@@ -4,7 +4,7 @@
 
 Hashelot, born under the lockdown, is something you kids might call a *startup*, an experimental venture across smart contracts and dApp development.
 
-Originally it will be an Ethereum-centric project, but from that point on it may leap to other crypto ecosystems depending on the initial outcome or the appeal those crypto-systems have on Hashelot developers.
+At first it will be an Ethereum-centric project, but from that point on it may leap to other crypto ecosystems depending on the initial outcome or the appeal those crypto-systems have on Hashelot developers.
 
 ![I think I might have sharded!](/images/hashelot_ethereum_wbg.png)
 
