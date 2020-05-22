@@ -17,7 +17,7 @@ At first it will be an Ethereum-centric project, but from that point on it may l
 ##### Research
 
 ##### Web interface
-- [**Hashelot.com**](http://www.hashelot.com) (*looping back here*)
+- **Hashelot.com** (*not quite there yet*)
 
 ##### Mobile interface
 
