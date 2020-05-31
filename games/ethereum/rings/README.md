@@ -1,6 +1,6 @@
 #### Rings by Hashelot
 
-![If you like it, then you shoulda put a ring on it.](images/hashelot_rings_wbg.png)
+![If you like it, then you shoulda put a ring on it.](images/hashelot_rings_nbg.png)
 
 **Rings by Hashelot** is a bet stacking game written in Solidity and deployed on the Ethereum main network.
 
@@ -34,7 +34,7 @@ rolling playerAddress among the addresses of all the players who entered the bet
 
 The winner takes 98% of the stack.
 
-2% of the stack goes to the **owner**, 'cause **even the eye wants its share** (*Italian expression*).
+2% of the stack goes to the **owner**, 'cause dApp development might end up costing good ole money and, why not, **even the eye wants its share** (*Italian expression*).
 
 The **owner** of the hashelot_rings smart contract may declare a winner with ```dustStack()```, but only if there are no ongoing bets.
 
