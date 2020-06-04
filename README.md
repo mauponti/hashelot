@@ -15,7 +15,7 @@ At first it will be an Ethereum-centric project, but from that point on it may l
 - **Chronicles** (*under development*)
 
 ##### Notes
-- [Born under the lockdown](https://www.hashelot.com/public/notes/born-under-the-lockdown/index.html)
+- [Born under the lockdown](https://www.hashelot.com/notes/born-under-the-lockdown/index.html)
 
 ##### Web interface
 - [**Hashelot.com**](https://www.hashelot.com)
