@@ -1709,9 +1709,11 @@ if (typeof web3 !== 'undefined') {
   var current_account;
 
   
-  if(window.web3.currentProvider.isMetaMask){
+  
+  
     
     window.addEventListener('load', async() => {
+      window.ethereum.enable();
       window.web3 = new Web3(ethereum);
       try {
         
@@ -1812,19 +1814,19 @@ if (typeof web3 !== 'undefined') {
         
       }
     }); 
-  }else{ 
+  
 
-    document.getElementById('ElonMetaMask').innerHTML = '<p>To play <strong>Rings by Hashelot</strong>, connect your <a href="https://metamask.io" target="_blank">MetaMask</a> account.</p><p><button class="enableEthereumButton">Enable Ethereum</button></p>';
+    
 
-    const ethereumButton = document.querySelector('.enableEthereumButton');
+    
 
-    ethereumButton.addEventListener('click', () => {
+    
       
-      window.ethereum.enable();
-    });
-  }
+      
+    
+  
 }else{ 
-  document.write('<p><i>If you want to play <strong>Rings by Hashelot</strong> through your web browser, then you need to install <a href="https://metamask.io/download.html" target="_blank">MetaMask</a>.</p>');
+  document.write('<p><i>If you want to play <strong>Rings by Hashelot</strong> through your web browser, you need to install <a href="https://metamask.io/download.html" target="_blank">MetaMask</a>.</p>');
 }
 </script>
 </p>
