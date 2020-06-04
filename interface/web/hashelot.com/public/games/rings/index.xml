@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Rings - A simple stacking game on Hashelot</title>
-    <link>http://www.hashelot.com/games/rings/</link>
+    <link>https://www.hashelot.com/games/rings/</link>
     <description>Recent content in Rings - A simple stacking game on Hashelot</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -15,7 +15,7 @@
     <webMaster>alias@hashelot.com</webMaster>
     <lastBuildDate>Wed, 03 Jun 2020 14:47:00 +0100</lastBuildDate>
     
-        <atom:link href="http://www.hashelot.com/games/rings/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://www.hashelot.com/games/rings/index.xml" rel="self" type="application/rss+xml" />
     
     
     
