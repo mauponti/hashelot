@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Ethereum on Hashelot</title>
-    <link>https://hashelot-com.onrender.com/tags/ethereum/</link>
+    <link>https://hashelot.onrender.com/tags/ethereum/</link>
     <description>Recent content in Ethereum on Hashelot</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -15,7 +15,7 @@
     <webMaster>alias@hashelot.com</webMaster>
     <lastBuildDate>Thu, 04 Jun 2020 14:02:45 +0200</lastBuildDate>
     
-        <atom:link href="https://hashelot-com.onrender.com/tags/ethereum/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://hashelot.onrender.com/tags/ethereum/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -23,11 +23,11 @@
       
       <item>
         <title>Born under the lockdown</title>
-        <link>https://hashelot-com.onrender.com/notes/born-under-the-lockdown/</link>
+        <link>https://hashelot.onrender.com/notes/born-under-the-lockdown/</link>
         <pubDate>Thu, 04 Jun 2020 14:02:45 +0200</pubDate>
         <author>alias@hashelot.com</author>
         <atom:modified>Thu, 04 Jun 2020 14:02:45 +0200</atom:modified>
-        <guid>https://hashelot-com.onrender.com/notes/born-under-the-lockdown/</guid>
+        <guid>https://hashelot.onrender.com/notes/born-under-the-lockdown/</guid>
         <description>You know those projects you keep postponing as you wait for the right moment to tackle them, but then a global pandemic hits the whole planet and you are faced with the choice of dedicating your newly acquired spare time doing chores around the house or pretending you are studying for an important project you had been postponing (waiting for the right time to develop it) and you choose wisely?</description>
         
         
@@ -51,11 +51,11 @@
       
       <item>
         <title>Rings - A simple stacking game</title>
-        <link>https://hashelot-com.onrender.com/games/rings/</link>
+        <link>https://hashelot.onrender.com/games/rings/</link>
         <pubDate>Wed, 03 Jun 2020 14:47:00 +0100</pubDate>
         <author>alias@hashelot.com</author>
         <atom:modified>Wed, 03 Jun 2020 14:47:00 +0100</atom:modified>
-        <guid>https://hashelot-com.onrender.com/games/rings/</guid>
+        <guid>https://hashelot.onrender.com/games/rings/</guid>
         <description>Rings is a stacking game written in Solidity and deployed on the Ethereum main network, whose game play you can audit straight out of the blockchain.
   function depositWage(cash, _contract, _curr_account){ if(isNaN(cash)){ console.error(&#39;To play Rings, you need to input a number!&#39;); }else{ const amount = cash*10**15; console.log(_curr_account); _contract.methods.depositStack().estimateGas({from: _curr_account, value:amount}).then(gasEstimate = { _contract.methods.depositStack().send({from: _curr_account, value:amount, gas: gasEstimate},function(error, result){ if(!error) console.log(result); else console.error(error); }); }); } } function winnerSelection(_contract, _curr_account){ console.</description>
         

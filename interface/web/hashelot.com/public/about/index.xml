@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>About on Hashelot</title>
-    <link>https://hashelot-com.onrender.com/about/</link>
+    <link>https://hashelot.onrender.com/about/</link>
     <description>Recent content in About on Hashelot</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -15,7 +15,7 @@
     <webMaster>alias@hashelot.com</webMaster>
     <lastBuildDate>Wed, 03 Jun 2020 17:20:37 +0200</lastBuildDate>
     
-        <atom:link href="https://hashelot-com.onrender.com/about/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://hashelot.onrender.com/about/index.xml" rel="self" type="application/rss+xml" />
     
     
     

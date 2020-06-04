@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Tags on Hashelot</title>
-    <link>https://hashelot-com.onrender.com/tags/</link>
+    <link>https://hashelot.onrender.com/tags/</link>
     <description>Recent content in Tags on Hashelot</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -15,7 +15,7 @@
     <webMaster>alias@hashelot.com</webMaster>
     <lastBuildDate>Thu, 04 Jun 2020 14:02:45 +0200</lastBuildDate>
     
-        <atom:link href="https://hashelot-com.onrender.com/tags/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://hashelot.onrender.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -23,11 +23,11 @@
       
       <item>
         <title>Ethereum</title>
-        <link>https://hashelot-com.onrender.com/tags/ethereum/</link>
+        <link>https://hashelot.onrender.com/tags/ethereum/</link>
         <pubDate>Thu, 04 Jun 2020 14:02:45 +0200</pubDate>
         <author>alias@hashelot.com</author>
         
-        <guid>https://hashelot-com.onrender.com/tags/ethereum/</guid>
+        <guid>https://hashelot.onrender.com/tags/ethereum/</guid>
         <description></description>
         
         
@@ -41,11 +41,11 @@
       
       <item>
         <title>Lockdown</title>
-        <link>https://hashelot-com.onrender.com/tags/lockdown/</link>
+        <link>https://hashelot.onrender.com/tags/lockdown/</link>
         <pubDate>Thu, 04 Jun 2020 14:02:45 +0200</pubDate>
         <author>alias@hashelot.com</author>
         
-        <guid>https://hashelot-com.onrender.com/tags/lockdown/</guid>
+        <guid>https://hashelot.onrender.com/tags/lockdown/</guid>
         <description></description>
         
         
@@ -59,11 +59,11 @@
       
       <item>
         <title>Hash function</title>
-        <link>https://hashelot-com.onrender.com/tags/hash-function/</link>
+        <link>https://hashelot.onrender.com/tags/hash-function/</link>
         <pubDate>Wed, 03 Jun 2020 14:47:00 +0100</pubDate>
         <author>alias@hashelot.com</author>
         
-        <guid>https://hashelot-com.onrender.com/tags/hash-function/</guid>
+        <guid>https://hashelot.onrender.com/tags/hash-function/</guid>
         <description></description>
         
         
