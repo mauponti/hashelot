@@ -1708,7 +1708,7 @@ if (ethereum.isMetaMask) {
   var current_account;
 
   
-  if(ethereum.selectedAddress !== 'undefined' && ethereum.selectedAddress !=='null'){
+  if(typeof window.ethereum !== 'undefined'){
     
     window.addEventListener('load', async() => {
       window.web3 = new Web3(ethereum);
@@ -1819,7 +1819,7 @@ if (ethereum.isMetaMask) {
 
     ethereumButton.addEventListener('click', () => {
       
-      ethereum.enable();
+      window.ethereum.enable();
     });
   }
 }else{ 
