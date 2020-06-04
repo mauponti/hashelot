@@ -1534,26 +1534,29 @@ function depositWage(cash, name, _contract){
 		console.error('To play Rings, you need to input a number!');
 	}else{
 		const amount = cash*10**15; 
-		_contract.methods.depositStack().estimateGas({from: curr_account, value:amount}).then(gasEstimate => {
-			_contract.methods.depositStack().send({from: curr_account, value:amount, gas: gasEstimate},function(error, result){
-				if(!error)
-					console.log(result);
-				else
-					console.error(error);
+		web3.eth.getAccounts((error, accounts) => { _curr_account = accounts[0];
+			_contract.methods.depositStack().estimateGas({from: _curr_account, value:amount}).then(gasEstimate => {
+				_contract.methods.depositStack().send({from: _curr_account, value:amount, gas: gasEstimate},function(error, result){
+					if(!error)
+						console.log(result);
+					else
+						console.error(error);
+				}); 
 			}); 
 		}); 
-
 		document.cookie = name + "= ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
 	}
 }
 
 function winnerSelection(name, _contract){
-	_contract.methods.closeBet().estimateGas({from: curr_account, value: 0}).then(gasEstimate => {
-		_contract.methods.closeBet().send({from: curr_account, value: 0, gas: gasEstimate},function(error, result){
-			if(!error)
-				console.log(result);
-			else
-				console.error(error);
+	web3.eth.getAccounts((error, accounts) => { _curr_account = accounts[0];
+		_contract.methods.closeBet().estimateGas({from: _curr_account, value: 0}).then(gasEstimate => {
+			_contract.methods.closeBet().send({from: _curr_account, value: 0, gas: gasEstimate},function(error, result){
+				if(!error)
+					console.log(result);
+				else
+					console.error(error);
+			}); 
 		}); 
 	}); 
 	document.cookie = name + "= ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
