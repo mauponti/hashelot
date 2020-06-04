@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Ethereum on Hashelot</title>
-    <link>https://hashelot.onrender.com/tags/ethereum/</link>
+    <link>https://hashelot.onrender.com/tags/Ethereum/</link>
     <description>Recent content in Ethereum on Hashelot</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -15,7 +15,7 @@
     <webMaster>alias@hashelot.com</webMaster>
     <lastBuildDate>Thu, 04 Jun 2020 14:02:45 +0200</lastBuildDate>
     
-        <atom:link href="https://hashelot.onrender.com/tags/ethereum/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://hashelot.onrender.com/tags/Ethereum/index.xml" rel="self" type="application/rss+xml" />
     
     
     
