@@ -1529,36 +1529,35 @@
 <hr />
 <p><script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
 <script>
-function depositWage(cash, name, _contract){
+function depositWage(cash, name, _contract, _curr_account){
 	if(isNaN(cash)){ 
 		console.error('To play Rings, you need to input a number!');
 	}else{
-		const amount = cash*10**15; 
-		web3.eth.getAccounts((error, accounts) => { _curr_account = accounts[0];
-			_contract.methods.depositStack().estimateGas({from: _curr_account, value:amount}).then(gasEstimate => {
-				_contract.methods.depositStack().send({from: _curr_account, value:amount, gas: gasEstimate},function(error, result){
-					if(!error)
-						console.log(result);
-					else
-						console.error(error);
-				}); 
-			}); 
-		}); 
-		document.cookie = name + "= ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
-	}
-}
-
-function winnerSelection(name, _contract){
-	web3.eth.getAccounts((error, accounts) => { _curr_account = accounts[0];
-		_contract.methods.closeBet().estimateGas({from: _curr_account, value: 0}).then(gasEstimate => {
-			_contract.methods.closeBet().send({from: _curr_account, value: 0, gas: gasEstimate},function(error, result){
+		const amount = cash*10**15;
+		console.log(_curr_account);
+		_contract.methods.depositStack().estimateGas({from: _curr_account, value:amount}).then(gasEstimate => {
+			_contract.methods.depositStack().send({from: _curr_account, value:amount, gas: gasEstimate},function(error, result){
 				if(!error)
 					console.log(result);
 				else
 					console.error(error);
 			}); 
 		}); 
+		document.cookie = name + "= ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
+	}
+}
+
+function winnerSelection(name, _contract, _curr_account){
+	console.log(_curr_account);
+	_contract.methods.closeBet().estimateGas({from: _curr_account, value: 0}).then(gasEstimate => {
+		_contract.methods.closeBet().send({from: _curr_account, value: 0, gas: gasEstimate},function(error, result){
+			if(!error)
+				console.log(result);
+			else
+				console.error(error);
+		}); 
 	}); 
+
 	document.cookie = name + "= ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
 }
 
@@ -1808,14 +1807,14 @@ if (ethereum.isMetaMask) {
                       var dummy = eval(valueToEnter)/Math.pow(10,15);
                       const countMeIn = document.querySelector('.countMeIn');
                       countMeIn.addEventListener('click', () => {
-                        depositWage(dummy, cookie, rings); 
+                        depositWage(dummy, cookie, rings, curr_account); 
                       });
                     }else{
                       document.getElementById('ElonMetaMask').innerHTML = '<p>The current round of Rings will end in ' + blockString + ' and there are currently ' + playersNum +' players in the game for a total Jackpot of <strong>'+ Math.round((eval(currentStack)/100*98)/Math.pow(10,15)+Number.EPSILON)/Math.pow(10,3) +' Ether</strong>. To play you need ' + Math.round(eval(valueToEnter)/Math.pow(10,15)+Number.EPSILON)/Math.pow(10,3) + ' Ether (<i>plus an editable gas fee for the transaction</i>).<br/>Were you to enter the round, your chances to win would be '+ Math.round((1/(eval(playersNum)+1)*Math.pow(10,6))+Number.EPSILON)/Math.pow(10,4)+'&percnt;.</p><p><button class="countMeIn">Count me in!</button></p>';
                       var dummy = eval(valueToEnter)/Math.pow(10,15);
                       const countMeIn = document.querySelector('.countMeIn');
                       countMeIn.addEventListener('click', () => {
-                        depositWage(dummy, cookie, rings); 
+                        depositWage(dummy, cookie, rings, curr_account); 
                       });
                     }
                     
@@ -1834,10 +1833,10 @@ if (ethereum.isMetaMask) {
                   const findTheLastWinner = document.querySelector('.findTheLastWinner');
 
                   startNewRound.addEventListener('click', () => {
-                    depositWage(document.getElementById('deposit').value, cookie, rings); 
+                    depositWage(document.getElementById('deposit').value, cookie, ring, curr_account); 
                   });
                   findTheLastWinner.addEventListener('click', () => {
-                    winnerSelection(cookie, rings);
+                    winnerSelection(cookie, rings, curr_account);
                   });
                 }else{ 
                   document.getElementById('ElonMetaMask').innerHTML = '<p>Start a new round of Rings on your own terms (<i>i.e. you choose the value to enter the game for the next round</i>).</p><p><button class="startNewRound">Start a new round</button> &nbsp;&nbsp;<input type="number" min="1" step="1" id="deposit" name="deposit" label="deposit"/> Finney (0.001 Ether)<br/><span style="font-size: 10pt">PS: 1 Finney is the lowest deposit allowed</span>.</p><p>If another player starts a new round in the meantime you choose how much to stack, you\'ll end up playing at the other player\'s terms (<i>if the other player\'s deposit is equal to or lower than yours</i>) or not playing at all (<i>if your deposit is not enough</i>).<br/>Funds that are not invested in the game will be directly returned to their owner.</p>';
@@ -1845,7 +1844,7 @@ if (ethereum.isMetaMask) {
                   const startNewRound = document.querySelector('.startNewRound');
 
                   startNewRound.addEventListener('click', () => {
-                    depositWage(document.getElementById('deposit').value, cookie, rings); 
+                    depositWage(document.getElementById('deposit').value, cookie, rings, curr_account); 
                   });
                 }
               }

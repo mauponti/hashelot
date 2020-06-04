@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Games – Hashelot</title>
+    <title>Rings - Ropsten test – Hashelot</title>
     
 
 
@@ -551,7 +551,7 @@
 
   
     
-    var permalink = JSON.parse("\"https://hashelot-com.onrender.com/games/\"");
+    var permalink = JSON.parse("\"https://hashelot-com.onrender.com/games/testrings/\"");
     var searchResults = null;
     var searchMenu = null;
     var searchText = null;
@@ -1203,9 +1203,9 @@
 
 
     
-<link rel="alternate" type="application/rss&#43;xml" title="RSS" href="https://hashelot-com.onrender.com/games/index.xml">
+<link rel="alternate" type="application/rss&#43;xml" title="RSS" href="https://hashelot-com.onrender.com/games/testrings/index.xml">
 
-<meta name="description" content="Games, dApps, and notes on decentralization." />
+<meta name="description" content="Test Rings on Ropsten" />
 
 
 <meta name="created" content="2020-06-04T23:58:33&#43;0900">
@@ -1214,10 +1214,10 @@
 
 
 <meta property="og:site_name" content="Hashelot">
-<meta property="og:title" content="Games">
-<meta property="og:url" content="https://hashelot-com.onrender.com/games/">
+<meta property="og:title" content="Rings - Ropsten test">
+<meta property="og:url" content="https://hashelot-com.onrender.com/games/testrings/">
 <meta property="og:type" content="website">
-<meta property="og:description" content="Games, dApps, and notes on decentralization.">
+<meta property="og:description" content="Test Rings on Ropsten">
 
 <meta name="generator" content="Hugo 0.71.0" />
 <meta name="msapplication-TileColor" content="#fff">
@@ -1228,7 +1228,7 @@
 
 <meta name="apple-mobile-web-app-status-bar-style" content="#fff">
 
-<link rel="canonical" href="https://hashelot-com.onrender.com/games/">
+<link rel="canonical" href="https://hashelot-com.onrender.com/games/testrings/">
 
 <link rel="manifest" href="/manifest.json">
 
@@ -1242,9 +1242,9 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "url" : "https://hashelot-com.onrender.com/games/",
-    "name": "Games",
-    "description": "Games, dApps, and notes on decentralization.",
+    "url" : "https://hashelot-com.onrender.com/games/testrings/",
+    "name": "Rings - Ropsten test",
+    "description": "Test Rings on Ropsten",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://hashelot-com.onrender.com"
@@ -1491,6 +1491,8 @@
   
   
   
+  
+  
   <li >
     
       <a href="https://hashelot-com.onrender.com/" class="capitalize">Hashelot</a>
@@ -1498,9 +1500,16 @@
   </li>
   
   
+  <li >
+    
+      <a href="https://hashelot-com.onrender.com/games/" class="capitalize">Games</a>
+    
+  </li>
+  
+  
   <li  class="is-active" >
     
-      <span>Games</span>
+      <span>Rings - Ropsten test</span>
     
   </li>
   
@@ -1508,63 +1517,360 @@
   
 </nav>
         <header class="list__header">
-            <h5 class="list__header--title capitalize h5">Games</h5>
+            <h5 class="list__header--title capitalize h5">Rings - Ropsten test</h5>
         </header>
 
         <div class="list__header--desc single__contents p2">
           <div style="text-align: justify">
-            
+            <p><script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+<script>
+function depositWage(cash, name, _contract, _curr_account){
+	if(isNaN(cash)){ 
+		console.error('To play Rings, you need to input a number!');
+	}else{
+		const amount = cash*10**15;
+		console.log(_curr_account);
+		_contract.methods.depositStack().estimateGas({from: _curr_account, value:amount}).then(gasEstimate => {
+			_contract.methods.depositStack().send({from: _curr_account, value:amount, gas: gasEstimate},function(error, result){
+				if(!error)
+					console.log(result);
+				else
+					console.error(error);
+			}); 
+		}); 
+		document.cookie = name + "= ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
+	}
+}
+
+function winnerSelection(name, _contract, _curr_account){
+	console.log(_curr_account);
+	_contract.methods.closeBet().estimateGas({from: _curr_account, value: 0}).then(gasEstimate => {
+		_contract.methods.closeBet().send({from: _curr_account, value: 0, gas: gasEstimate},function(error, result){
+			if(!error)
+				console.log(result);
+			else
+				console.error(error);
+		}); 
+	}); 
+
+	document.cookie = name + "= ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
+}
+
+function rings_cookiefy(name, object, minutes){
+	var d = new Date();
+	
+	d.setTime(d.getTime() + (minutes*60*1000));
+	var value = JSON.stringify(object);
+	var expires = "expires="+ d.toUTCString();
+	document.cookie = name + "=" + value + ";" + expires;
+}
+
+function rings_decookiefy(name){
+	var object = {}; 
+	var prefix = name + "=";
+	var decodedCookie = decodeURIComponent(document.cookie);
+	var ca = decodedCookie.split(';');
+	var toParse = '';
+  for(var i = 0; i <ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+		if (c.indexOf(prefix) == 0) {
+      toParse = c.substring(prefix.length, c.length);
+    }
+  }
+	if(toParse == ''){ 
+		object.isLoaded = false;
+	}else{ 
+		object = JSON.parse(toParse);
+		object.isLoaded = true;
+	}
+	return object;
+}
+</script>
+<div id="stacked"></div>
+<hr/>
+<div id="ElonMetaMask"></div>
+<script>
+
+var infuraWeb3 = new Web3(Web3.HttpProvider || "https://ropsten.infura.io/v3/becb60120425437f8aeeaa91305586bb");
+var rings_address = '0xF236340B2eb01FdafAf5eE2A5F3678Da02401117';
+var scanURL = 'https://ropsten.etherscan.io/address/'+rings_address;
+var editPlay = '<br/>You can also audit the game play <a href="'+ scanURL +'" target="_blank">straight out of the blockchain</a>.';
+
+var jsonInterface = [
+{
+  "inputs": [],
+  "name": "closeBet",
+  "outputs": [],
+  "stateMutability": "payable",
+  "type": "function"
+},
+{
+  "inputs": [],
+  "name": "depositStack",
+  "outputs": [],
+  "stateMutability": "payable",
+  "type": "function"
+},
+{
+  "inputs": [],
+  "name": "dustStack",
+  "outputs": [],
+  "stateMutability": "payable",
+  "type": "function"
+},
+{
+  "inputs": [],
+  "stateMutability": "nonpayable",
+  "type": "constructor"
+},
+{
+  "inputs": [],
+  "name": "checkBalance",
+  "outputs": [
+    {
+      "internalType": "uint256",
+      "name": "",
+      "type": "uint256"
+    }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+},
+{
+  "inputs": [],
+  "name": "checkPlayers",
+  "outputs": [
+    {
+      "internalType": "uint256",
+      "name": "",
+      "type": "uint256"
+    }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+},
+{
+  "inputs": [
+    {
+      "internalType": "uint256",
+      "name": "",
+      "type": "uint256"
+    }
+  ],
+  "name": "stackPlayers",
+  "outputs": [
+    {
+      "internalType": "address payable",
+      "name": "",
+      "type": "address"
+    }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+},
+{
+  "inputs": [],
+  "name": "stackSoFar",
+  "outputs": [
+    {
+      "internalType": "uint256",
+      "name": "",
+      "type": "uint256"
+    }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+},
+{
+  "inputs": [],
+  "name": "stackTime",
+  "outputs": [
+    {
+      "internalType": "uint256",
+      "name": "",
+      "type": "uint256"
+    }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+},
+{
+  "inputs": [],
+  "name": "stackValue",
+  "outputs": [
+    {
+      "internalType": "uint256",
+      "name": "",
+      "type": "uint256"
+    }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+},
+{
+  "inputs": [],
+  "name": "stackWait",
+  "outputs": [
+    {
+      "internalType": "uint256",
+      "name": "",
+      "type": "uint256"
+    }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+}
+];
+var rings_contract = new infuraWeb3.eth.Contract(jsonInterface);
+rings_contract.options.address = rings_address;
+
+var cookie = 'torcetto'; 
+var cookieLife = 3; 
+
+
+var ringsInfo = rings_decookiefy(cookie); 
+
+if(ringsInfo.isLoaded){ 
+  if(eval(ringsInfo.currentStack)>0){ 
+    document.getElementById('stacked').innerHTML = '<p>The current Jackpot of Rings is <strong>'+ Math.round((eval(ringsInfo.currentStack)/100*98)/Math.pow(10,15)+Number.EPSILON)/Math.pow(10,3) +' Ether</strong>.<br/>Total prizes collected so far in all the rounds of Rings: <strong>' + Math.round(eval(ringsInfo.stackSoFar)/Math.pow(10,15)+Number.EPSILON)/Math.pow(10,3) + ' Ether</strong>.'+ editPlay +'</p>';
+  }else{ 
+    document.getElementById('stacked').innerHTML = '<p>Total prizes collected so far in all the rounds of Rings: <strong>' + Math.round(eval(ringsInfo.stackSoFar)/Math.pow(10,15)+Number.EPSILON)/Math.pow(10,3) + ' Ether</strong>.'+ editPlay +'</p>';
+  }
+}else{ 
+  
+  rings_contract.methods.checkBalance().call().then(currentStack => {
+    
+    rings_contract.methods.stackSoFar().call().then(stackSoFar => {
+      if(eval(currentStack)>0){ 
+        document.getElementById('stacked').innerHTML = '<p>The current Jackpot of Rings is <strong>'+ Math.round((eval(currentStack)/100*98)/Math.pow(10,15)+Number.EPSILON)/Math.pow(10,3) +' Ether</strong>.<br/>Total prizes collected so far in all the rounds of Rings: <strong>' + Math.round(eval(stackSoFar)/Math.pow(10,15)+Number.EPSILON)/Math.pow(10,3) + ' Ether</strong>.'+ editPlay +'</p>';
+      }else{ 
+        document.getElementById('stacked').innerHTML = '<p>Total prizes collected so far in all the rounds of Rings: <strong>' + Math.round(eval(stackSoFar)/Math.pow(10,15)+Number.EPSILON)/Math.pow(10,3) + ' Ether</strong>.'+ editPlay +'</p>';
+      }
+      ringsInfo.isLoaded = true; 
+      ringsInfo.currentStack = currentStack;
+      ringsInfo.stackSoFar = stackSoFar;
+
+      rings_cookiefy(cookie, ringsInfo, cookieLife);
+    }); 
+  }); 
+}
+
+
+if (ethereum.isMetaMask) { 
+  var blocksLeft;
+  var gameTime = 10; 
+  var rings;
+  var current_account;
+  
+  if(typeof ethereum.selectedAddress !== 'undefined'){
+    
+    window.addEventListener('load', async() => {
+
+      if (window.ethereum) {
+        window.web3 = new Web3(ethereum);
+        try {
+          
+          await web3.eth.getAccounts((error, accounts) => { curr_account = accounts[0] });
+        } catch (error) {
+      		console.log("MetaMask issue");
+          
+        }
+      }
+
+      rings = new web3.eth.Contract(jsonInterface, rings_address);
+
+      infuraWeb3.eth.getBlockNumber().then(blockNum => {
+        rings.methods.stackTime().call().then(roundStarted => {
+          rings.methods.checkPlayers().call().then(playersNum =>{
+            rings.methods.checkBalance().call().then(currentStack => {
+
+              blocksLeft = eval(roundStarted)+eval(gameTime)-eval(blockNum);
+              var blockString = '-';
+              if(blocksLeft>0){ 
+                rings.methods.stackValue().call().then(valueToEnter => {
+
+                if(blocksLeft == 1) {
+                  blockString = '1 block';
+                }else{
+                  blockString = blocksLeft + ' blocks';
+                }
+                    if(playersNum == 1){
+                      document.getElementById('ElonMetaMask').innerHTML = '<p>The current round of Rings will end in ' + blockString + ' and there is currently 1 player in the game for a Jackpot of <strong>'+ Math.round((eval(currentStack)/100*98)/Math.pow(10,15)+Number.EPSILON)/Math.pow(10,3) +' Ether</strong>. To play you need ' + Math.round(eval(valueToEnter)/Math.pow(10,15)+Number.EPSILON)/Math.pow(10,3) + ' Ether (<i>plus an editable gas fee for the transaction</i>).<br/>Were you to enter the round, your chances to win would be 50&percnt;.</p><p><button class="countMeIn">Count me in!</button></p>';
+                      var dummy = eval(valueToEnter)/Math.pow(10,15);
+                      const countMeIn = document.querySelector('.countMeIn');
+                      countMeIn.addEventListener('click', () => {
+                        depositWage(dummy, cookie, rings, curr_account); 
+                      });
+                    }else{
+                      document.getElementById('ElonMetaMask').innerHTML = '<p>The current round of Rings will end in ' + blockString + ' and there are currently ' + playersNum +' players in the game for a total Jackpot of <strong>'+ Math.round((eval(currentStack)/100*98)/Math.pow(10,15)+Number.EPSILON)/Math.pow(10,3) +' Ether</strong>. To play you need ' + Math.round(eval(valueToEnter)/Math.pow(10,15)+Number.EPSILON)/Math.pow(10,3) + ' Ether (<i>plus an editable gas fee for the transaction</i>).<br/>Were you to enter the round, your chances to win would be '+ Math.round((1/(eval(playersNum)+1)*Math.pow(10,6))+Number.EPSILON)/Math.pow(10,4)+'&percnt;.</p><p><button class="countMeIn">Count me in!</button></p>';
+                      var dummy = eval(valueToEnter)/Math.pow(10,15);
+                      const countMeIn = document.querySelector('.countMeIn');
+                      countMeIn.addEventListener('click', () => {
+                        depositWage(dummy, cookie, rings, curr_account); 
+                      });
+                    }
+                    
+                }); 
+              }else{ 
+                if(playersNum > 0){ 
+                  var roundInfo = '-';
+                  if(playersNum == 1){
+                    roundInfo = '1 player for a Jackpot of '+ Math.round((eval(currentStack)/100*98)/Math.pow(10,15)+Number.EPSILON)/Math.pow(10,3) +' Ether';
+                  }else{
+                    roundInfo = playersNum + ' players for a Jackpot of '+ Math.round((eval(currentStack)/100*98)/Math.pow(10,15)+Number.EPSILON)/Math.pow(10,3) +' Ether';
+                  }
+                  document.getElementById('ElonMetaMask').innerHTML = '<p>The previous round of Rings ('+ roundInfo +') still needs to be finalized with a winner.<br/>You can simply do that (<i>paying an editable gas fee for the transaction</i>) or start a new round (<i>automatically finalizing the pending one</i>) on your own terms (<i>i.e. you choose the value to enter the game for the next round</i>).</p><p><button class="startNewRound">Start a new round</button> &nbsp;&nbsp;<input type="number" id="deposit" min="1" step="1" name="deposit" label="deposit"/> Finney (0.001 Ether)<br/><span style="font-size: 10pt">PS: 1 Finney is the lowest deposit allowed</span>.</p><p>If another player starts a new round in the meantime you lollygag, you\'ll end up playing at the other player\'s terms (<i>if the other player\'s deposit is equal to or lower than yours</i>) or not playing at all (<i>if your deposit is not enough</i>).<br/>Funds that are not invested in the game will be directly returned to their owner.</p><hr/><p><button class="findTheLastWinner">Just find out who won</button></p>';
+
+                  const startNewRound = document.querySelector('.startNewRound');
+                  const findTheLastWinner = document.querySelector('.findTheLastWinner');
+
+                  startNewRound.addEventListener('click', () => {
+                    depositWage(document.getElementById('deposit').value, cookie, rings, curr_account); 
+                  });
+                  findTheLastWinner.addEventListener('click', () => {
+                    winnerSelection(cookie, rings, curr_account);
+                  });
+                }else{ 
+                  document.getElementById('ElonMetaMask').innerHTML = '<p>Start a new round of Rings on your own terms (<i>i.e. you choose the value to enter the game for the next round</i>).</p><p><button class="startNewRound">Start a new round</button> &nbsp;&nbsp;<input type="number" min="1" step="1" id="deposit" name="deposit" label="deposit"/> Finney (0.001 Ether)<br/><span style="font-size: 10pt">PS: 1 Finney is the lowest deposit allowed</span>.</p><p>If another player starts a new round in the meantime you choose how much to stack, you\'ll end up playing at the other player\'s terms (<i>if the other player\'s deposit is equal to or lower than yours</i>) or not playing at all (<i>if your deposit is not enough</i>).<br/>Funds that are not invested in the game will be directly returned to their owner.</p>';
+
+                  const startNewRound = document.querySelector('.startNewRound');
+
+                  startNewRound.addEventListener('click', () => {
+                    depositWage(document.getElementById('deposit').value, cookie, rings, curr_account); 
+                  });
+                }
+              }
+
+            }); 
+          }); 
+        }); 
+      }); 
+    }); 
+  }else{ 
+    document.getElementById('ElonMetaMask').innerHTML = '<p>To play <strong>Rings by Hashelot</strong>, connect your <a href="https://metamask.io" target="_blank">MetaMask</a> account.</p><p><button class="enableEthereumButton">Enable Ethereum</button></p>';
+
+    const ethereumButton = document.querySelector('.enableEthereumButton');
+
+    ethereumButton.addEventListener('click', () => {
+      
+      ethereum.enable();
+    });
+  }
+}else{ 
+  document.write('<p><i>If you want to play <strong>Rings by Hashelot</strong> through your web browser, then you need to install <a href="https://metamask.io/download.html" target="_blank">MetaMask</a>.</p>');
+}
+</script>
+</p>
+<hr />
+
           </div>
         </div>
 
         <div class="summary__container" data-display="block">
             
-            
-                
-  <article class="summary-card" data-ani="true">
-  <header>
-    <h5 class="title h5"><a href='https://hashelot-com.onrender.com/games/testrings/'> Rings - Ropsten test</a> </h5>
-    <h6 class="subtitle caption">
-      <time title="Written At" dir="ltr">📅Jun 4, 2020 </time> 
-       
-      <span title="Reading Time" dir="ltr"> &middot; ☕ 6 min read</span>
-      
-    </h6>
-  </header>
-  <div class="summary-card__content">
-    <div class="summary-card__text p2">
-      
-      Test Rings on Ropsten
-      
-    </div>
-    
-  </div>
-  <hr />
-</article>
-
-            
-                
-  <article class="summary-card" data-ani="true">
-  <header>
-    <h5 class="title h5"><a href='https://hashelot-com.onrender.com/games/rings/'> Rings - A simple stacking game</a> </h5>
-    <h6 class="subtitle caption">
-      <time title="Written At" dir="ltr">📅Jun 3, 2020 </time> 
-       
-      <span title="Reading Time" dir="ltr"> &middot; ☕ 9 min read</span>
-      
-    </h6>
-  </header>
-  <div class="summary-card__content">
-    <div class="summary-card__text p2">
-      
-      A stacking game for the Ethereum main network
-      
-    </div>
-    
-  </div>
-  <hr />
-</article>
-
             
             
 
@@ -1612,14 +1918,6 @@
     
     
     
-        
-        <li class="sidebar-recent">
-            <a href="/games/testrings/" class="sidebar-recent__title p1">Rings - Ropsten test</a>
-        </li>
-        
-        <li class="sidebar-recent">
-            <a href="/games/rings/" class="sidebar-recent__title p1">Rings - A simple stacking game</a>
-        </li>
         
         <hr class="hr-fade sidebar-hr" />
     

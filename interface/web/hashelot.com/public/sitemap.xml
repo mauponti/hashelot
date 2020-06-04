@@ -3,17 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://hashelot-com.onrender.com/games/</loc>
+    <lastmod>2020-06-04T23:58:33+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hashelot-com.onrender.com/</loc>
+    <lastmod>2020-06-04T23:58:33+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hashelot-com.onrender.com/games/testrings/</loc>
+    <lastmod>2020-06-04T23:58:33+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://hashelot-com.onrender.com/notes/born-under-the-lockdown/</loc>
     <lastmod>2020-06-04T14:02:45+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://hashelot-com.onrender.com/tags/ethereum/</loc>
-    <lastmod>2020-06-04T14:02:45+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hashelot-com.onrender.com/</loc>
     <lastmod>2020-06-04T14:02:45+02:00</lastmod>
   </url>
   
@@ -35,11 +45,6 @@
   <url>
     <loc>https://hashelot-com.onrender.com/about/</loc>
     <lastmod>2020-06-03T17:20:37+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hashelot-com.onrender.com/games/</loc>
-    <lastmod>2020-06-03T14:47:00+01:00</lastmod>
   </url>
   
   <url>
