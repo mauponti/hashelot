@@ -1382,7 +1382,7 @@
           </li>
         
           <li class="navbarm__menu--item navbarm__menu--subitem">
-            <a href="/games/testrings">rings [testnet]</a>
+            <a href="/games/testRings">rings [testnet]</a>
           </li>
         
 
@@ -1471,7 +1471,7 @@
       
       <a href="/games/rings" class="navbar__dropdown--item" dir="ltr">rings</a>
       
-      <a href="/games/testrings" class="navbar__dropdown--item" dir="ltr">rings [testnet]</a>
+      <a href="/games/testRings" class="navbar__dropdown--item" dir="ltr">rings [testnet]</a>
       
     </div>
   </div>
@@ -1708,7 +1708,7 @@ if (ethereum.isMetaMask) {
   var current_account;
 
   
-  if(ethereum.selectedAddress !== 'undefined'&&'null'){
+  if(ethereum.selectedAddress !== 'undefined' && ethereum.selectedAddress !=='null'){
     
     window.addEventListener('load', async() => {
       window.web3 = new Web3(ethereum);
