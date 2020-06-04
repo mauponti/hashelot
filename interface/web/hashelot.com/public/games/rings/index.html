@@ -1700,15 +1700,16 @@ var jsonInterface = [
 ];
 
 
-if (ethereum.isMetaMask) { 
 
+
+if (typeof web3 !== 'undefined') {
   var blocksLeft;
 
   var rings;
   var current_account;
 
   
-  if(window.ethereum !== null){
+  if(window.web3.currentProvider.isMetaMask){
     
     window.addEventListener('load', async() => {
       window.web3 = new Web3(ethereum);
