@@ -7,14 +7,14 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Categories on Hashelot</title>
-    <link>https://www.hashelot.com/categories/</link>
+    <link>https://hashelot-com.onrender.com/categories/</link>
     <description>Recent content in Categories on Hashelot</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>alias@hashelot.com</managingEditor>
     <webMaster>alias@hashelot.com</webMaster>
     
-        <atom:link href="https://www.hashelot.com/categories/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://hashelot-com.onrender.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     

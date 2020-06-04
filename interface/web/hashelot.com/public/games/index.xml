@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Games on Hashelot</title>
-    <link>https://www.hashelot.com/games/</link>
+    <link>https://hashelot-com.onrender.com/games/</link>
     <description>Recent content in Games on Hashelot</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -15,7 +15,7 @@
     <webMaster>alias@hashelot.com</webMaster>
     <lastBuildDate>Wed, 03 Jun 2020 14:47:00 +0100</lastBuildDate>
     
-        <atom:link href="https://www.hashelot.com/games/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://hashelot-com.onrender.com/games/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -23,11 +23,11 @@
       
       <item>
         <title>Rings - A simple stacking game</title>
-        <link>https://www.hashelot.com/games/rings/</link>
+        <link>https://hashelot-com.onrender.com/games/rings/</link>
         <pubDate>Wed, 03 Jun 2020 14:47:00 +0100</pubDate>
         <author>alias@hashelot.com</author>
         <atom:modified>Wed, 03 Jun 2020 14:47:00 +0100</atom:modified>
-        <guid>https://www.hashelot.com/games/rings/</guid>
+        <guid>https://hashelot-com.onrender.com/games/rings/</guid>
         <description>Rings is a stacking game written in Solidity and deployed on the Ethereum main network.
   function depositWage(cash, name, _contract){ if(isNaN(cash)){ console.error(&#39;To play Rings, you need to input a number!&#39;); }else{ const amount = cash*10**15; _contract.methods.depositStack().estimateGas({from: curr_account, value:amount}).then(gasEstimate = { _contract.methods.depositStack().send({from: curr_account, value:amount, gas: gasEstimate},function(error, result){ if(!error) console.log(result); else console.error(error); }); }); document.cookie = name + &#34;= ; expires = Thu, 01 Jan 1970 00:00:00 GMT&#34;; } } function winnerSelection(name, _contract){ _contract.</description>
         
