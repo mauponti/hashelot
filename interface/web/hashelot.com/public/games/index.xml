@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Games on Hashelot</title>
+    <link>http://www.hashelot.com/games/</link>
+    <description>Recent content in Games on Hashelot</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>alias@hashelot.com</managingEditor>
+    <webMaster>alias@hashelot.com</webMaster>
+    <lastBuildDate>Wed, 03 Jun 2020 14:47:00 +0100</lastBuildDate>
+    
+        <atom:link href="http://www.hashelot.com/games/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>Rings - A simple stacking game</title>
+        <link>http://www.hashelot.com/games/rings/</link>
+        <pubDate>Wed, 03 Jun 2020 14:47:00 +0100</pubDate>
+        <author>alias@hashelot.com</author>
+        <atom:modified>Wed, 03 Jun 2020 14:47:00 +0100</atom:modified>
+        <guid>http://www.hashelot.com/games/rings/</guid>
+        <description>Rings is a stacking game written in Solidity and deployed on the Ethereum main network.
+  function depositWage(cash, name, _contract){ if(isNaN(cash)){ console.error(&#39;To play Rings, you need to input a number!&#39;); }else{ const amount = cash*10**15; _contract.methods.depositStack().estimateGas({from: curr_account, value:amount}).then(gasEstimate = { _contract.methods.depositStack().send({from: curr_account, value:amount, gas: gasEstimate},function(error, result){ if(!error) console.log(result); else console.error(error); }); }); document.cookie = name + &#34;= ; expires = Thu, 01 Jan 1970 00:00:00 GMT&#34;; } } function winnerSelection(name, _contract){ _contract.</description>
+        
+        
+        
+        
+        
+        
+          
+            
+              <category>Ethereum</category>
+            
+          
+            
+              <category>Hash function</category>
+            
+          
+        
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>
