@@ -1703,7 +1703,7 @@ if (ethereum.isMetaMask) {
   var current_account;
 
   
-  if(typeof window.ethereum !== 'undefined'){
+  if(window.ethereum !== null){
     
     window.addEventListener('load', async() => {
       window.web3 = new Web3(ethereum);
