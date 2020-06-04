@@ -1708,7 +1708,7 @@ if (ethereum.isMetaMask) {
   var current_account;
 
   
-  if(ethereum.selectedAddress !== 'undefined'){
+  if(ethereum.selectedAddress !== 'undefined'&&'null'){
     
     window.addEventListener('load', async() => {
       window.web3 = new Web3(ethereum);
