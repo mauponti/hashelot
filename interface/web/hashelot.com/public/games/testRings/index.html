@@ -1563,135 +1563,135 @@ function winnerSelection(_contract, _curr_account){
 <div id="ElonMetaMask"></div>
 <script>
 
-var gameTime = 10; 
+var gameTime = 12; 
 
 var current_network = 3; 
 var networkWarning = 'To play Ropsten test Rings, set your MetaMask network on the Ropsten one.';
-var rings_address = '0xF236340B2eb01FdafAf5eE2A5F3678Da02401117';
+var rings_address = '0x0ebB0c3aaEe2DE660A35c58af50EE48FBC7D0262';
 var jsonInterface = [
-{
-  "inputs": [],
-  "name": "closeBet",
-  "outputs": [],
-  "stateMutability": "payable",
-  "type": "function"
-},
-{
-  "inputs": [],
-  "name": "depositStack",
-  "outputs": [],
-  "stateMutability": "payable",
-  "type": "function"
-},
-{
-  "inputs": [],
-  "name": "dustStack",
-  "outputs": [],
-  "stateMutability": "payable",
-  "type": "function"
-},
-{
-  "inputs": [],
-  "stateMutability": "nonpayable",
-  "type": "constructor"
-},
-{
-  "inputs": [],
-  "name": "checkBalance",
-  "outputs": [
-    {
-      "internalType": "uint256",
-      "name": "",
-      "type": "uint256"
-    }
-  ],
-  "stateMutability": "view",
-  "type": "function"
-},
-{
-  "inputs": [],
-  "name": "checkPlayers",
-  "outputs": [
-    {
-      "internalType": "uint256",
-      "name": "",
-      "type": "uint256"
-    }
-  ],
-  "stateMutability": "view",
-  "type": "function"
-},
-{
-  "inputs": [
-    {
-      "internalType": "uint256",
-      "name": "",
-      "type": "uint256"
-    }
-  ],
-  "name": "stackPlayers",
-  "outputs": [
-    {
-      "internalType": "address payable",
-      "name": "",
-      "type": "address"
-    }
-  ],
-  "stateMutability": "view",
-  "type": "function"
-},
-{
-  "inputs": [],
-  "name": "stackSoFar",
-  "outputs": [
-    {
-      "internalType": "uint256",
-      "name": "",
-      "type": "uint256"
-    }
-  ],
-  "stateMutability": "view",
-  "type": "function"
-},
-{
-  "inputs": [],
-  "name": "stackTime",
-  "outputs": [
-    {
-      "internalType": "uint256",
-      "name": "",
-      "type": "uint256"
-    }
-  ],
-  "stateMutability": "view",
-  "type": "function"
-},
-{
-  "inputs": [],
-  "name": "stackValue",
-  "outputs": [
-    {
-      "internalType": "uint256",
-      "name": "",
-      "type": "uint256"
-    }
-  ],
-  "stateMutability": "view",
-  "type": "function"
-},
-{
-  "inputs": [],
-  "name": "stackWait",
-  "outputs": [
-    {
-      "internalType": "uint256",
-      "name": "",
-      "type": "uint256"
-    }
-  ],
-  "stateMutability": "view",
-  "type": "function"
-}
+	{
+		"inputs": [],
+		"name": "closeBet",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "depositStack",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "dustStack",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"inputs": [],
+		"name": "checkBalance",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "checkPlayers",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "stackPlayers",
+		"outputs": [
+			{
+				"internalType": "address payable",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "stackSoFar",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "stackTime",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "stackValue",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "stackWait",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
 ];
 
 
@@ -1821,12 +1821,12 @@ if (typeof web3 !== 'undefined') {
     
   
 }else{ 
-  document.write('<p><i>If you want to play <strong>Rings by Hashelot</strong> through your web browser, you need to install <a href="https://metamask.io/download.html" target="_blank">MetaMask</a>.</p>');
+  document.write('<p><i>If you want to play <strong>Ropsten Rings</strong> through your web browser, you need to install <a href="https://metamask.io/download.html" target="_blank">MetaMask</a>.</p>');
 }
 </script>
 </p>
 <hr />
-<p>Same rules as Rings, but with less blocks to wait for the end of a round (only 10 in Ropsten test Rings for a faster experience).</p>
+<p>Same rules as <a href="/games/rings/">Rings</a>, but with less blocks to wait for the end of a round (only 12+1 in Ropsten test Rings for a faster experience).</p>
 
           </div>
         </div>
