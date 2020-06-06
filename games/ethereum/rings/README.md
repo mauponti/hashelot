@@ -57,7 +57,7 @@ Etherscan contract verification: <a href="https://etherscan.io/address/0x6CbfF43
 
 - ```stackValue``` - A public unsigned integer that shows the current value for entering the bet. Updated at every round.
 - ```stackTime``` - A public unsigned integer that shows the block number at which the round has been started. Updated at every round.
-- ```stackWait``` - A public unsigned integer set by the **owner** to *127*, once and for all.
+- ```stackWait``` - A public unsigned integer set by the **owner** to *126*, once and for all.
 - ```stackPlayers``` - A public array containing the addresses of the players currently involved in a round.
 - ```stackSoFar``` - A public unsigned integer that shows the total amount of winnings so far.
 - ```depositStack()``` - A public payable function anyone can call to enter (or start) a bet. When starting a new bet it closes a previous one for which a winner has not been declared yet.

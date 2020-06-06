@@ -1845,16 +1845,11 @@ Etherscan contract verification: <a href="https://etherscan.io/address/0x6CbfF43
 </ul>
 <h6 id="solidity-code">Solidity code</h6>
 <p>You can check out the code: <a href="https://github.com/mauponti/hashelot/tree/master/games/ethereum/rings/solidity/hashelot_rings_1.1.sol" target="\_blank">hashelot_rings_1.1.sol</a>.</p>
-<ul>
-<li>MD5: b4ed080cb671e9e5c143e40a166f59e7.</li>
-<li>SHA1: 422f70771c358667d47c88f80aa669e399b1b2ac.</li>
-<li>SHA256: 03515a48e4f23f1056076454a9bc8a6c24cfe53febf87a57f04d82def5fa5c80.</li>
-</ul>
 <h6 id="methods-and-variables">Methods and variables</h6>
 <ul>
 <li><code>stackValue</code> - A public unsigned integer that shows the current value for entering the bet. Updated at every round.</li>
 <li><code>stackTime</code> - A public unsigned integer that shows the block number at which the round has been started. Updated at every round.</li>
-<li><code>stackWait</code> - A public unsigned integer set by the <strong>owner</strong> to <em>127</em>, once and for all.</li>
+<li><code>stackWait</code> - A public unsigned integer set by the <strong>owner</strong> to <em>126</em>, once and for all.</li>
 <li><code>stackPlayers</code> - A public array containing the addresses of the players currently involved in a round.</li>
 <li><code>stackSoFar</code> - A public unsigned integer that shows the total amount of winnings so far.</li>
 <li><code>depositStack()</code> - A public payable function anyone can call to enter (or start) a bet. When starting a new bet it closes a previous one for which a winner has not been declared yet.</li>
