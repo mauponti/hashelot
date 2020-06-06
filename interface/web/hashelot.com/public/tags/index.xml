@@ -13,7 +13,7 @@
     <language>en</language>
     <managingEditor>alias@hashelot.com</managingEditor>
     <webMaster>alias@hashelot.com</webMaster>
-    <lastBuildDate>Thu, 04 Jun 2020 14:02:45 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 06 Jun 2020 14:54:00 +0100</lastBuildDate>
     
         <atom:link href="https://hashelot.onrender.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -24,10 +24,28 @@
       <item>
         <title>Ethereum</title>
         <link>https://hashelot.onrender.com/tags/Ethereum/</link>
-        <pubDate>Thu, 04 Jun 2020 14:02:45 +0200</pubDate>
+        <pubDate>Sat, 06 Jun 2020 14:54:00 +0100</pubDate>
         <author>alias@hashelot.com</author>
         
         <guid>https://hashelot.onrender.com/tags/Ethereum/</guid>
+        <description></description>
+        
+        
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Hash function</title>
+        <link>https://hashelot.onrender.com/tags/Hash-function/</link>
+        <pubDate>Sat, 06 Jun 2020 14:54:00 +0100</pubDate>
+        <author>alias@hashelot.com</author>
+        
+        <guid>https://hashelot.onrender.com/tags/Hash-function/</guid>
         <description></description>
         
         
@@ -46,24 +64,6 @@
         <author>alias@hashelot.com</author>
         
         <guid>https://hashelot.onrender.com/tags/Lockdown/</guid>
-        <description></description>
-        
-        
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Hash function</title>
-        <link>https://hashelot.onrender.com/tags/Hash-function/</link>
-        <pubDate>Wed, 03 Jun 2020 14:47:00 +0100</pubDate>
-        <author>alias@hashelot.com</author>
-        
-        <guid>https://hashelot.onrender.com/tags/Hash-function/</guid>
         <description></description>
         
         

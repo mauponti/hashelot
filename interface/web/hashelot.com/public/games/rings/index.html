@@ -1210,9 +1210,9 @@
 
 <meta name="keywords" content="Ethereum,Hash function">
 
-<meta name="created" content="2020-06-03T14:47:00&#43;0100">
-<meta name="modified" content="2020-06-03T14:47:00&#43;0100">
-<meta property="article:published_time" content="2020-06-03T14:47:00&#43;0100">
+<meta name="created" content="2020-06-06T14:54:00&#43;0100">
+<meta name="modified" content="2020-06-06T14:54:00&#43;0100">
+<meta property="article:published_time" content="2020-06-06T14:54:00&#43;0100">
 
 
 <meta property="og:site_name" content="Hashelot">
@@ -1531,7 +1531,8 @@
         <div class="list__header--desc single__contents p2">
           <div style="text-align: justify">
             <p><img src="/images/hashelot_rings_nbg.png" alt="If you like it, then you shoulda put a ring on it." /></p>
-<p><strong>Rings</strong> is a stacking game written in Solidity and deployed on the <a href="https://ethereum.org/" target="\_blank">Ethereum</a> main network, whose game play you can audit <a href="https://etherscan.io/address/0xbBaf40e637835A1EE3B62760e3C9911DD3811e84" target="\_blank">straight out of the blockchain</a>.</p>
+<p><strong>Rings</strong> is a stacking game written in Solidity and deployed on the <a href="https://ethereum.org/" target="\_blank">Ethereum</a> main network, whose game play you can audit <a href="https://etherscan.io/address/0x6CbfF439F27d1e3431d912B6a0817d7a95596877" target="\_blank">straight out of the blockchain</a>.<br />
+The contract has been <a href="https://etherscan.io/address/0x6CbfF439F27d1e3431d912B6a0817d7a95596877#code" target="\_blank">verified on Etherscan</a> on 2020-06-06.</p>
 <hr />
 <p><script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
 <script>
@@ -1564,38 +1565,295 @@ function winnerSelection(_contract, _curr_account){
 	}); 
 }
 </script>
+<div id="stacked"></div>
+<div id="ElonMetaMask"></div>
+<script>
+
+var gameTime = 126; 
+
+var current_network = 1; 
+var networkWarning = 'To play Rings, set your MetaMask network on the Ethereum main one.';
+var rings_address = '0x6CbfF439F27d1e3431d912B6a0817d7a95596877';
+var jsonInterface = [
+	{
+		"inputs": [],
+		"name": "closeBet",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "depositStack",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "dustStack",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"inputs": [],
+		"name": "checkBalance",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "checkPlayers",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "stackPlayers",
+		"outputs": [
+			{
+				"internalType": "address payable",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "stackSoFar",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "stackTime",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "stackValue",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "stackWait",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+];
+
+
+
+if (typeof web3 !== 'undefined') {
+  var blocksLeft;
+
+  var rings;
+  var current_account;
+
+  
+  window.addEventListener('load', async() => {
+    window.ethereum.enable();
+    window.web3 = new Web3(ethereum);
+    try {
+      
+      await web3.eth.getAccounts((error, accounts) => {
+        curr_account = accounts[0];
+
+        
+        rings = new web3.eth.Contract(jsonInterface, rings_address);
+
+        
+        if(ethereum.networkVersion == current_network){
+
+          
+          rings.methods.checkBalance().call().then(currentStack => {
+            
+            rings.methods.stackSoFar().call().then(stackSoFar => {
+              if(eval(currentStack)>0){ 
+                document.getElementById('stacked').innerHTML = '<p>The current Jackpot of Rings is <strong>'+ Math.round((eval(currentStack)/100*98)/Math.pow(10,15)+Number.EPSILON)/Math.pow(10,3) +' Ether</strong>.<br/>Total prizes collected so far in all the rounds of Rings: <strong>' + Math.round(eval(stackSoFar)/Math.pow(10,15)+Number.EPSILON)/Math.pow(10,3) + ' Ether</strong>.</p><hr/>';
+              }else{ 
+                document.getElementById('stacked').innerHTML = '<p>Total prizes collected so far in all the rounds of Rings: <strong>' + Math.round(eval(stackSoFar)/Math.pow(10,15)+Number.EPSILON)/Math.pow(10,3) + ' Ether</strong>.</p><hr/>';
+              }
+            }); 
+          }); 
+          
+
+          web3.eth.getBlockNumber().then(blockNum => {
+            rings.methods.stackTime().call().then(roundStarted => {
+              rings.methods.checkPlayers().call().then(playersNum =>{
+                rings.methods.checkBalance().call().then(currentStack => {
+                  blocksLeft = eval(roundStarted)+eval(gameTime)-eval(blockNum);
+                  var blockString = '-';
+                  if(blocksLeft>=0){ 
+                    rings.methods.stackValue().call().then(valueToEnter => {
+
+                    if(blocksLeft == 1) {
+                      blockString = '1 block';
+                    }else{
+                      blockString = blocksLeft + ' blocks';
+                    }
+                        if(playersNum == 1){
+                          document.getElementById('ElonMetaMask').innerHTML = '<p>The current round of Rings will end in ' + blockString + ' and there is currently 1 player in the game for a Jackpot of <strong>'+ Math.round((eval(currentStack)/100*98)/Math.pow(10,15)+Number.EPSILON)/Math.pow(10,3) +' Ether</strong>. To play you need ' + Math.round(eval(valueToEnter)/Math.pow(10,15)+Number.EPSILON)/Math.pow(10,3) + ' Ether (<i>plus an editable gas fee for the transaction</i>).<br/>Were you to enter the round, your chances to win would be 50&percnt;.</p><p><button class="countMeIn">Count me in!</button></p>';
+                          var dummy = eval(valueToEnter)/Math.pow(10,15);
+                          const countMeIn = document.querySelector('.countMeIn');
+                          countMeIn.addEventListener('click', () => {
+                            depositWage(dummy, rings, curr_account); 
+                          });
+                        }else{
+                          document.getElementById('ElonMetaMask').innerHTML = '<p>The current round of Rings will end in ' + blockString + ' and there are currently ' + playersNum +' players in the game for a total Jackpot of <strong>'+ Math.round((eval(currentStack)/100*98)/Math.pow(10,15)+Number.EPSILON)/Math.pow(10,3) +' Ether</strong>. To play you need ' + Math.round(eval(valueToEnter)/Math.pow(10,15)+Number.EPSILON)/Math.pow(10,3) + ' Ether (<i>plus an editable gas fee for the transaction</i>).<br/>Were you to enter the round, your chances to win would be '+ Math.round((1/(eval(playersNum)+1)*Math.pow(10,6))+Number.EPSILON)/Math.pow(10,4)+'&percnt;.</p><p><button class="countMeIn">Count me in!</button></p>';
+                          var dummy = eval(valueToEnter)/Math.pow(10,15);
+                          const countMeIn = document.querySelector('.countMeIn');
+                          countMeIn.addEventListener('click', () => {
+                            depositWage(dummy, rings, curr_account); 
+                          });
+                        }
+
+                    }); 
+                  }else{ 
+                    if(playersNum > 0){ 
+                      var roundInfo = '-';
+                      if(playersNum == 1){
+                        roundInfo = '1 player for a Jackpot of '+ Math.round((eval(currentStack)/100*98)/Math.pow(10,15)+Number.EPSILON)/Math.pow(10,3) +' Ether';
+                      }else{
+                        roundInfo = playersNum + ' players for a Jackpot of '+ Math.round((eval(currentStack)/100*98)/Math.pow(10,15)+Number.EPSILON)/Math.pow(10,3) +' Ether';
+                      }
+                      document.getElementById('ElonMetaMask').innerHTML = '<p>The previous round of Rings ('+ roundInfo +') still needs to be finalized with a winner.<br/>You can simply do that (<i>paying an editable gas fee for the transaction</i>) or start a new round (<i>automatically finalizing the pending one</i>) on your own terms (<i>i.e. you choose the value to enter the game for the next round</i>).</p><p><button class="startNewRound">Start a new round</button> &nbsp;&nbsp;<input type="number" id="deposit" min="1" step="1" name="deposit" label="deposit"/> Finney (0.001 Ether)<br/><span style="font-size: 10pt">PS: 1 Finney is the lowest deposit allowed</span>.</p><p>If another player starts a new round in the meantime you lollygag, you\'ll end up playing at the other player\'s terms (<i>if the other player\'s deposit is equal to or lower than yours</i>) or not playing at all (<i>if your deposit is not enough</i>).<br/>Funds that are not invested in the game will be directly returned to their owner.</p><hr/><p><button class="findTheLastWinner">Just find out who won</button></p>';
+
+                      const startNewRound = document.querySelector('.startNewRound');
+                      const findTheLastWinner = document.querySelector('.findTheLastWinner');
+
+                      startNewRound.addEventListener('click', () => {
+                        depositWage(document.getElementById('deposit').value, rings, curr_account); 
+                      });
+                      findTheLastWinner.addEventListener('click', () => {
+                        winnerSelection(rings, curr_account);
+                      });
+                    }else{ 
+                      document.getElementById('ElonMetaMask').innerHTML = '<p>Start a new round of Rings on your own terms (<i>i.e. you choose the value to enter the game for the next round</i>).</p><p><button class="startNewRound">Start a new round</button> &nbsp;&nbsp;<input type="number" min="1" step="1" id="deposit" name="deposit" label="deposit"/> Finney (0.001 Ether)<br/><span style="font-size: 10pt">PS: 1 Finney is the lowest deposit allowed</span>.</p><p>If another player starts a new round in the meantime you choose how much to stack, you\'ll end up playing at the other player\'s terms (<i>if the other player\'s deposit is equal to or lower than yours</i>) or not playing at all (<i>if your deposit is not enough</i>).<br/>Funds that are not invested in the game will be directly returned to their owner.</p>';
+
+                      const startNewRound = document.querySelector('.startNewRound');
+
+                      startNewRound.addEventListener('click', () => {
+                        depositWage(document.getElementById('deposit').value, rings, curr_account); 
+                      });
+                    }
+                  }
+
+                }); 
+              }); 
+            }); 
+          }); 
+
+        }else{
+          document.getElementById('stacked').innerHTML = '<p>' + networkWarning + '</p>';
+        }
+      }); 
+    } catch (error) {
+      console.log("MetaMask issue");
+      
+    }
+  }); 
+}else{ 
+  document.write('<p><i>If you want to play <strong>Rings</strong> through your web browser, you need to install <a href="https://metamask.io/download.html" target="_blank">MetaMask</a>.</p>');
+}
+</script>
 </p>
 <hr />
-<p>Under maintenance.</p>
-<h6 id="deployment-specs">Deployment specs</h6>
-<p>Transaction hash:<br />
-<a href="https://etherscan.io/tx/0xdb0077a1c9cb3379226ed852a938fa61a6559eb696b79176fa57be87d7f5ce7b">0xdb0077a1c9&hellip;87d7f5ce7b</a>.</p>
 <h6 id="tldr-rules">TL;DR Rules</h6>
-<p>Someone deposits a certain amount of Ether on the stack and for 127 blocks anybody else can join in the game depositing the same amount. After 127 blocks, 98% of the Jackpot goes to the address that minimizes the value:</p>
+<p>Someone deposits a certain amount of Ether on the stack and for 126 blocks anybody else can join in the game depositing the same amount. At the 127<sup>th</sup> block, 98% of the Jackpot goes to the address that minimizes the value:</p>
 <p><code>keccak256(blockhash(block number at the end of the round) + player_address))</code></p>
+<p>2% goes to the house.</p>
 <h6 id="rules">Rules</h6>
 <p>The very first round of Rings starts when a player deposits his bet on the empty stack. The bet needs to be equal to or higher than 1 Finney (0.001 Ether).</p>
-<p>From the moment his transaction - <code>depositStack()</code> call - is confirmed in a certain block <em>X</em>, the round goes on for <em>127</em> additional blocks - <code>stackWait=127</code> -, during which any other player can take part in the bet and stack the exact same amount.</p>
+<p>From the moment his transaction - <code>depositStack()</code> call - is confirmed in a certain block <em>X</em>, the round goes on for <em>126</em> additional blocks - <code>stackWait=126</code> -, during which any other player can take part in the bet and stack the exact same amount.</p>
 <p>If a player tries to deposit a bet which is lower than the current value - <code>stackValue</code> -, said bet won&rsquo;t be added to the stack and the value returned to the player.</p>
 <p>If a player deposits a bet which is higher than the current <code>stackValue</code> a change will be returned to the player once the bet is added to the stack.</p>
-<p>The number of blocks, <em>127</em>, has been chosen as a prime number (out of pure mathematical fun) to make a round hypothetically last around 24 hours.</p>
-<p>After the <em>(X+127)</em> <sup>th</sup> block has been mined a winner can be declared, either calling <code>closeBet()</code> or starting a new round with <code>depositStack()</code>. The winner is the user whose address, concatenated with the last blockhash for which it was possible to enter the bet and passed through the hash function <a href="https://en.wikipedia.org/wiki/SHA-3" target="\_blank">keccak256</a> and converted to an unsigned value - <code>uint</code> - returns the lowest value, or in other code words:</p>
-<p><code>uint(keccak256(abi.encodePacked(blockhash(stackTime + stackWait), playerAddress)))</code></p>
+<p>Once the <em>(X+127)<sup>th</sup></em> block has been mined, a winner can be declared, either calling <code>closeBet()</code> or starting a new round with <code>depositStack()</code>. The winner is the user whose address, concatenated with the blockhash of the first block after the last one for which it was possible to enter the bet and passed through the hash function <a href="https://en.wikipedia.org/wiki/SHA-3" target="\_blank">keccak256</a> and converted to an unsigned value - <code>uint</code> - returns the lowest value, or in other code words:</p>
+<p><code>uint(keccak256(abi.encodePacked(blockhash(stackTime + stackWait + 1), playerAddress)))</code></p>
 <p>rolling playerAddress among the addresses of all the players who entered the bet to find the minimum.</p>
 <p>The winner takes 98% of the stack.</p>
 <p>2% of the stack goes to the <strong>owner</strong>, to finance research and development of (<em>hopefully less frivolous</em>) decentralized ventures.</p>
+<p>The number of blocks, <em>127</em>, has been chosen as a prime number (out of pure mathematical fun) to make a round hypothetically last around 24 hours.</p>
 <p>The <strong>owner</strong> of the hashelot_rings smart contract may declare a winner with <code>dustStack()</code>, but only if there are no ongoing bets.</p>
+<h6 id="deployment-specs">Deployment specs</h6>
+<p>Transaction hash: <a href="https://etherscan.io/tx/0x8c2659ee2c48ca7e80249d290d1da81ea21a281a596375f7fbc941fc5a71971d">0x8c265&hellip;fc5a71971d</a>.<br />
+Etherscan contract verification: <a href="https://etherscan.io/address/0x6CbfF439F27d1e3431d912B6a0817d7a95596877#code" target="\_blank">submitted for verification on 2020-06-06</a>.</p>
+<h6 id="rings-v11-release-notes-2020-06-06">Rings v.1.1 release notes (2020-06-06)</h6>
+<ul>
+<li>Fixed vulnerability of last playable block.</li>
+<li>Code verified on Etherscan.io.</li>
+<li>Added control for preventing a player to enter a round twice.</li>
+<li>Added MIT License.</li>
+</ul>
 <h6 id="solidity-code-methods-and-variables">Solidity code, methods, and variables</h6>
-<p>You can check out the code: <a href="https://github.com/mauponti/hashelot/tree/master/games/ethereum/rings/solidity/hashelot_rings.sol" target="\_blank">hashelot_rings.sol</a>.</p>
+<p>You can check out the code: <a href="https://github.com/mauponti/hashelot/tree/master/games/ethereum/rings/solidity/hashelot_rings_1.1.sol" target="\_blank">hashelot_rings_1.1.sol</a>.</p>
 <ul>
 <li>
-<p>MD5: 5ab41fd104bdf8046e1b1a04b4a7411e</p>
+<p>MD5: b4ed080cb671e9e5c143e40a166f59e7.</p>
 </li>
 <li>
-<p>SHA1: 9dc61fb07e38f9e415bfc7446ee46af79d050ad4</p>
+<p>SHA1: 422f70771c358667d47c88f80aa669e399b1b2ac.</p>
 </li>
 <li>
-<p>SHA256: 59cb8435a5ed0ea8ea4708ea7fb8b16293f6974fa075c1cb74a214ae846b087e</p>
+<p>SHA256: 03515a48e4f23f1056076454a9bc8a6c24cfe53febf87a57f04d82def5fa5c80.</p>
 </li>
 <li>
 <p><code>stackValue</code> - A public unsigned integer that shows the current value for entering the bet. Updated at every round.</p>

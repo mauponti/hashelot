@@ -1,4 +1,7 @@
 // Hashelot Rings - v.1.1
+// MIT License
+// Copyright (c) 2020 Maurizio Ponti
+
 pragma solidity ^0.6.1;
 
 contract hashelot_rings{ // Son of a lockdown
