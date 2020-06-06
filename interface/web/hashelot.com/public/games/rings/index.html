@@ -1819,7 +1819,7 @@ if (typeof web3 !== 'undefined') {
 <hr />
 <h6 id="tldr-rules">TL;DR Rules</h6>
 <p>Someone deposits a certain amount of Ether on the stack and for 126 blocks anybody else can join in the game depositing the same amount. At the 127<sup>th</sup> block, 98% of the Jackpot goes to the address that minimizes the value:</p>
-<p><code>keccak256(blockhash(block number at the end of the round) + player_address))</code></p>
+<p><code>keccak256 ( blockhash ( block number at the end of the round ) + player_address ))</code></p>
 <p>2% goes to the house.</p>
 <h6 id="rules">Rules</h6>
 <p>The very first round of Rings starts when a player deposits his bet on the empty stack. The bet needs to be equal to or higher than 1 Finney (0.001 Ether).</p>
@@ -1827,7 +1827,7 @@ if (typeof web3 !== 'undefined') {
 <p>If a player tries to deposit a bet which is lower than the current value - <code>stackValue</code> -, said bet won&rsquo;t be added to the stack and the value returned to the player.</p>
 <p>If a player deposits a bet which is higher than the current <code>stackValue</code> a change will be returned to the player once the bet is added to the stack.</p>
 <p>Once the <em>(X+127)<sup>th</sup></em> block has been mined, a winner can be declared, either calling <code>closeBet()</code> or starting a new round with <code>depositStack()</code>. The winner is the user whose address, concatenated with the blockhash of the first block after the last one for which it was possible to enter the bet and passed through the hash function <a href="https://en.wikipedia.org/wiki/SHA-3" target="\_blank">keccak256</a> and converted to an unsigned value - <code>uint</code> - returns the lowest value, or in other code words:</p>
-<p><code>uint(keccak256(abi.encodePacked(blockhash(stackTime + stackWait + 1), playerAddress)))</code></p>
+<p><code>uint ( keccak256 ( abi.encodePacked ( blockhash ( stackTime + stackWait + 1 ), playerAddress )))</code></p>
 <p>rolling playerAddress among the addresses of all the players who entered the bet to find the minimum.</p>
 <p>The winner takes 98% of the stack.</p>
 <p>2% of the stack goes to the <strong>owner</strong>, to finance research and development of (<em>hopefully less frivolous</em>) decentralized ventures.</p>
@@ -1843,48 +1843,25 @@ Etherscan contract verification: <a href="https://etherscan.io/address/0x6CbfF43
 <li>Added control for preventing a player to enter a round twice.</li>
 <li>Added MIT License.</li>
 </ul>
-<h6 id="solidity-code-methods-and-variables">Solidity code, methods, and variables</h6>
+<h6 id="solidity-code">Solidity code</h6>
 <p>You can check out the code: <a href="https://github.com/mauponti/hashelot/tree/master/games/ethereum/rings/solidity/hashelot_rings_1.1.sol" target="\_blank">hashelot_rings_1.1.sol</a>.</p>
 <ul>
-<li>
-<p>MD5: b4ed080cb671e9e5c143e40a166f59e7.</p>
-</li>
-<li>
-<p>SHA1: 422f70771c358667d47c88f80aa669e399b1b2ac.</p>
-</li>
-<li>
-<p>SHA256: 03515a48e4f23f1056076454a9bc8a6c24cfe53febf87a57f04d82def5fa5c80.</p>
-</li>
-<li>
-<p><code>stackValue</code> - A public unsigned integer that shows the current value for entering the bet. Updated at every round.</p>
-</li>
-<li>
-<p><code>stackTime</code> - A public unsigned integer that shows the block number at which the round has been started. Updated at every round.</p>
-</li>
-<li>
-<p><code>stackWait</code> - A public unsigned integer set by the <strong>owner</strong> to <em>127</em>, once and for all.</p>
-</li>
-<li>
-<p><code>stackPlayers</code> - A public array containing the addresses of the players currently involved in a round.</p>
-</li>
-<li>
-<p><code>stackSoFar</code> - A public unsigned integer that shows the total amount of winnings so far.</p>
-</li>
-<li>
-<p><code>depositStack()</code> - A public payable function anyone can call to enter (or start) a bet. When starting a new bet it closes a previous one for which a winner has not been declared yet.</p>
-</li>
-<li>
-<p><code>checkBalance()</code> - A public function which returns the current balance of the smart contract address.</p>
-</li>
-<li>
-<p><code>checkPlayers()</code> - A public function which returns the number of player currently involved in a round.</p>
-</li>
-<li>
-<p><code>closeBet()</code> - A public payable function anyone can call to declare a bet if there are no more available blocks to play.</p>
-</li>
-<li>
-<p><code>dustStack()</code> - A public payable function that only the <strong>owner</strong> can call to declare a winner of an ended round.</p>
-</li>
+<li>MD5: b4ed080cb671e9e5c143e40a166f59e7.</li>
+<li>SHA1: 422f70771c358667d47c88f80aa669e399b1b2ac.</li>
+<li>SHA256: 03515a48e4f23f1056076454a9bc8a6c24cfe53febf87a57f04d82def5fa5c80.</li>
+</ul>
+<h6 id="methods-and-variables">Methods and variables</h6>
+<ul>
+<li><code>stackValue</code> - A public unsigned integer that shows the current value for entering the bet. Updated at every round.</li>
+<li><code>stackTime</code> - A public unsigned integer that shows the block number at which the round has been started. Updated at every round.</li>
+<li><code>stackWait</code> - A public unsigned integer set by the <strong>owner</strong> to <em>127</em>, once and for all.</li>
+<li><code>stackPlayers</code> - A public array containing the addresses of the players currently involved in a round.</li>
+<li><code>stackSoFar</code> - A public unsigned integer that shows the total amount of winnings so far.</li>
+<li><code>depositStack()</code> - A public payable function anyone can call to enter (or start) a bet. When starting a new bet it closes a previous one for which a winner has not been declared yet.</li>
+<li><code>checkBalance()</code> - A public function which returns the current balance of the smart contract address.</li>
+<li><code>checkPlayers()</code> - A public function which returns the number of player currently involved in a round.</li>
+<li><code>closeBet()</code> - A public payable function anyone can call to declare a bet if there are no more available blocks to play.</li>
+<li><code>dustStack()</code> - A public payable function that only the <strong>owner</strong> can call to declare a winner of an ended round.</li>
 </ul>
 
           </div>
