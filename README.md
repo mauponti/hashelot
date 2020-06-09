@@ -16,11 +16,13 @@ At first it will be an Ethereum-centric project, but from that point on it may l
 
 ##### Notes
 - [Born under the lockdown](https://www.hashelot.com/notes/born-under-the-lockdown/index.html)
+- [How I learned to stop worrying and love pending transactions](https://www.hashelot.com/notes/pending-messages/)
 
 ##### Web interface
 - [**Hashelot.com**](https://www.hashelot.com)
 
 ##### Mobile interface
+(*still needs time to develop*)
 
 ---
 *On the other hand Hashelot might just be a fun quarantine idea and nothing more*.
