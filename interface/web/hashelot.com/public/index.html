@@ -1210,9 +1210,9 @@
 <meta name="description" content="Games, dApps, and notes on decentralization." />
 
 
-<meta name="created" content="2020-06-09T10:26:01&#43;0100">
-<meta name="modified" content="2020-06-09T10:26:01&#43;0100">
-<meta property="article:published_time" content="2020-06-09T10:26:01&#43;0100">
+<meta name="created" content="2020-06-06T14:54:33&#43;0100">
+<meta name="modified" content="2020-06-06T14:54:33&#43;0100">
+<meta property="article:published_time" content="2020-06-06T14:54:33&#43;0100">
 
 
 <meta property="og:site_name" content="Hashelot">
@@ -1492,54 +1492,6 @@
     
     <div class="summary-compact__meta">
       <header>
-        <h5 class="title h6"><a href='https://hashelot.onrender.com/notes/pending-messages/'> How I learned to stop worrying and love pending transactions</a> </h5>
-        <h6 class="subtitle caption">
-          <time title="Written At" dir="ltr">📅 Jun 9, 2020 </time>
-          
-
-        </h6>
-      </header>
-      <div class="summary-compact__tag--wrapper">
-        
-          
-            <a href="/tags/Decentralized-Messaging-System" class="summary-compact__tag">
-              Decentralized Messaging System
-            </a>
-          
-        
-          
-            <a href="/tags/Blockchain-agnosticism" class="summary-compact__tag">
-              Blockchain agnosticism
-            </a>
-          
-        
-      </div>
-      <article class="single__contents single__contents--about" data-dir="ltr" data-ani="true"><div style="text-align: justify">
-        <p>While working on the web interface for my first smart contract, <a href="/games/rings">Rings</a>, I had a chance to experience, unfortunately more than once, the message of doom that is a failed transaction due to the contract execution running out of gas.</p>
-<p>The allocation of gas for a certain transaction is an unavoidable element in the working principles of the Ethereum blockchain and from a game theoretic point of view such is the concept of an <em>economic compensation</em> for the time or resources spent to keep a distributed structure active and with an acceptable level of security, in any general blockchain setting.</p>
-<p>There exists a balance, or it should exist one, between how much users are willing to pay to get their transactions mined and how much miners are prone to lower their expectations on the outcome of their work. In the Ethereum case, transfering funds costs gas and invoking methods from a smart contract may as well, and if the actors play a rational game, gas price will fluctuate according to their actions.</p>
-<p>That is why, when setting a gas limit that lies on the edge of that equilibrium or, even worse, completely neglects the race to confirmation, a user might incur in pending or, God forbid, failed transactions.</p>
-<p>But <strong>what if a user doesn&rsquo;t want a transaction to be mined</strong>, but just wishes for it to stay indefinitely, or for a reasonable time, in the pool of unconfirmed transactions?</p>
-<p>This is how I learned to stop worrying about and actually started <del>loving</del> liking pending transactions, having outlined a different purpose for them: <strong>holding (<em>small</em>) messages</strong>, inside transactions that offer nothing to be mined and send no value from one address to another, <strong>in a decentralized fashion</strong>.</p>
-<p>Aside from the inspiring event (<em>i.e. failed transactions on the Ethereum network</em>), the idea of a Decentralized Messaging System through unworthy transactions, at least from a miner perspective, is blockchain agnostic. It doesn&rsquo;t rely on a particular distributed ledger solution, as long as the design allows for a tagging or text field to be exploited as a carrier for small messages.</p>
-<p>It would clearly involve nodes and wallets to be able to discern actual transactions from messages disguised as such. Miners wouldn&rsquo;t have any incentive to keep in their pool of unconfirmed transactions elements bound to never be mined, but then again users could become beacons for unconfirmed transactions listening for and filtering only 0 value ones, holding the messages addressed to them and rebroadcasting other ones still in search for their recipient.</p>
-<p>Messages could be available for anyone to read (<em>for instance, this could be useful for journalists under authoritarian control</em>), as long as periodically repeated to the pool of 0 value transactions by those interested in keeping them alive, or encrypted using the recipient addresses, since they are public keys in an asymmetric cryptographic structure.</p>
-<p>Finally, with a further leap of fate, since the ownership of a transaction belongs to the holder of the private key that signed it and not on its condition of being mined or not, a similar system of messages could be used as a polling medium or as a basis for decentralized oracles.</p>
-
-      </div></article>
-
-    </div>
-  </div>
-  <hr />
-</article>
-
-          
-              
-<article class="summary-compact" data-ani="true">
-  <div class="summary-compact__flex-box">
-    
-    <div class="summary-compact__meta">
-      <header>
         <h5 class="title h6"><a href='https://hashelot.onrender.com/notes/born-under-the-lockdown/'> Born under the lockdown</a> </h5>
         <h6 class="subtitle caption">
           <time title="Written At" dir="ltr">📅 Jun 4, 2020 </time>
@@ -1622,32 +1574,6 @@
                 Tags
             </a>
         </span>
-        
-        
-            <span class="tag">
-                <a href="/tags/Blockchain-agnosticism/" class="is-tags taxo__link" data-dir="ltr">
-                    <span class="taxo__text">
-                        Blockchain agnosticism
-                    </span>
-                    <span class="taxo__num" dir="auto">
-                        1
-                    </span>
-                </a>
-            </span>
-        
-        
-        
-            <span class="tag">
-                <a href="/tags/Decentralized-Messaging-System/" class="is-tags taxo__link" data-dir="ltr">
-                    <span class="taxo__text">
-                        Decentralized Messaging System
-                    </span>
-                    <span class="taxo__num" dir="auto">
-                        1
-                    </span>
-                </a>
-            </span>
-        
         
         
             <span class="tag">
