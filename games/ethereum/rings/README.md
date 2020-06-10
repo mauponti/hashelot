@@ -45,7 +45,7 @@ The winner takes 98&percnt; of the stack.
 
 2&percnt; of the stack goes to the **owner**, to finance research and development of (*hopefully less frivolous*) decentralized ventures.
 
-The number of blocks, *127*, has been chosen as a prime number (out of pure mathematical fun) to make a round hypothetically last around 24 hours.
+The number of blocks, *127*, has been chosen as a prime number (out of pure mathematical fun) to make a round hypothetically last around half an hour.
 
 The **owner** of the hashelot_rings smart contract may declare a winner with ```dustStack()```, but only if there are no ongoing bets.
 
