@@ -6,16 +6,16 @@
   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>Ethereum on Hashelot</title>
-    <link>https://hashelot.onrender.com/tags/Ethereum/</link>
-    <description>Recent content in Ethereum on Hashelot</description>
+    <title>MetaMask on Hashelot</title>
+    <link>https://hashelot.onrender.com/tags/MetaMask/</link>
+    <description>Recent content in MetaMask on Hashelot</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>alias@hashelot.com</managingEditor>
     <webMaster>alias@hashelot.com</webMaster>
     <lastBuildDate>Sat, 06 Jun 2020 14:54:00 +0100</lastBuildDate>
     
-        <atom:link href="https://hashelot.onrender.com/tags/Ethereum/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://hashelot.onrender.com/tags/MetaMask/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -48,34 +48,6 @@ The contract has been verified on Etherscan on 2020-06-06.
           
             
               <category>MetaMask</category>
-            
-          
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Born under the lockdown</title>
-        <link>https://hashelot.onrender.com/notes/born-under-the-lockdown/</link>
-        <pubDate>Thu, 04 Jun 2020 14:02:45 +0100</pubDate>
-        <author>alias@hashelot.com</author>
-        <atom:modified>Thu, 04 Jun 2020 14:02:45 +0100</atom:modified>
-        <guid>https://hashelot.onrender.com/notes/born-under-the-lockdown/</guid>
-        <description>You know those projects you keep postponing as you wait for the right moment to tackle them, but then a global pandemic hits the whole planet and you are faced with the choice of dedicating your newly acquired spare time doing chores around the house or pretending you are studying for an important project you had been postponing (waiting for the right time to develop it) and you choose wisely?</description>
-        
-        
-        
-        
-        
-        
-          
-            
-              <category>Lockdown</category>
-            
-          
-            
-              <category>Ethereum</category>
             
           
         

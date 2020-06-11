@@ -1208,7 +1208,7 @@
 <meta name="description" content="An idea for a Decentralized Messaging System based on 0 value transactions" />
 
 
-<meta name="keywords" content="Decentralized Messaging System,Blockchain agnosticism">
+<meta name="keywords" content="Decentralized Messaging System,Blockchain agnosticism,Whisper">
 
 <meta name="created" content="2020-06-09T10:26:01&#43;0100">
 <meta name="modified" content="2020-06-09T10:26:01&#43;0100">
@@ -1538,6 +1538,12 @@
                         </a>
                       
                     
+                      
+                        <a href="/tags/Whisper" class="summary-compact__tag">
+                          Whisper
+                        </a>
+                      
+                    
                   </div>
                   <article class="single__contents single__contents--about" data-dir="ltr" data-ani="true"><div style="text-align: justify">
                     <p>While working on the web interface for my first smart contract, <a href="/games/rings">Rings</a>, I had a chance to experience, unfortunately more than once, the message of doom that is a failed transaction due to the contract execution running out of gas.</p>
@@ -1546,6 +1552,7 @@
 <p>That is why, when setting a gas limit that lies on the edge of that equilibrium or, even worse, completely neglects the race to confirmation, a user might incur in pending or, God forbid, failed transactions.</p>
 <p>But <strong>what if a user doesn&rsquo;t want a transaction to be mined</strong>, but just wishes for it to stay indefinitely, or for a reasonable time, in the pool of unconfirmed transactions?</p>
 <p>This is how I learned to stop worrying about and actually started <del>loving</del> liking pending transactions, having outlined a different purpose for them: <strong>holding (<em>small</em>) messages</strong>, inside transactions that offer nothing to be mined and send no value from one address to another, <strong>in a decentralized fashion</strong>.</p>
+<p>It could be a novel approach for the development of a <a href="https://github.com/ethereum/wiki/wiki/Whisper#specs">Whisper</a> solution, the protocol for DApps mutual communication, which could forget about the adoption issue, since the underlying structure would be already in use.</p>
 <p>Aside from the inspiring event (<em>i.e. failed transactions on the Ethereum network</em>), the idea of a Decentralized Messaging System through unworthy transactions, at least from a miner perspective, is blockchain agnostic. It doesn&rsquo;t rely on a particular distributed ledger solution, as long as the design allows for a tagging or text field to be exploited as a carrier for small messages.</p>
 <p>It would clearly involve nodes and wallets to be able to discern actual transactions from messages disguised as such. Miners wouldn&rsquo;t have any incentive to keep in their pool of unconfirmed transactions elements bound to never be mined, but then again users could become beacons for unconfirmed transactions listening for and filtering only 0 value ones, holding the messages addressed to them and rebroadcasting other ones still in search for their recipient.</p>
 <p>Messages could be available for anyone to read (<em>for instance, this could be useful for journalists under authoritarian control</em>), as long as periodically repeated to the pool of 0 value transactions by those interested in keeping them alive, or encrypted using the recipient addresses, since they are public keys in an asymmetric cryptographic structure.</p>
@@ -1681,6 +1688,32 @@ text-align: center;
                 <a href="/tags/Lockdown/" class="is-tags taxo__link" data-dir="ltr">
                     <span class="taxo__text">
                         Lockdown
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/MetaMask/" class="is-tags taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        MetaMask
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/Whisper/" class="is-tags taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        Whisper
                     </span>
                     <span class="taxo__num" dir="auto">
                         1

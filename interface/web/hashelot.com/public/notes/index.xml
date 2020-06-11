@@ -13,13 +13,46 @@
     <language>en</language>
     <managingEditor>alias@hashelot.com</managingEditor>
     <webMaster>alias@hashelot.com</webMaster>
-    <lastBuildDate>Thu, 04 Jun 2020 14:02:45 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jun 2020 10:26:01 +0100</lastBuildDate>
     
         <atom:link href="https://hashelot.onrender.com/notes/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>How I learned to stop worrying and love pending transactions</title>
+        <link>https://hashelot.onrender.com/notes/pending-messages/</link>
+        <pubDate>Tue, 09 Jun 2020 10:26:01 +0100</pubDate>
+        <author>alias@hashelot.com</author>
+        <atom:modified>Tue, 09 Jun 2020 10:26:01 +0100</atom:modified>
+        <guid>https://hashelot.onrender.com/notes/pending-messages/</guid>
+        <description>While working on the web interface for my first smart contract, Rings, I had a chance to experience, unfortunately more than once, the message of doom that is a failed transaction due to the contract execution running out of gas.
+The allocation of gas for a certain transaction is an unavoidable element in the working principles of the Ethereum blockchain and from a game theoretic point of view such is the concept of an economic compensation for the time or resources spent to keep a distributed structure active and with an acceptable level of security, in any general blockchain setting.</description>
+        
+        
+        
+        
+        
+        
+          
+            
+              <category>Decentralized Messaging System</category>
+            
+          
+            
+              <category>Blockchain agnosticism</category>
+            
+          
+            
+              <category>Whisper</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>Born under the lockdown</title>
