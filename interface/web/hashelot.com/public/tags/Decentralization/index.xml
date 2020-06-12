@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Decentralization on Hashelot</title>
+    <link>https://hashelot.onrender.com/tags/Decentralization/</link>
+    <description>Recent content in Decentralization on Hashelot</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>alias@hashelot.com</managingEditor>
+    <webMaster>alias@hashelot.com</webMaster>
+    <lastBuildDate>Fri, 12 Jun 2020 10:53:25 +0100</lastBuildDate>
+    
+        <atom:link href="https://hashelot.onrender.com/tags/Decentralization/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>Fairness, randomness, and decentralization</title>
+        <link>https://hashelot.onrender.com/notes/fairness-randomness/</link>
+        <pubDate>Fri, 12 Jun 2020 10:53:25 +0100</pubDate>
+        <author>alias@hashelot.com</author>
+        <atom:modified>Fri, 12 Jun 2020 10:53:25 +0100</atom:modified>
+        <guid>https://hashelot.onrender.com/notes/fairness-randomness/</guid>
+        <description>Playing around and coding with Solidity forces developers to adapt their way of thinking, especially if they come from more traditional languages.
+The initial hype many feel when learning for the first time about distributed ledger technologies is then usually weakened by the hard truth that blockchains are often oversold as a universal remedy to unfairness in the financial system, that is unless a maximalist stance is held despite solid criticism, and by the fact that a harder to hack structure comes with the property of having harder to implement features.</description>
+        
+        
+        
+        
+        
+        
+          
+            
+              <category>Proof of Work</category>
+            
+          
+            
+              <category>Proof of Stake</category>
+            
+          
+            
+              <category>Randomness</category>
+            
+          
+            
+              <category>Decentralization</category>
+            
+          
+            
+              <category>Fairness</category>
+            
+          
+        
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

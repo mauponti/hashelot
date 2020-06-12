@@ -14,9 +14,13 @@ At first it will be an Ethereum-centric project, but from that point on it may l
 ##### Apps
 - **Chronicles** (*under development*)
 
+##### Utilities
+- [**Entropy**](/utilities/ethereum/entropy) (*deployed*)
+
 ##### Notes
-- [Born under the lockdown](https://www.hashelot.com/notes/born-under-the-lockdown/index.html)
+- [Fairness, randomness, and decentralization](https://www.hashelot.com/notes/fairness-randomness/)
 - [How I learned to stop worrying and love pending transactions](https://www.hashelot.com/notes/pending-messages/)
+- [Born under the lockdown](https://www.hashelot.com/notes/born-under-the-lockdown/index.html)
 
 ##### Web interface
 - [**Hashelot.com**](https://www.hashelot.com)

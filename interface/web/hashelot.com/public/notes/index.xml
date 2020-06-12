@@ -13,13 +13,54 @@
     <language>en</language>
     <managingEditor>alias@hashelot.com</managingEditor>
     <webMaster>alias@hashelot.com</webMaster>
-    <lastBuildDate>Tue, 09 Jun 2020 10:26:01 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 12 Jun 2020 10:53:25 +0100</lastBuildDate>
     
         <atom:link href="https://hashelot.onrender.com/notes/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>Fairness, randomness, and decentralization</title>
+        <link>https://hashelot.onrender.com/notes/fairness-randomness/</link>
+        <pubDate>Fri, 12 Jun 2020 10:53:25 +0100</pubDate>
+        <author>alias@hashelot.com</author>
+        <atom:modified>Fri, 12 Jun 2020 10:53:25 +0100</atom:modified>
+        <guid>https://hashelot.onrender.com/notes/fairness-randomness/</guid>
+        <description>Playing around and coding with Solidity forces developers to adapt their way of thinking, especially if they come from more traditional languages.
+The initial hype many feel when learning for the first time about distributed ledger technologies is then usually weakened by the hard truth that blockchains are often oversold as a universal remedy to unfairness in the financial system, that is unless a maximalist stance is held despite solid criticism, and by the fact that a harder to hack structure comes with the property of having harder to implement features.</description>
+        
+        
+        
+        
+        
+        
+          
+            
+              <category>Proof of Work</category>
+            
+          
+            
+              <category>Proof of Stake</category>
+            
+          
+            
+              <category>Randomness</category>
+            
+          
+            
+              <category>Decentralization</category>
+            
+          
+            
+              <category>Fairness</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>How I learned to stop worrying and love pending transactions</title>
