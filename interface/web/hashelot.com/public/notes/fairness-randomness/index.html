@@ -1566,7 +1566,7 @@
 <p>As an intellectual exercise, I&rsquo;ve developed a smart contract <a href="https://github.com/mauponti/hashelot/tree/master/utilities/ethereum/entropy/solidity" target="">hashelot_entropy_v.1.0.sol</a>, with a callable (<em>i.e. you don&rsquo;t need gas to use it</em>) method <code>randomics()</code> that returns a value in $ [0,2^{256}-1] $, mimicking a random generator<sup>(‡)</sup>.</p>
 <p>Transaction hash: <a href="https://etherscan.io/tx/0x80d370b1466d132c545ba234eef018d2ac21fbfa18bf7b2221578f2f978ae329" target="\_blank">0x80d370b146&hellip;2f978ae329</a>.</p>
 <p>The way another contract might use <code>randomics()</code> is then up to the developer. As an example, the following button generates and displays a value in $ [0,1] $, by an off-chain evaluation of</p>
-<p>$$ \frac{ randomics().call()}{2^{256}}. $$</p>
+<p>$$ \frac{ randomics().call()}{2^{256}-1}. $$</p>
 <hr />
 <p><script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
 <div id="ElonMetaMask"></div>
@@ -1601,7 +1601,7 @@ const ethereumButton = document.querySelector('.enableEthereumButton');
 ethereumButton.addEventListener('click', () => {
   
   entropy_contract.methods.randomics().call().then(randomValue => {
-    var _random = randomValue/2**256;
+    var _random = randomValue/(2**256-1);
     document.getElementById('randomTarget').innerHTML = _random;
   });
 });
