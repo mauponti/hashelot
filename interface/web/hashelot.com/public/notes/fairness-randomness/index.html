@@ -1563,7 +1563,7 @@
 <p>In designing a game that would rely on randomness, the miners&rsquo; motive can&rsquo;t be neglected, but for the fun of it and as long as the Jackpot doesn&rsquo;t inflate to a notable amount, a blockhash can be sufficiently fair.</p>
 <p>One possible solution for mitigating the influence by those who mine is to seed randomness in other values from the network, for instance the Ether balances of known wealthy addresses, tipically the ones that belong to exchanges which would hardly find interest in manipulating the outcome of a smart contract that easily has a fraction of their value.</p>
 <p>A bigger number of parameters or a bigger number of actors whose actions might modify the outcome would streghten a decentralized smart contract. Entropy is a friend.</p>
-<p>As an intellectual exercise, I&rsquo;ve developed a smart contract <a href="https://github.com/mauponti/hashelot/tree/master/utilities/ethereum/entropy/solidity" target="">hashelot_entropy_v.1.0.sol</a>, with a callable (<em>i.e. you don&rsquo;t need gas to use it</em>) method <code>randomics()</code> that returns a value in $ [0,2^{256}-1] $, mimicking a random generator<sup>(‡)</sup>.</p>
+<p>As an intellectual exercise, I&rsquo;ve developed the smart contract <a href="https://github.com/mauponti/hashelot/tree/master/utilities/ethereum/entropy/solidity" target="">hashelot_entropy_v.1.0.sol</a>, with a callable (<em>i.e. you don&rsquo;t need gas to use it</em>) method <code>randomics()</code> that returns a value in $ [0,2^{256}-1] $, mimicking a random generator<sup>(‡)</sup>.</p>
 <p>Transaction hash: <a href="https://etherscan.io/tx/0x80d370b1466d132c545ba234eef018d2ac21fbfa18bf7b2221578f2f978ae329" target="\_blank">0x80d370b146&hellip;2f978ae329</a>.</p>
 <p>The way another contract might use <code>randomics()</code> is then up to the developer. As an example, the following button generates and displays a value in $ [0,1] $, by an off-chain evaluation of</p>
 <p>$$ \frac{ randomics().call()}{2^{256}-1}. $$</p>
@@ -1687,9 +1687,35 @@ text-align: center;
         
         
             <span class="tag">
+                <a href="/tags/Arbitrage/" class="is-tags taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        Arbitrage
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
                 <a href="/tags/Blockchain-agnosticism/" class="is-tags taxo__link" data-dir="ltr">
                     <span class="taxo__text">
                         Blockchain agnosticism
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/DeFi/" class="is-tags taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        DeFi
                     </span>
                     <span class="taxo__num" dir="auto">
                         1
@@ -1731,7 +1757,20 @@ text-align: center;
                         Ethereum
                     </span>
                     <span class="taxo__num" dir="auto">
-                        2
+                        3
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/Flashloan/" class="is-tags taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        Flashloan
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        1
                     </span>
                 </a>
             </span>
@@ -1931,7 +1970,6 @@ text-align: center;
 <script defer src="/js/helper/prop.min.js"></script>
 
 <script defer src="/js/helper/fadeinout.min.js"></script>
-
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha256-V8SV2MO1FUb63Bwht5Wx9x6PVHNa02gv8BgH/uH3ung=" crossorigin="anonymous">
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha256-F/Xda58SPdcUCr&#43;xhSGz9MA2zQBPb0ASEYKohl8UCHc=" crossorigin="anonymous"></script>

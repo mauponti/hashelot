@@ -13,13 +13,50 @@
     <language>en</language>
     <managingEditor>alias@hashelot.com</managingEditor>
     <webMaster>alias@hashelot.com</webMaster>
-    <lastBuildDate>Sat, 06 Jun 2020 14:54:00 +0100</lastBuildDate>
+    <lastBuildDate>Mon, 22 Jun 2020 21:47:10 +0100</lastBuildDate>
     
         <atom:link href="https://hashelot.onrender.com/tags/Ethereum/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>Trading assets in the lifespan of a single block (and hopefully profiting from it)</title>
+        <link>https://hashelot.onrender.com/notes/flash-arbitrage/</link>
+        <pubDate>Mon, 22 Jun 2020 21:47:10 +0100</pubDate>
+        <author>alias@hashelot.com</author>
+        <atom:modified>Mon, 22 Jun 2020 21:47:10 +0100</atom:modified>
+        <guid>https://hashelot.onrender.com/notes/flash-arbitrage/</guid>
+        <description>Flashloans are zero-risk instruments in the universe of Decentralized Finance (DeFi). Their purpose is not much different from the one held by more traditional loans: borrowing money to invest it in ventures or personal projects and lending it in order to gain a profit.
+As the name itself suggests though, the novelty of the decentralized version lies in its instantaneous lifespan, a quality that on one hand enormously limits what a borrower can do with the received money, but that on the other hand manages to cancel credit risk, the possibility of a loss resulting from a borrower&amp;rsquo;s failure to repay a loan, making theoretically possible to lend any amount of money (Ether or tokens) to anyone without any risk.</description>
+        
+        
+        
+        
+        
+        
+          
+            
+              <category>Flashloan</category>
+            
+          
+            
+              <category>Arbitrage</category>
+            
+          
+            
+              <category>DeFi</category>
+            
+          
+            
+              <category>Ethereum</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>Rings - A simple stacking game</title>
