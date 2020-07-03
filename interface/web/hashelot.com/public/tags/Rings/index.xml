@@ -6,16 +6,16 @@
   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>Games on Hashelot</title>
-    <link>https://hashelot.onrender.com/games/</link>
-    <description>Recent content in Games on Hashelot</description>
+    <title>Rings on Hashelot</title>
+    <link>https://hashelot.onrender.com/tags/Rings/</link>
+    <description>Recent content in Rings on Hashelot</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>alias@hashelot.com</managingEditor>
     <webMaster>alias@hashelot.com</webMaster>
     <lastBuildDate>Thu, 02 Jul 2020 17:09:00 +0100</lastBuildDate>
     
-        <atom:link href="https://hashelot.onrender.com/games/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://hashelot.onrender.com/tags/Rings/index.xml" rel="self" type="application/rss+xml" />
     
     
     

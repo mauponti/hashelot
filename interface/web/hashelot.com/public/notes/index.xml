@@ -13,13 +13,39 @@
     <language>en</language>
     <managingEditor>alias@hashelot.com</managingEditor>
     <webMaster>alias@hashelot.com</webMaster>
-    <lastBuildDate>Mon, 22 Jun 2020 21:47:10 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 03 Jul 2020 10:26:01 +0100</lastBuildDate>
     
         <atom:link href="https://hashelot.onrender.com/notes/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>Dapper integration</title>
+        <link>https://hashelot.onrender.com/notes/sneak-peek/</link>
+        <pubDate>Fri, 03 Jul 2020 10:26:01 +0100</pubDate>
+        <author>alias@hashelot.com</author>
+        <atom:modified>Fri, 03 Jul 2020 10:26:01 +0100</atom:modified>
+        <guid>https://hashelot.onrender.com/notes/sneak-peek/</guid>
+        <description>This is hardly a note, since it&amp;rsquo;s nothing more than an announcement: you can now use Dapper ETH to play Rings.
+Don&amp;rsquo;t worry, you will be able to keep using MetaMask as well to have fun or operate decentralized applications on Hashelot, but since Dapper let&amp;rsquo;s you have 3 free transactions per week1, it sounded like an interesting addition to this website features.
+Being able to use Dapper will help those willing to enter low stack rounds of Rings save up on gas fees and possibly finalize closed rounds without the need for additional spending.</description>
+        
+        
+        
+        
+        
+        
+          
+            
+              <category>Dapper</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>Trading assets in the lifespan of a single block (and hopefully profiting from it)</title>
