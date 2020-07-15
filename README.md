@@ -9,7 +9,8 @@ At first it will be an Ethereum-centric project, but from that point on it may l
 ![I think I might have sharded!](/images/hashelot_ethereum_wbg.png)
 
 ##### Games
-- [**Rings**](/games/ethereum/rings) (*deployed*)
+- [**Rings**](/games/ethereum/rings) (*deployed and verified*)
+- [**[Day] Rings**](/games/ethereum/dayrings) (*deployed and verified*)
 
 ##### Apps
 - **Chronicles** (*under development*)
