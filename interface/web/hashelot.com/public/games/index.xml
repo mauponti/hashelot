@@ -13,7 +13,7 @@
     <language>en</language>
     <managingEditor>alias@hashelot.com</managingEditor>
     <webMaster>alias@hashelot.com</webMaster>
-    <lastBuildDate>Thu, 02 Jul 2020 17:09:00 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 15 Jul 2020 17:09:00 +0100</lastBuildDate>
     
         <atom:link href="https://hashelot.onrender.com/games/index.xml" rel="self" type="application/rss+xml" />
     
@@ -24,12 +24,12 @@
       <item>
         <title>[Day] Rings - A simple stacking game, just longer</title>
         <link>https://hashelot.onrender.com/games/dayrings/</link>
-        <pubDate>Thu, 02 Jul 2020 17:09:00 +0100</pubDate>
+        <pubDate>Wed, 15 Jul 2020 17:09:00 +0100</pubDate>
         <author>alias@hashelot.com</author>
-        <atom:modified>Thu, 02 Jul 2020 17:09:00 +0100</atom:modified>
+        <atom:modified>Wed, 15 Jul 2020 17:09:00 +0100</atom:modified>
         <guid>https://hashelot.onrender.com/games/dayrings/</guid>
-        <description>The same rules of Rings apply, but with a longer gameplay: 5&#39;749 blocks to conclude a round, making it last around 24 hours.
-Coming soon.</description>
+        <description>The same rules of Rings apply, but with a longer gameplay: 5749 blocks to conclude a round, making it last around 24 hours.
+  function depositWage(cash, _contract, _curr_account){ if(isNaN(cash)){ console.error(&#39;To play [Day] Rings, you need to input a number!&#39;); }else{ const amount = cash*10**15; console.log(_curr_account); _contract.methods.depositStack().estimateGas({from: _curr_account, value:amount}).then(gasEstimate = { _contract.methods.depositStack().send({from: _curr_account, value:amount, gas: gasEstimate},function(error, result){ if(!error) console.log(result); else console.error(error); }); }); } } function winnerSelection(_contract, _curr_account){ console.log(_curr_account); _contract.methods.closeBet().estimateGas({from: _curr_account, value: 0}).</description>
         
         
         
