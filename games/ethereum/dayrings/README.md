@@ -2,13 +2,13 @@
 
 ![If you like it, then you shoulda put a ring on it.](images/hashelot_dayrings_nbg.png)
 
-**[Day] Rings by Hashelot** is a stacking game written in Solidity and deployed on the [Ethereum](https://ethereum.org/) main network, whose game play you can audit <a href="https://etherscan.io/address/0x6CbfF439F27d1e3431d912B6a0817d7a95596877" target="\_blank">straight out of the blockchain</a>.
+**[Day] Rings by Hashelot** is a stacking game written in Solidity and deployed on the [Ethereum](https://ethereum.org/) main network, whose game play you can audit <a href="https://etherscan.io/address/0xA8e44bB386766f597a22fCdC14d82a9C700dfb70" target="\_blank">straight out of the blockchain</a>.
 
 You can check out the code: [hashelot\_dayrings\_1.0.sol](solidity/hashelot_dayrings_1.0.sol).
 
-- MD5: b4ed080cb671e9e5c143e40a166f59e7.
-- SHA1: 422f70771c358667d47c88f80aa669e399b1b2ac.
-- SHA256: 03515a48e4f23f1056076454a9bc8a6c24cfe53febf87a57f04d82def5fa5c80.
+- MD5: 0d029e7b9c356f753fa9354193f1d67a.
+- SHA1: 5a73d4d5c18de1517290553b763692384bdf2e40.
+- SHA256: 8858b66977717ac1e34c119c3d11a835814205f2a0ff0b5a753748e47c016b40.
 
 Transaction hash: [0x1a8436e60c35d0c6d694e53b65409e6daeee855647a053dfa0439fef673587ca](https://etherscan.io/tx/0x1a8436e60c35d0c6d694e53b65409e6daeee855647a053dfa0439fef673587ca)
 
@@ -44,7 +44,7 @@ The **owner** of the hashelot_rings smart contract may declare a winner with ```
 
 ###### Deployment specs
 Transaction hash: [0x8c265...fc5a71971d](https://etherscan.io/tx/0x8c2659ee2c48ca7e80249d290d1da81ea21a281a596375f7fbc941fc5a71971d).
-Etherscan contract verification: <a href="https://etherscan.io/address/0x6CbfF439F27d1e3431d912B6a0817d7a95596877#code" target="\_blank">submitted for verification on 2020-06-06</a>.
+Etherscan contract verification: <a href="https://etherscan.io/address/0xa8e44bb386766f597a22fcdc14d82a9c700dfb70#code" target="\_blank">submitted for verification on 2020-07-15</a>.
 
 ###### Methods and variables
 
