@@ -14,6 +14,7 @@ At first it will be an Ethereum-centric project, but from that point on it may l
 
 ##### Apps
 - **Chronicles** (*under development*)
+- **Delphi** (*under development*)
 
 ##### Utilities
 - [**Entropy**](/utilities/ethereum/entropy) (*deployed*)
