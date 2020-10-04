@@ -2,12 +2,12 @@
 <html lang="en-us">
   <head>
 	<meta name="generator" content="Hugo 0.71.0" />
-    
+
 
 <meta property="og:title" content="Hashelot - Decentralized ventures" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="http://www.hashelot.render.com/" />
+<meta property="og:url" content="/" />
 <meta property="og:updated_time" content="2020-10-01T01:02:03+01:00" />
 
 
@@ -16,29 +16,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Hashelot - Decentralized ventures</title>
-    
-<link rel="icon" type="image/png" href="/images/favicon.png" />
+
+<link rel="icon" type="image/png" href="./images/favicon.png" />
 <link href="https://fonts.googleapis.com/css?family=Open&#43;Sans:400,600" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="/css/style.min.bfae47b96aa2abf6eedbe138c13dbaa4e229e252b9906c24269d571907da1d1d.css" integrity="sha256-v65HuWqiq/bu2&#43;E4wT26pOIp4lK5kGwkJp1XGQfaHR0=">
-<link rel="stylesheet" type="text/css" href="/css/icons.css">
+<link rel="stylesheet" type="text/css" href="./css/style.min.bfae47b96aa2abf6eedbe138c13dbaa4e229e252b9906c24269d571907da1d1d.css" >
+<link rel="stylesheet" type="text/css" href="./css/icons.css">
 
   </head>
   <body>
-    
+
     <div id="preloader">
       <div id="status"></div>
     </div>
 
-    
-    
+
+
     <section class="hero is-fullheight is-default is-bold">
-  
+
 
 <nav class="navbar is-fresh is-transparent no-shadow" role="navigation" aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
-      <a class="navbar-item" href="/">
-        <img src="/images/logos/hashelot-header.svg" alt="" width="200">
+      <a class="navbar-item" href="./">
+        <img src="./images/logos/hashelot-header.svg" alt="" width="200">
       </a>
 
       <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar-menu">
@@ -57,13 +57,13 @@
             </a>
 
             <div class="navbar-dropdown">
-              <a href="/dapps/delphi/" class="navbar-item">
+              <a href="./dapps/delphi/" class="navbar-item">
                 Delphi
               </a>
-              <a href="/dapps/hodler/" class="navbar-item">
+              <a href="./dapps/hodler/" class="navbar-item">
                 Hodler
               </a>
-              <a href="/dapps/chronicles/" class="navbar-item">
+              <a href="./dapps/chronicles/" class="navbar-item">
                 Chronicles
               </a>
             </div>
@@ -74,10 +74,10 @@
             </a>
 
             <div class="navbar-dropdown">
-              <a href="/games/rings/" class="navbar-item">
+              <a href="./games/rings/" class="navbar-item">
                 Rings
               </a>
-              <a href="/games/dayrings/" class="navbar-item">
+              <a href="./games/dayrings/" class="navbar-item">
                 [Day] Rings
               </a>
             </div>
@@ -88,7 +88,7 @@
             </a>
 
             <div class="navbar-dropdown">
-              <a href="/utilities/entropy/" class="navbar-item">
+              <a href="./utilities/entropy/" class="navbar-item">
                 Entropy
               </a>
             </div>
@@ -101,17 +101,17 @@
 <script>
 
 
-var metamask = 0; 
+var metamask = 0;
 var connectMetaMask = "Connect MetaMask";
 
-var dapper = 0; 
+var dapper = 0;
 var connectDapper = "Connect Dapper";
 
 
-var neoline = 0; 
+var neoline = 0;
 
 
-var brave = 0; 
+var brave = 0;
 
 var unsupportedWallet = "Unsupported Web3 wallet"
 
@@ -122,22 +122,22 @@ if (typeof web3 !== 'undefined') {
     if(web3.currentProvider.isMetaMask){
       metamask = 1;
     }
-    
 
 
-    if(metamask){ 
-      
+
+    if(metamask){
+
       ethereum.request({ method: 'eth_accounts' }).then(accounts => {
-        
+
         var curr_account = accounts[0];
         if(curr_account != null){
-          
-          
+
+
           var displayed_account = curr_account.slice(0, 6) + '...' + curr_account.slice(-5, -1);
           document.getElementById('enableWallet').innerHTML = displayed_account;
         }else{
-          
-          
+
+
           const classMetaMask = document.getElementById('enableWallet');
           if (classMetaMask) {
             classMetaMask.addEventListener('click', async() => {
@@ -145,8 +145,8 @@ if (typeof web3 !== 'undefined') {
                 console.log(result);
                 location.reload();
               });
-            }); 
-          } 
+            });
+          }
 
           document.getElementById('enableWallet').innerHTML = connectMetaMask;
 
@@ -154,22 +154,22 @@ if (typeof web3 !== 'undefined') {
       });
 
 
-    }else{ 
+    }else{
       const classWallet = document.getElementById('enableWallet');
       if (classWallet) {
         classWallet.addEventListener('click', async() => {
           window.location = 'wallets';
-        }); 
-      } 
+        });
+      }
       document.getElementById('enableWallet').innerHTML = unsupportedWallet;
     }
-}else{ 
+}else{
   const classWallet = document.getElementById('enableWallet');
   if (classWallet) {
     classWallet.addEventListener('click', async() => {
       window.location = 'wallets';
-    }); 
-  } 
+    });
+  }
 
   document.getElementById('enableWallet').innerHTML = noWeb3;
 }
@@ -181,13 +181,13 @@ if (typeof web3 !== 'undefined') {
   </div>
 </nav>
 
-  
+
 
 <nav id="navbar-clone" class="navbar is-fresh is-transparent" role="navigation" aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
-      <a class="navbar-item" href="/">
-        <img src="/images/logos/hashelot-header.svg" alt="" width="200">
+      <a class="navbar-item" href="./">
+        <img src="./images/logos/hashelot-header.svg" alt="" width="200">
       </a>
 
       <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="cloned-navbar-menu">
@@ -206,13 +206,13 @@ if (typeof web3 !== 'undefined') {
           </a>
 
           <div class="navbar-dropdown">
-            <a href="/dapps/delphi/" class="navbar-item">
+            <a href="./dapps/delphi/" class="navbar-item">
               Delphi
             </a>
-            <a href="/dapps/hodler/" class="navbar-item">
+            <a href="./dapps/hodler/" class="navbar-item">
               Hodler
             </a>
-            <a href="/dapps/chronicles/" class="navbar-item">
+            <a href="./dapps/chronicles/" class="navbar-item">
               Chronicles
             </a>
           </div>
@@ -223,10 +223,10 @@ if (typeof web3 !== 'undefined') {
           </a>
 
           <div class="navbar-dropdown">
-            <a href="/games/rings/" class="navbar-item">
+            <a href="./games/rings/" class="navbar-item">
               Rings
             </a>
-            <a href="/games/dayrings/" class="navbar-item">
+            <a href="./games/dayrings/" class="navbar-item">
               [Day] Rings
             </a>
           </div>
@@ -237,7 +237,7 @@ if (typeof web3 !== 'undefined') {
           </a>
 
           <div class="navbar-dropdown">
-            <a href="/utilities/entropy/" class="navbar-item">
+            <a href="./utilities/entropy/" class="navbar-item">
               Entropy
             </a>
           </div>
@@ -250,17 +250,17 @@ if (typeof web3 !== 'undefined') {
 <script>
 
 
-var metamask = 0; 
+var metamask = 0;
 var connectMetaMask = "Connect MetaMask";
 
-var dapper = 0; 
+var dapper = 0;
 var connectDapper = "Connect Dapper";
 
 
-var neoline = 0; 
+var neoline = 0;
 
 
-var brave = 0; 
+var brave = 0;
 
 var unsupportedWallet = "Unsupported Web3 wallet"
 
@@ -271,22 +271,22 @@ if (typeof web3 !== 'undefined') {
     if(web3.currentProvider.isMetaMask){
       metamask = 1;
     }
-    
 
 
-    if(metamask){ 
-      
+
+    if(metamask){
+
       ethereum.request({ method: 'eth_accounts' }).then(accounts => {
-        
+
         var curr_account = accounts[0];
         if(curr_account != null){
-          
-          
+
+
           var displayed_account = curr_account.slice(0, 6) + '...' + curr_account.slice(-5, -1);
           document.getElementById('enableWallet-clone').innerHTML = displayed_account;
         }else{
-          
-          
+
+
           const classMetaMask = document.getElementById('enableWallet-clone');
           if (classMetaMask) {
             classMetaMask.addEventListener('click', async() => {
@@ -294,8 +294,8 @@ if (typeof web3 !== 'undefined') {
                 console.log(result);
                 location.reload();
               });
-            }); 
-          } 
+            });
+          }
 
           document.getElementById('enableWallet-clone').innerHTML = connectMetaMask;
 
@@ -303,22 +303,22 @@ if (typeof web3 !== 'undefined') {
       });
 
 
-    }else{ 
+    }else{
       const classWallet = document.getElementById('enableWallet-clone');
       if (classWallet) {
         classWallet.addEventListener('click', async() => {
           window.location = 'wallets';
-        }); 
-      } 
+        });
+      }
       document.getElementById('enableWallet-clone').innerHTML = unsupportedWallet;
     }
-}else{ 
+}else{
   const classWallet = document.getElementById('enableWallet-clone');
   if (classWallet) {
     classWallet.addEventListener('click', async() => {
       window.location = 'wallets';
-    }); 
-  } 
+    });
+  }
 
   document.getElementById('enableWallet-clone').innerHTML = noWeb3;
 }
@@ -330,7 +330,7 @@ if (typeof web3 !== 'undefined') {
 </div>
 </nav>
 
-  
+
 <div class="hero-body">
   <div class="container">
     <div class="columns is-vcentered">
@@ -338,11 +338,11 @@ if (typeof web3 !== 'undefined') {
         <h1 class="title is-1 is-bold is-spaced">
           Decentralized ventures.
         </h1>
-        
+
         <h2 class="subtitle is-5 is-muted">
           A journey across smart contracts and distributed platforms.
         </h2>
-        
+
         <p>
           <a class="button cta rounded primary-btn raised" href="showcase">
             Get started
@@ -351,13 +351,13 @@ if (typeof web3 !== 'undefined') {
       </div>
       <div class="column is-5 is-offset-1">
         <figure class="image is-4by3">
-          <img src="/images/illustrations/hashelot-platforms.svg" alt="Description">
+          <img src="./images/illustrations/hashelot-platforms.svg" alt="Description">
         </figure>
       </div>
     </div>
   </div>
 </div>
-  
+
 <div class="hero-foot mb-20">
   <div class="container">
     <div class="tabs is-centered">
@@ -368,10 +368,10 @@ if (typeof web3 !== 'undefined') {
 </div>
 </section>
 
-    
 
-    
-    
+
+
+
 <section class="section section-feature-grey is-medium">
   <div class="container">
     <div class="title-wrapper has-text-centered">
@@ -388,13 +388,13 @@ if (typeof web3 !== 'undefined') {
               <h4>DApp development</h4>
             </div>
             <div class="card-icon">
-                <img src="/images/illustrations/icons/development.svg">
+                <img src="./images/illustrations/icons/development.svg">
             </div>
             <div class="card-text">
                 <p>Designing and giving shape to decentralized ideas</p>
             </div>
             <div class="card-action">
-              <a href="/showcase/" class="button btn-align-md accent-btn raised">Take a look</a>
+              <a href="./showcase/" class="button btn-align-md accent-btn raised">Take a look</a>
             </div>
           </div>
         </div>
@@ -404,13 +404,13 @@ if (typeof web3 !== 'undefined') {
               <h4>Crypto advocacy</h4>
             </div>
             <div class="card-icon">
-                <img src="/images/illustrations/icons/advocacy.svg">
+                <img src="./images/illustrations/icons/advocacy.svg">
             </div>
             <div class="card-text">
                 <p>Blockchain agnostic notes and talks on cryptocurrencies</p>
             </div>
             <div class="card-action">
-              <a href="/notes/" class="button btn-align-md accent-btn raised">Get inspired</a>
+              <a href="./notes/" class="button btn-align-md accent-btn raised">Get inspired</a>
             </div>
           </div>
         </div>
@@ -420,13 +420,13 @@ if (typeof web3 !== 'undefined') {
               <h4>Research</h4>
             </div>
             <div class="card-icon">
-                <img src="/images/illustrations/icons/research.svg">
+                <img src="./images/illustrations/icons/research.svg">
             </div>
             <div class="card-text">
                 <p>Expanding concepts and finding new solutions</p>
             </div>
             <div class="card-action">
-              <a href="/research/" class="button btn-align-md accent-btn raised">Explore</a>
+              <a href="./research/" class="button btn-align-md accent-btn raised">Explore</a>
             </div>
           </div>
         </div>
@@ -434,15 +434,15 @@ if (typeof web3 !== 'undefined') {
     </div>
   </div>
 </section>
-    
 
-    
 
-    
 
-    
 
-    
+
+
+
+
+
     <section class="section section-light-grey is-medium">
   <div class="container">
     <div class="title-wrapper has-text-centered">
@@ -476,10 +476,10 @@ if (typeof web3 !== 'undefined') {
   </div>
 </section>
 
-    
 
-    
-    
+
+
+
 <footer class="footer footer-dark">
   <div class="container">
     <div class="columns">
@@ -498,7 +498,7 @@ if (typeof web3 !== 'undefined') {
               </div>
             </nav>
             <a href="https://bulma.io" target="_blank">
-              <img src="/images/logos/made-with-bulma.png" alt="Made with Bulma" width="128" height="24">
+              <img src="./images/logos/made-with-bulma.png" alt="Made with Bulma" width="128" height="24">
             </a>
           </div>
         </div>
@@ -507,24 +507,24 @@ if (typeof web3 !== 'undefined') {
   </div>
 </footer>
 
-    
 
-    
+
+
     <div id="backtotop"><a href="#"></a></div>
 
-    
-    
 
 
-    
+
+
+
     <div id="backtotop"><a href="#"></a></div>
 
-    
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="https://unpkg.com/feather-icons"></script>
-<script src="/js/fresh.js"></script>
-<script src="/js/jquery.panelslider.min.js"></script>
+<script src="./js/fresh.js"></script>
+<script src="./js/jquery.panelslider.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   </body>
 </html>

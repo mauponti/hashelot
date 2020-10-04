@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    
+
 
 <meta property="og:title" content="Rings - A simple stacking game" />
 <meta property="og:description" content="A stacking game for the Ethereum main network." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://www.hashelot.render.com/games/rings/" />
+<meta property="og:url" content="/games/rings/" />
 <meta property="article:published_time" content="2020-06-06T14:54:00+01:00" />
 <meta property="article:modified_time" content="2020-06-06T14:54:00+01:00" />
 
@@ -16,37 +16,37 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Hashelot - Decentralized ventures</title>
-    
-<link rel="icon" type="image/png" href="/images/favicon.png" />
+
+<link rel="icon" type="image/png" href="../../images/favicon.png" />
 <link href="https://fonts.googleapis.com/css?family=Open&#43;Sans:400,600" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="/css/style.min.bfae47b96aa2abf6eedbe138c13dbaa4e229e252b9906c24269d571907da1d1d.css" integrity="sha256-v65HuWqiq/bu2&#43;E4wT26pOIp4lK5kGwkJp1XGQfaHR0=">
-<link rel="stylesheet" type="text/css" href="/css/icons.css">
+<link rel="stylesheet" type="text/css" href="../../css/style.min.bfae47b96aa2abf6eedbe138c13dbaa4e229e252b9906c24269d571907da1d1d.css">
+<link rel="stylesheet" type="text/css" href="../../css/icons.css">
 
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 
-    
+
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
 
-    
+
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
         onload="renderMathInElement(document.body);"></script>
   </head>
   <body>
-    
+
     <div id="preloader">
       <div id="status"></div>
     </div>
 
-    
 
-    
+
+
 
 <nav class="navbar is-fresh is-transparent no-shadow" role="navigation" aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
-      <a class="navbar-item" href="/">
-        <img src="/images/logos/hashelot-header.svg" alt="" width="200">
+      <a class="navbar-item" href="../../">
+        <img src="../../images/logos/hashelot-header.svg" alt="" width="200">
       </a>
 
       <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar-menu">
@@ -65,13 +65,13 @@
             </a>
 
             <div class="navbar-dropdown">
-              <a href="/dapps/delphi/" class="navbar-item">
+              <a href="../../dapps/delphi/" class="navbar-item">
                 Delphi
               </a>
-              <a href="/dapps/hodler/" class="navbar-item">
+              <a href="../../dapps/hodler/" class="navbar-item">
                 Hodler
               </a>
-              <a href="/dapps/chronicles/" class="navbar-item">
+              <a href="../../dapps/chronicles/" class="navbar-item">
                 Chronicles
               </a>
             </div>
@@ -82,10 +82,10 @@
             </a>
 
             <div class="navbar-dropdown">
-              <a href="/games/rings/" class="navbar-item">
+              <a href="../../games/rings/" class="navbar-item">
                 Rings
               </a>
-              <a href="/games/dayrings/" class="navbar-item">
+              <a href="../../games/dayrings/" class="navbar-item">
                 [Day] Rings
               </a>
             </div>
@@ -96,7 +96,7 @@
             </a>
 
             <div class="navbar-dropdown">
-              <a href="/utilities/entropy/" class="navbar-item">
+              <a href="../../utilities/entropy/" class="navbar-item">
                 Entropy
               </a>
             </div>
@@ -109,17 +109,17 @@
 <script>
 
 
-var metamask = 0; 
+var metamask = 0;
 var connectMetaMask = "Connect MetaMask";
 
-var dapper = 0; 
+var dapper = 0;
 var connectDapper = "Connect Dapper";
 
 
-var neoline = 0; 
+var neoline = 0;
 
 
-var brave = 0; 
+var brave = 0;
 
 var unsupportedWallet = "Unsupported Web3 wallet"
 
@@ -130,22 +130,22 @@ if (typeof web3 !== 'undefined') {
     if(web3.currentProvider.isMetaMask){
       metamask = 1;
     }
-    
 
 
-    if(metamask){ 
-      
+
+    if(metamask){
+
       ethereum.request({ method: 'eth_accounts' }).then(accounts => {
-        
+
         var curr_account = accounts[0];
         if(curr_account != null){
-          
-          
+
+
           var displayed_account = curr_account.slice(0, 6) + '...' + curr_account.slice(-5, -1);
           document.getElementById('enableWallet').innerHTML = displayed_account;
         }else{
-          
-          
+
+
           const classMetaMask = document.getElementById('enableWallet');
           if (classMetaMask) {
             classMetaMask.addEventListener('click', async() => {
@@ -153,8 +153,8 @@ if (typeof web3 !== 'undefined') {
                 console.log(result);
                 location.reload();
               });
-            }); 
-          } 
+            });
+          }
 
           document.getElementById('enableWallet').innerHTML = connectMetaMask;
 
@@ -162,22 +162,22 @@ if (typeof web3 !== 'undefined') {
       });
 
 
-    }else{ 
+    }else{
       const classWallet = document.getElementById('enableWallet');
       if (classWallet) {
         classWallet.addEventListener('click', async() => {
           window.location = 'wallets';
-        }); 
-      } 
+        });
+      }
       document.getElementById('enableWallet').innerHTML = unsupportedWallet;
     }
-}else{ 
+}else{
   const classWallet = document.getElementById('enableWallet');
   if (classWallet) {
     classWallet.addEventListener('click', async() => {
       window.location = 'wallets';
-    }); 
-  } 
+    });
+  }
 
   document.getElementById('enableWallet').innerHTML = noWeb3;
 }
@@ -194,8 +194,8 @@ if (typeof web3 !== 'undefined') {
 <nav id="navbar-clone" class="navbar is-fresh is-transparent" role="navigation" aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
-      <a class="navbar-item" href="/">
-        <img src="/images/logos/hashelot-header.svg" alt="" width="200">
+      <a class="navbar-item" href="../../">
+        <img src="../../images/logos/hashelot-header.svg" alt="" width="200">
       </a>
 
       <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="cloned-navbar-menu">
@@ -214,13 +214,13 @@ if (typeof web3 !== 'undefined') {
           </a>
 
           <div class="navbar-dropdown">
-            <a href="/dapps/delphi/" class="navbar-item">
+            <a href="../../dapps/delphi/" class="navbar-item">
               Delphi
             </a>
-            <a href="/dapps/hodler/" class="navbar-item">
+            <a href="../../dapps/hodler/" class="navbar-item">
               Hodler
             </a>
-            <a href="/dapps/chronicles/" class="navbar-item">
+            <a href="../../dapps/chronicles/" class="navbar-item">
               Chronicles
             </a>
           </div>
@@ -231,10 +231,10 @@ if (typeof web3 !== 'undefined') {
           </a>
 
           <div class="navbar-dropdown">
-            <a href="/games/rings/" class="navbar-item">
+            <a href="../../games/rings/" class="navbar-item">
               Rings
             </a>
-            <a href="/games/dayrings/" class="navbar-item">
+            <a href="../../games/dayrings/" class="navbar-item">
               [Day] Rings
             </a>
           </div>
@@ -245,7 +245,7 @@ if (typeof web3 !== 'undefined') {
           </a>
 
           <div class="navbar-dropdown">
-            <a href="/utilities/entropy/" class="navbar-item">
+            <a href="../../utilities/entropy/" class="navbar-item">
               Entropy
             </a>
           </div>
@@ -258,17 +258,17 @@ if (typeof web3 !== 'undefined') {
 <script>
 
 
-var metamask = 0; 
+var metamask = 0;
 var connectMetaMask = "Connect MetaMask";
 
-var dapper = 0; 
+var dapper = 0;
 var connectDapper = "Connect Dapper";
 
 
-var neoline = 0; 
+var neoline = 0;
 
 
-var brave = 0; 
+var brave = 0;
 
 var unsupportedWallet = "Unsupported Web3 wallet"
 
@@ -279,22 +279,22 @@ if (typeof web3 !== 'undefined') {
     if(web3.currentProvider.isMetaMask){
       metamask = 1;
     }
-    
 
 
-    if(metamask){ 
-      
+
+    if(metamask){
+
       ethereum.request({ method: 'eth_accounts' }).then(accounts => {
-        
+
         var curr_account = accounts[0];
         if(curr_account != null){
-          
-          
+
+
           var displayed_account = curr_account.slice(0, 6) + '...' + curr_account.slice(-5, -1);
           document.getElementById('enableWallet-clone').innerHTML = displayed_account;
         }else{
-          
-          
+
+
           const classMetaMask = document.getElementById('enableWallet-clone');
           if (classMetaMask) {
             classMetaMask.addEventListener('click', async() => {
@@ -302,8 +302,8 @@ if (typeof web3 !== 'undefined') {
                 console.log(result);
                 location.reload();
               });
-            }); 
-          } 
+            });
+          }
 
           document.getElementById('enableWallet-clone').innerHTML = connectMetaMask;
 
@@ -311,22 +311,22 @@ if (typeof web3 !== 'undefined') {
       });
 
 
-    }else{ 
+    }else{
       const classWallet = document.getElementById('enableWallet-clone');
       if (classWallet) {
         classWallet.addEventListener('click', async() => {
           window.location = 'wallets';
-        }); 
-      } 
+        });
+      }
       document.getElementById('enableWallet-clone').innerHTML = unsupportedWallet;
     }
-}else{ 
+}else{
   const classWallet = document.getElementById('enableWallet-clone');
   if (classWallet) {
     classWallet.addEventListener('click', async() => {
       window.location = 'wallets';
-    }); 
-  } 
+    });
+  }
 
   document.getElementById('enableWallet-clone').innerHTML = noWeb3;
 }
@@ -349,15 +349,15 @@ if (typeof web3 !== 'undefined') {
     </div>
 
     <div class="content">
-      <img src="/images/logos/hashelot_rings.svg" alt="If you like it, then you shoulda put a ring on it." width="200"/>
+      <img src="../../images/logos/hashelot_rings.svg" alt="If you like it, then you shoulda put a ring on it." width="200"/>
 <p><strong>Rings</strong> is a stacking game written in Solidity and deployed on the <a href="https://ethereum.org/" target="\_blank">Ethereum</a> main network, whose game play you can audit <a href="https://etherscan.io/address/0x6CbfF439F27d1e3431d912B6a0817d7a95596877" target="\_blank">straight out of the blockchain</a>.
 The contract has been <a href="https://etherscan.io/address/0x6CbfF439F27d1e3431d912B6a0817d7a95596877#code" target="\_blank">verified on Etherscan</a> on 2020-06-06.</p>
-<p>You may also <a href="/games/testrings/">test it out on Ropsten</a>.</p>
+<p>You may also <a href="../../games/testrings/">test it out on Ropsten</a>.</p>
 <hr>
 <p><script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
 <script>
 function depositWage(cash, _contract, _curr_account){
-	if(isNaN(cash)){ 
+	if(isNaN(cash)){
 		console.error('To play Rings, you need to input a number!');
 	}else{
 		const amount = cash*10**15;
@@ -368,8 +368,8 @@ function depositWage(cash, _contract, _curr_account){
 					console.log(result);
 				else
 					console.error(error);
-			}); 
-		}); 
+			});
+		});
 	}
 }
 
@@ -381,17 +381,17 @@ function winnerSelection(_contract, _curr_account){
 				console.log(result);
 			else
 				console.error(error);
-		}); 
-	}); 
+		});
+	});
 }
 </script>
 <div id="stacked"></div>
 <div id="ElonMetaMask"></div>
 <script>
 
-var gameTime = 126; 
+var gameTime = 126;
 
-var current_network = 1; 
+var current_network = 1;
 var networkWarning = 'To play Rings, set your MetaMask network on the Ethereum main one.';
 var rings_address = '0x6CbfF439F27d1e3431d912B6a0817d7a95596877';
 var jsonInterface = [
@@ -519,7 +519,7 @@ var jsonInterface = [
 		"type": "function"
 	}
 ];
-var metamaskRings = 0; 
+var metamaskRings = 0;
 
 
 if (typeof web3 !== 'undefined') {
@@ -532,32 +532,32 @@ if (typeof web3 !== 'undefined') {
 		metamaskRings = 1;
 	}
 
-	if(metamaskRings){ 
-		
+	if(metamaskRings){
+
 		ethereum.request({ method: 'eth_accounts' }).then(accounts => {
 			var curr_account_rings = accounts[0];
 			if(curr_account_rings != null){
-				
+
 
 				window.web3 = new Web3(ethereum);
-				
+
 				rings = new web3.eth.Contract(jsonInterface, rings_address);
 
-				
+
 				if(ethereum.networkVersion == current_network){
 
-					
+
 					rings.methods.checkBalance().call().then(currentStack => {
-						
+
 						rings.methods.stackSoFar().call().then(stackSoFar => {
-							if(eval(currentStack)>0){ 
+							if(eval(currentStack)>0){
 								document.getElementById('stacked').innerHTML = '<p>The current Jackpot of Rings is <strong>'+ Math.round((eval(currentStack)/100*98)/Math.pow(10,15)+Number.EPSILON)/Math.pow(10,3) +' Ether</strong>.<br/>Total prizes collected so far in all the rounds of Rings: <strong>' + Math.round(eval(stackSoFar)/Math.pow(10,15)+Number.EPSILON)/Math.pow(10,3) + ' Ether</strong>.</p><hr/>';
-							}else{ 
+							}else{
 								document.getElementById('stacked').innerHTML = '<p>Total prizes collected so far in all the rounds of Rings: <strong>' + Math.round(eval(stackSoFar)/Math.pow(10,15)+Number.EPSILON)/Math.pow(10,3) + ' Ether</strong>.</p><hr/>';
 							}
-						}); 
-					}); 
-					
+						});
+					});
+
 
 					web3.eth.getBlockNumber().then(blockNum => {
 						rings.methods.stackTime().call().then(roundStarted => {
@@ -565,7 +565,7 @@ if (typeof web3 !== 'undefined') {
 								rings.methods.checkBalance().call().then(currentStack => {
 									blocksLeft = eval(roundStarted)+eval(gameTime)-eval(blockNum);
 									var blockString = '-';
-									if(blocksLeft>=0){ 
+									if(blocksLeft>=0){
 										rings.methods.stackValue().call().then(valueToEnter => {
 
 										if(blocksLeft == 1) {
@@ -578,20 +578,20 @@ if (typeof web3 !== 'undefined') {
 													var dummy = eval(valueToEnter)/Math.pow(10,15);
 													const countMeIn = document.querySelector('.countMeIn');
 													countMeIn.addEventListener('click', () => {
-														depositWage(dummy, rings, curr_account_rings); 
+														depositWage(dummy, rings, curr_account_rings);
 													});
 												}else{
 													document.getElementById('ElonMetaMask').innerHTML = '<p>The current round of Rings will end in ' + blockString + ' and there are currently ' + playersNum +' players in the game for a total Jackpot of <strong>'+ Math.round((eval(currentStack)/100*98)/Math.pow(10,15)+Number.EPSILON)/Math.pow(10,3) +' Ether</strong>. To play you need ' + Math.round(eval(valueToEnter)/Math.pow(10,15)+Number.EPSILON)/Math.pow(10,3) + ' Ether (<i>plus an editable gas fee for the transaction</i>).<br/>Were you to enter the round, your chances to win would be '+ Math.round((1/(eval(playersNum)+1)*Math.pow(10,6))+Number.EPSILON)/Math.pow(10,4)+'&percnt;.</p><p><button class="countMeIn button cta rounded primary-btn raised">Count me in!</button></p>';
 													var dummy = eval(valueToEnter)/Math.pow(10,15);
 													const countMeIn = document.querySelector('.countMeIn');
 													countMeIn.addEventListener('click', () => {
-														depositWage(dummy, rings, curr_account_rings); 
+														depositWage(dummy, rings, curr_account_rings);
 													});
 												}
 
-										}); 
-									}else{ 
-										if(playersNum > 0){ 
+										});
+									}else{
+										if(playersNum > 0){
 											var roundInfo = '-';
 											if(playersNum == 1){
 												roundInfo = '1 player for a Jackpot of '+ Math.round((eval(currentStack)/100*98)/Math.pow(10,15)+Number.EPSILON)/Math.pow(10,3) +' Ether';
@@ -604,41 +604,41 @@ if (typeof web3 !== 'undefined') {
 											const findTheLastWinner = document.querySelector('.findTheLastWinner');
 
 											startNewRound.addEventListener('click', () => {
-												depositWage(document.getElementById('deposit').value, rings, curr_account_rings); 
+												depositWage(document.getElementById('deposit').value, rings, curr_account_rings);
 											});
 											findTheLastWinner.addEventListener('click', () => {
 												winnerSelection(rings, curr_account_rings);
 											});
-										}else{ 
+										}else{
 											document.getElementById('ElonMetaMask').innerHTML = '<p>Start a new round of Rings on your own terms (<i>i.e. you choose the value to enter the game for the next round</i>).</p><p><input type="number" class="input" style="width: 25%;" id="deposit" min="1" step="1" name="deposit" label="deposit"/> Finney (0.001 Ether) - <span style="font-style: italic;">PS: 1 Finney is the lowest deposit allowed</span></p><p><button class="startNewRound button cta rounded primary-btn raised">Start a new round</button></p><p>If another player starts a new round in the meantime you choose how much to stack, you\'ll end up playing at the other player\'s terms (<i>if the other player\'s deposit is equal to or lower than yours</i>) or not playing at all (<i>if your deposit is not enough</i>).<br/>Funds that are not invested in the game will be directly returned to their owner.</p>';
 
 											const startNewRound = document.querySelector('.startNewRound');
 
 											startNewRound.addEventListener('click', () => {
-												depositWage(document.getElementById('deposit').value, rings, curr_account_rings); 
+												depositWage(document.getElementById('deposit').value, rings, curr_account_rings);
 											});
 										}
 									}
 
-								}); 
-							}); 
-						}); 
-					}); 
+								});
+							});
+						});
+					});
 
 				}else{
 					document.getElementById('stacked').innerHTML = '<p>' + networkWarning + '</p>';
 				}
 			}else{
-				
+
 			}
 		});
 
 
-	}else{ 
+	}else{
 		document.getElementById('ElonMetaMask').innerHTML = '<p><i>If you want to play <strong>Rings</strong> through your web browser, you need to connect your MetaMask account.</p>';
 	}
 
-}else{ 
+}else{
   document.getElementById('ElonMetaMask').innerHTML = '<p><i>If you want to play <strong>Rings</strong> through your web browser, you need to install <a href="https://metamask.io/download.html" target="_blank">MetaMask</a>.</p>';
 }
 </script>
@@ -692,8 +692,8 @@ Etherscan contract verification: <a href="https://etherscan.io/address/0x6CbfF43
 
 
 
-    
-    
+
+
 <footer class="footer footer-dark">
   <div class="container">
     <div class="columns">
@@ -712,7 +712,7 @@ Etherscan contract verification: <a href="https://etherscan.io/address/0x6CbfF43
               </div>
             </nav>
             <a href="https://bulma.io" target="_blank">
-              <img src="/images/logos/made-with-bulma.png" alt="Made with Bulma" width="128" height="24">
+              <img src="../../images/logos/made-with-bulma.png" alt="Made with Bulma" width="128" height="24">
             </a>
           </div>
         </div>
@@ -721,19 +721,19 @@ Etherscan contract verification: <a href="https://etherscan.io/address/0x6CbfF43
   </div>
 </footer>
 
-    
 
-    
+
+
     <div id="backtotop"><a href="#"></a></div>
 
-    
 
-    
+
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="https://unpkg.com/feather-icons"></script>
-<script src="/js/fresh.js"></script>
-<script src="/js/jquery.panelslider.min.js"></script>
+<script src="../../js/fresh.js"></script>
+<script src="../../js/jquery.panelslider.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   </body>
 </html>
