@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1230"
+   height="300"
+   viewBox="0 0 325.4375 79.375002"
+   version="1.1"
+   id="svg1796"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="hashelot-footer-solo.svg">
+  <defs
+     id="defs1790" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.21097012"
+     inkscape:cx="-1347.6052"
+     inkscape:cy="237.88832"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1825"
+     inkscape:window-height="1046"
+     inkscape:window-x="84"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata1793">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-217.62498)">
+    <g
+       style="display:inline;opacity:1"
+       id="g1125"
+       transform="matrix(0.62799677,0,0,0.62799674,99.919012,194.51291)">
+      <path
+         inkscape:export-ydpi="108.37"
+         inkscape:export-xdpi="108.37"
+         id="rect970-9-7-4"
+         transform="scale(0.26458333)"
+         d="M 151.18164,151.17969 V 292.89648 H 300.84961 V 151.17969 Z m 303.87305,0 V 292.89648 H 604.72461 V 151.17969 Z M 151.18164,463.00977 V 604.72461 H 300.84961 V 463.00977 Z m 303.87305,0 V 604.72461 H 604.72461 V 463.00977 Z"
+         style="display:inline;opacity:1;fill:#ffde5a;fill-opacity:1;fill-rule:evenodd;stroke-width:0.34467372"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:export-ydpi="108.37"
+         inkscape:export-xdpi="108.37"
+         id="rect970-9-7-7-9"
+         transform="scale(0.26458333)"
+         d="M 455.05469,151.17969 V 292.89648 H 604.72461 V 151.17969 Z m 0,311.83008 V 604.72461 H 604.72461 V 463.00977 Z"
+         style="display:inline;opacity:1;fill:#a6913c;fill-opacity:1;fill-rule:evenodd;stroke-width:0.34467372"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:export-ydpi="108.37"
+         inkscape:export-xdpi="108.37"
+         id="rect970-9-8-6-9-6"
+         transform="scale(0.26458333)"
+         d="m 191.65625,463.00977 109.19336,27.57812 v -27.57812 z m 263.39844,0 v 66.52539 l 149.66992,37.80273 V 463.00977 Z"
+         style="display:inline;opacity:0.65;fill:#575757;fill-opacity:1;fill-rule:evenodd;stroke-width:0.34467372"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:export-ydpi="108.37"
+         inkscape:export-xdpi="108.37"
+         id="rect970-9-8-7-8-2"
+         transform="scale(0.26458333)"
+         d="m 151.18164,307.88086 v 140.14453 h 65.31445 322.91407 65.31445 V 307.88086 H 539.41016 216.49609 Z"
+         style="display:inline;opacity:1;fill:#ffcc00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:14.020504;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+         inkscape:connector-curvature="0" />
+    </g>
+  </g>
+</svg>

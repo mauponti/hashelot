@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dapps on Hashelot - Decentralized ventures</title>
+    <link>/dapps/</link>
+    <description>Recent content in Dapps on Hashelot - Decentralized ventures</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 01 Oct 2020 01:02:03 +0100</lastBuildDate>
+    
+	<atom:link href="/dapps/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Chronicles - Notarization on the Ethereum blockchain</title>
+      <link>/dapps/chronicles/</link>
+      <pubDate>Thu, 01 Oct 2020 01:02:03 +0100</pubDate>
+      
+      <guid>/dapps/chronicles/</guid>
+      <description>A smart contract for setting customized and permanent checkpoints on the blockchain.
+So far, just an idea.</description>
+    </item>
+    
+    <item>
+      <title>Delphi - Be your own oracle, sort of</title>
+      <link>/dapps/delphi/</link>
+      <pubDate>Thu, 01 Oct 2020 01:02:03 +0100</pubDate>
+      
+      <guid>/dapps/delphi/</guid>
+      <description>Become and advertise yourself as an oracle, no tokens needed.
+Coming soon.</description>
+    </item>
+    
+    <item>
+      <title>Hodler - You&#39;d better hold on that precious Ether</title>
+      <link>/dapps/hodler/</link>
+      <pubDate>Thu, 01 Oct 2020 01:02:03 +0100</pubDate>
+      
+      <guid>/dapps/hodler/</guid>
+      <description>A set of tools for better holding on your precious Ether such as time locks, password safes, and trading protocols.
+Coming a bit less soon.</description>
+    </item>
+    
+  </channel>
+</rss>
