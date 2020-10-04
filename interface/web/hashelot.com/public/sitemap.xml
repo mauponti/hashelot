@@ -3,156 +3,73 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://hashelot.onrender.com/games/dayrings/</loc>
+    <loc>http://www.hashelot.render.com/dapps/chronicles/</loc>
+    <lastmod>2020-10-01T01:02:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.hashelot.render.com/notes/</loc>
+    <lastmod>2020-10-01T01:02:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.hashelot.render.com/dapps/</loc>
+    <lastmod>2020-10-01T01:02:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.hashelot.render.com/dapps/delphi/</loc>
+    <lastmod>2020-10-01T01:02:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.hashelot.render.com/research/</loc>
+    <lastmod>2020-10-01T01:02:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.hashelot.render.com/</loc>
+    <lastmod>2020-10-01T01:02:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.hashelot.render.com/dapps/hodler/</loc>
+    <lastmod>2020-10-01T01:02:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.hashelot.render.com/showcase/</loc>
+    <lastmod>2020-10-01T01:02:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.hashelot.render.com/games/dayrings/</loc>
     <lastmod>2020-07-15T17:09:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hashelot.onrender.com/tags/Dapper/</loc>
+    <loc>http://www.hashelot.render.com/games/</loc>
     <lastmod>2020-07-15T17:09:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hashelot.onrender.com/tags/Ethereum/</loc>
-    <lastmod>2020-07-15T17:09:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hashelot.onrender.com/games/</loc>
-    <lastmod>2020-07-15T17:09:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hashelot.onrender.com/</loc>
-    <lastmod>2020-07-15T17:09:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hashelot.onrender.com/tags/MetaMask/</loc>
-    <lastmod>2020-07-15T17:09:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hashelot.onrender.com/tags/Rings/</loc>
-    <lastmod>2020-07-15T17:09:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hashelot.onrender.com/tags/</loc>
-    <lastmod>2020-07-15T17:09:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hashelot.onrender.com/notes/sneak-peek/</loc>
-    <lastmod>2020-07-03T10:26:01+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hashelot.onrender.com/notes/</loc>
-    <lastmod>2020-07-03T10:26:01+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hashelot.onrender.com/tags/Arbitrage/</loc>
-    <lastmod>2020-06-22T21:47:10+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hashelot.onrender.com/tags/DeFi/</loc>
-    <lastmod>2020-06-22T21:47:10+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hashelot.onrender.com/tags/Flashloan/</loc>
-    <lastmod>2020-06-22T21:47:10+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hashelot.onrender.com/notes/flash-arbitrage/</loc>
-    <lastmod>2020-06-22T21:47:10+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hashelot.onrender.com/tags/Decentralization/</loc>
+    <loc>http://www.hashelot.render.com/utilities/entropy/</loc>
     <lastmod>2020-06-12T10:53:25+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hashelot.onrender.com/notes/fairness-randomness/</loc>
+    <loc>http://www.hashelot.render.com/utilities/</loc>
     <lastmod>2020-06-12T10:53:25+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hashelot.onrender.com/tags/PoS/</loc>
-    <lastmod>2020-06-12T10:53:25+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hashelot.onrender.com/tags/PoW/</loc>
-    <lastmod>2020-06-12T10:53:25+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hashelot.onrender.com/tags/Randomness/</loc>
-    <lastmod>2020-06-12T10:53:25+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hashelot.onrender.com/tags/Blockchain-agnosticism/</loc>
-    <lastmod>2020-06-09T10:26:01+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hashelot.onrender.com/tags/Decentralized-Messaging-System/</loc>
-    <lastmod>2020-06-09T10:26:01+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hashelot.onrender.com/notes/pending-messages/</loc>
-    <lastmod>2020-06-09T10:26:01+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hashelot.onrender.com/tags/Whisper/</loc>
-    <lastmod>2020-06-09T10:26:01+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hashelot.onrender.com/games/testRings/</loc>
+    <loc>http://www.hashelot.render.com/games/testrings/</loc>
     <lastmod>2020-06-06T14:54:33+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hashelot.onrender.com/tags/Hash-function/</loc>
+    <loc>http://www.hashelot.render.com/games/rings/</loc>
     <lastmod>2020-06-06T14:54:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hashelot.onrender.com/games/rings/</loc>
-    <lastmod>2020-06-06T14:54:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hashelot.onrender.com/notes/born-under-the-lockdown/</loc>
-    <lastmod>2020-06-04T14:02:45+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hashelot.onrender.com/tags/Lockdown/</loc>
-    <lastmod>2020-06-04T14:02:45+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hashelot.onrender.com/about/</loc>
-    <lastmod>2020-06-03T17:20:37+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hashelot.onrender.com/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>https://hashelot.onrender.com/series/</loc>
   </url>
   
 </urlset>

@@ -1,48 +1,115 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" 
-  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-  xmlns:dc="http://purl.org/dc/elements/1.1/" 
-  xmlns:atom="http://www.w3.org/2005/Atom" 
-  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
-  xmlns:media="http://search.yahoo.com/mrss/">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hashelot - Decentralized ventures on Hashelot</title>
-    <link>https://hashelot.onrender.com/</link>
-    <description>Recent content in Hashelot - Decentralized ventures on Hashelot</description>
+    <title>Hashelot - Decentralized ventures</title>
+    <link>http://www.hashelot.render.com/</link>
+    <description>Recent content on Hashelot - Decentralized ventures</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <managingEditor>alias@hashelot.com</managingEditor>
-    <webMaster>alias@hashelot.com</webMaster>
-    <lastBuildDate>Wed, 15 Jul 2020 17:09:00 +0100</lastBuildDate>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 01 Oct 2020 01:02:03 +0100</lastBuildDate>
     
-        <atom:link href="https://hashelot.onrender.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.hashelot.render.com/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>Chronicles - Notarization on the Ethereum blockchain</title>
+      <link>http://www.hashelot.render.com/dapps/chronicles/</link>
+      <pubDate>Thu, 01 Oct 2020 01:02:03 +0100</pubDate>
+      
+      <guid>http://www.hashelot.render.com/dapps/chronicles/</guid>
+      <description>A smart contract for setting customized and permanent checkpoints on the blockchain.
+So far, just an idea.</description>
+    </item>
     
+    <item>
+      <title>Crypto advocacy</title>
+      <link>http://www.hashelot.render.com/notes/</link>
+      <pubDate>Thu, 01 Oct 2020 01:02:03 +0100</pubDate>
       
+      <guid>http://www.hashelot.render.com/notes/</guid>
+      <description>Not ready yet.</description>
+    </item>
+    
+    <item>
+      <title>Delphi - Be your own oracle, sort of</title>
+      <link>http://www.hashelot.render.com/dapps/delphi/</link>
+      <pubDate>Thu, 01 Oct 2020 01:02:03 +0100</pubDate>
       
+      <guid>http://www.hashelot.render.com/dapps/delphi/</guid>
+      <description>Become and advertise yourself as an oracle, no tokens needed.
+Coming soon.</description>
+    </item>
+    
+    <item>
+      <title>Explore our research activity</title>
+      <link>http://www.hashelot.render.com/research/</link>
+      <pubDate>Thu, 01 Oct 2020 01:02:03 +0100</pubDate>
       
-        
+      <guid>http://www.hashelot.render.com/research/</guid>
+      <description>Not ready yet.</description>
+    </item>
+    
+    <item>
+      <title>Hodler - You&#39;d better hold on that precious Ether</title>
+      <link>http://www.hashelot.render.com/dapps/hodler/</link>
+      <pubDate>Thu, 01 Oct 2020 01:02:03 +0100</pubDate>
       
-        
+      <guid>http://www.hashelot.render.com/dapps/hodler/</guid>
+      <description>A set of tools for better holding on your precious Ether such as time locks, password safes, and trading protocols.
+Coming a bit less soon.</description>
+    </item>
+    
+    <item>
+      <title>What we have done so far</title>
+      <link>http://www.hashelot.render.com/showcase/</link>
+      <pubDate>Thu, 01 Oct 2020 01:02:03 +0100</pubDate>
       
-        
+      <guid>http://www.hashelot.render.com/showcase/</guid>
+      <description>Not ready yet.</description>
+    </item>
+    
+    <item>
+      <title>[Day] Rings - A simple stacking game, just longer</title>
+      <link>http://www.hashelot.render.com/games/dayrings/</link>
+      <pubDate>Wed, 15 Jul 2020 17:09:00 +0100</pubDate>
       
-        
+      <guid>http://www.hashelot.render.com/games/dayrings/</guid>
+      <description>The same rules of Rings apply, but with a longer gameplay: 5749 blocks to conclude a round, making it last around 24 hours.
+   function depositWage(cash, _contract, _curr_account){ if(isNaN(cash)){ console.error(&#39;To play [Day] Rings, you need to input a number!&#39;); }else{ const amount = cash*10**15; console.log(_curr_account); _contract.methods.depositStack().estimateGas({from: _curr_account, value:amount}).then(gasEstimate = { _contract.methods.depositStack().send({from: _curr_account, value:amount, gas: gasEstimate},function(error, result){ if(!error) console.log(result); else console.error(error); }); }); } } function winnerSelection(_contract, _curr_account){ console.log(_curr_account); _contract.</description>
+    </item>
+    
+    <item>
+      <title>Entropy - A case for on-chain randomness</title>
+      <link>http://www.hashelot.render.com/utilities/entropy/</link>
+      <pubDate>Fri, 12 Jun 2020 10:53:25 +0100</pubDate>
       
-        
+      <guid>http://www.hashelot.render.com/utilities/entropy/</guid>
+      <description>Entropy is an intellectual exercise, a smart contract (hashelot_entropy_v.1.0.sol) in which you will find the callable (i.e. you don&amp;rsquo;t need gas to use it) method randomics() that returns a value in $ [0,2^{256}-1] $, mimicking a random generator1.
+Transaction hash: 0x80d370b146&amp;hellip;2f978ae329.
+The way another contract might use randomics() is then up to the developer. As an example, the following button generates and displays a value in
+$$ [0,1] $$
+by an off-chain evaluation of</description>
+    </item>
+    
+    <item>
+      <title>Ropsten test Rings</title>
+      <link>http://www.hashelot.render.com/games/testrings/</link>
+      <pubDate>Sat, 06 Jun 2020 14:54:33 +0100</pubDate>
       
-        
+      <guid>http://www.hashelot.render.com/games/testrings/</guid>
+      <description>function depositWage(cash, _contract, _curr_account){ if(isNaN(cash)){ console.error(&#39;To play Rings, you need to input a number!&#39;); }else{ const amount = cash*10**15; console.log(_curr_account); _contract.methods.depositStack().estimateGas({from: _curr_account, value:amount}).then(gasEstimate = { _contract.methods.depositStack().send({from: _curr_account, value:amount, gas: gasEstimate},function(error, result){ if(!error) console.log(result); else console.error(error); }); }); } } function winnerSelection(_contract, _curr_account){ console.log(_curr_account); _contract.methods.closeBet().estimateGas({from: _curr_account, value: 0}).then(gasEstimate = { _contract.methods.closeBet().send({from: _curr_account, value: 0, gas: gasEstimate},function(error, result){ if(!error) console.log(result); else console.error(error); }); }); }  var gameTime = 12; var current_network = 3; var networkWarning = &#39;To play Ropsten test Rings, set your MetaMask network on the Ropsten one.</description>
+    </item>
+    
+    <item>
+      <title>Rings - A simple stacking game</title>
+      <link>http://www.hashelot.render.com/games/rings/</link>
+      <pubDate>Sat, 06 Jun 2020 14:54:00 +0100</pubDate>
       
-        
-      
-        
-      
-        
-      
-
-      
-
+      <guid>http://www.hashelot.render.com/games/rings/</guid>
+      <description>Rings is a stacking game written in Solidity and deployed on the Ethereum main network, whose game play you can audit straight out of the blockchain. The contract has been verified on Etherscan on 2020-06-06.
+You may also test it out on Ropsten.
+   function depositWage(cash, _contract, _curr_account){ if(isNaN(cash)){ console.error(&#39;To play Rings, you need to input a number!&#39;); }else{ const amount = cash*10**15; console.log(_curr_account); _contract.methods.depositStack().estimateGas({from: _curr_account, value:amount}).then(gasEstimate = { _contract.</description>
+    </item>
     
   </channel>
 </rss>

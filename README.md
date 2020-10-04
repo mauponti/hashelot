@@ -19,17 +19,11 @@ At first it will be an Ethereum-centric project, but from that point on it may l
 ##### Utilities
 - [**Entropy**](/utilities/ethereum/entropy) (*deployed*)
 
-##### Notes
-- [Trading assets in the lifespan of a single block (and hopefully profiting from it)](https://hashelot.com/notes/flash-arbitrage/)
-- [Fairness, randomness, and decentralization](https://www.hashelot.com/notes/fairness-randomness/)
-- [How I learned to stop worrying and love pending transactions](https://www.hashelot.com/notes/pending-messages/)
-- [Born under the lockdown](https://www.hashelot.com/notes/born-under-the-lockdown/index.html)
-
 ##### Web interface
 - [**Hashelot.com**](https://www.hashelot.com)
 
 ##### Mobile interface
-(*still needs time to develop*)
+(*still needs time to be developed*)
 
 ---
 *On the other hand Hashelot might just be a fun quarantine idea and nothing more*.
