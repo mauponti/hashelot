@@ -93,10 +93,10 @@ by an off-chain evaluation of</description>
     
     <item>
       <title>Ropsten test Rings</title>
-      <link>/games/testrings/</link>
+      <link>/games/test_rings/</link>
       <pubDate>Sat, 06 Jun 2020 14:54:33 +0100</pubDate>
       
-      <guid>/games/testrings/</guid>
+      <guid>/games/test_rings/</guid>
       <description>function depositWage(cash, _contract, _curr_account){ if(isNaN(cash)){ console.error(&#39;To play Rings, you need to input a number!&#39;); }else{ const amount = cash*10**15; console.log(_curr_account); _contract.methods.depositStack().estimateGas({from: _curr_account, value:amount}).then(gasEstimate = { _contract.methods.depositStack().send({from: _curr_account, value:amount, gas: gasEstimate},function(error, result){ if(!error) console.log(result); else console.error(error); }); }); } } function winnerSelection(_contract, _curr_account){ console.log(_curr_account); _contract.methods.closeBet().estimateGas({from: _curr_account, value: 0}).then(gasEstimate = { _contract.methods.closeBet().send({from: _curr_account, value: 0, gas: gasEstimate},function(error, result){ if(!error) console.log(result); else console.error(error); }); }); }  var gameTime = 12; var current_network = 3; var networkWarning = &#39;To play Ropsten test Rings, set your MetaMask network on the Ropsten one.</description>
     </item>
     
