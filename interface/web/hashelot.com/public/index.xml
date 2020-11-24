@@ -64,10 +64,9 @@ So far, just an idea.</description>
       <pubDate>Thu, 01 Oct 2020 01:02:03 +0100</pubDate>
       
       <guid>/dapps/delphi/</guid>
-      <description>Hashelot&amp;rsquo;s Delphi is a DoaaS (Distributed oracle as a service) smart contract written in Solidity and currently in beta testing on the Ropsten network, that lets you become and advertise yourself as an Oracle. No token needed.
+      <description>Delphi by Hashelot is a DoaaS (Distributed oracle as a service) smart contract written in Solidity and currently in beta testing on the Ropsten network, that lets you become and advertise yourself as an Oracle. No token needed.
 Each question or answer is limited to 32 characters1, every Oracle has a minimum reward that inquirers need to grant in order to ask them something.
-Delphi gets 0.1% of each reward.
-Code and deployment specs Solidity code: Hashelot Delphi (GitHub).</description>
+Delphi gets 0.1% of each reward.</description>
     </item>
     
     <item>
