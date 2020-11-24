@@ -18,7 +18,7 @@
       
       <guid>/games/dayrings/</guid>
       <description>The same rules of Rings apply, but with a longer gameplay: 5749 blocks to conclude a round, making it last around 24 hours.
-   function depositWage(cash, _contract, _curr_account){ if(isNaN(cash)){ console.error(&#39;To play [Day] Rings, you need to input a number!&#39;); }else{ const amount = cash*10**15; console.log(_curr_account); _contract.methods.depositStack().estimateGas({from: _curr_account, value:amount}).then(gasEstimate = { _contract.methods.depositStack().send({from: _curr_account, value:amount, gas: gasEstimate},function(error, result){ if(!error) console.log(result); else console.error(error); }); }); } } function winnerSelection(_contract, _curr_account){ console.log(_curr_account); _contract.</description>
+  function depositWage(cash, _contract, _curr_account){ if(isNaN(cash)){ console.error(&#39;To play [Day] Rings, you need to input a number!&#39;); }else{ const amount = web3.utils.toWei(cash); console.log(_curr_account); _contract.methods.depositStack().estimateGas({from: _curr_account, value:amount}).then(gasEstimate = { _contract.methods.depositStack().send({from: _curr_account, value:amount, gas: gasEstimate},function(error, result){ if(!error) console.log(result); else console.error(error); }); }); } } function winnerSelection(_contract, _curr_account){ console.log(_curr_account); _contract.methods.closeBet().estimateGas({from: _curr_account, value: 0}).</description>
     </item>
     
     <item>
@@ -27,7 +27,7 @@
       <pubDate>Sat, 06 Jun 2020 14:54:33 +0100</pubDate>
       
       <guid>/games/test_rings/</guid>
-      <description>function depositWage(cash, _contract, _curr_account){ if(isNaN(cash)){ console.error(&#39;To play Rings, you need to input a number!&#39;); }else{ const amount = cash*10**15; console.log(_curr_account); _contract.methods.depositStack().estimateGas({from: _curr_account, value:amount}).then(gasEstimate = { _contract.methods.depositStack().send({from: _curr_account, value:amount, gas: gasEstimate},function(error, result){ if(!error) console.log(result); else console.error(error); }); }); } } function winnerSelection(_contract, _curr_account){ console.log(_curr_account); _contract.methods.closeBet().estimateGas({from: _curr_account, value: 0}).then(gasEstimate = { _contract.methods.closeBet().send({from: _curr_account, value: 0, gas: gasEstimate},function(error, result){ if(!error) console.log(result); else console.error(error); }); }); }  var gameTime = 12; var current_network = 3; var networkWarning = &#39;To play Ropsten test Rings, set your MetaMask network on the Ropsten one.</description>
+      <description>function depositWage(cash, _contract, _curr_account){ if(isNaN(cash)){ console.error(&#39;To play Rings, you need to input a number!&#39;); }else{ const amount = web3.utils.toWei(cash); console.log(_curr_account); _contract.methods.depositStack().estimateGas({from: _curr_account, value:amount}).then(gasEstimate = { _contract.methods.depositStack().send({from: _curr_account, value:amount, gas: gasEstimate},function(error, result){ if(!error) console.log(result); else console.error(error); }); }); } } function winnerSelection(_contract, _curr_account){ console.log(_curr_account); _contract.methods.closeBet().estimateGas({from: _curr_account, value: 0}).then(gasEstimate = { _contract.methods.closeBet().send({from: _curr_account, value: 0, gas: gasEstimate},function(error, result){ if(!error) console.log(result); else console.error(error); }); }); }  var gameTime = 12; var current_network = 3; var networkWarning = &#39;To play Ropsten test Rings, set your MetaMask network on the Ropsten one.</description>
     </item>
     
     <item>
@@ -38,7 +38,7 @@
       <guid>/games/rings/</guid>
       <description>Rings is a stacking game written in Solidity and deployed on the Ethereum main network, whose game play you can audit straight out of the blockchain. The contract has been verified on Etherscan on 2020-06-06.
 You may also test it out on Ropsten.
-   function depositWage(cash, _contract, _curr_account){ if(isNaN(cash)){ console.error(&#39;To play Rings, you need to input a number!&#39;); }else{ const amount = cash*10**15; console.log(_curr_account); _contract.methods.depositStack().estimateGas({from: _curr_account, value:amount}).then(gasEstimate = { _contract.</description>
+  function depositWage(cash, _contract, _curr_account){ if(isNaN(cash)){ console.error(&#39;To play Rings, you need to input a number!&#39;); }else{ const amount = web3.utils.toWei(cash); console.log(_curr_account); _contract.methods.depositStack().estimateGas({from: _curr_account, value:amount}).then(gasEstimate = { _contract.</description>
     </item>
     
   </channel>

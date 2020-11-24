@@ -6,10 +6,20 @@
     <description>Recent content in Dapps on Hashelot - Decentralized ventures</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 01 Oct 2020 01:02:03 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 01 Nov 2020 01:02:03 +0100</lastBuildDate>
     
 	<atom:link href="/dapps/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Delphi [Beta testing] - A comprehensive list of Delphi&#39;s Oracles</title>
+      <link>/dapps/delphi/oraclesList/</link>
+      <pubDate>Sun, 01 Nov 2020 01:02:03 +0100</pubDate>
+      
+      <guid>/dapps/delphi/oraclesList/</guid>
+      <description>Here&amp;rsquo;s a list of all the Oracles of Delphi, but if you want you can go back to Delphi&amp;rsquo;s Hall.
+  function htmlEntities(str) { return String(str).replace(/&amp;/g, &#39;&amp;amp;&#39;).replace(//g, &#39;&amp;gt;&#39;).replace(/&#34;/g, &#39;&amp;quot;&#39;); } function paintMeOracle(_minimumReward, _contract, _curr_account){ if(isNaN(_minimumReward)){ console.error(&#39;To become an Oracle, you need to input a number as the minimum reward!&#39;); }else{ const offering = 10**15; var amount; if (_minimumReward == &#39;&#39;){ amount = 1; }else{ amount = web3.utils.toWei(_minimumReward); if (amount{ console.</description>
+    </item>
     
     <item>
       <title>Chronicles - Notarization on the Ethereum blockchain</title>
@@ -22,22 +32,34 @@ So far, just an idea.</description>
     </item>
     
     <item>
-      <title>Delphi - Be your own oracle, sort of</title>
+      <title>Delphi [Beta testing] - Be your own oracle, sort of</title>
       <link>/dapps/delphi/</link>
       <pubDate>Thu, 01 Oct 2020 01:02:03 +0100</pubDate>
       
       <guid>/dapps/delphi/</guid>
-      <description>Become and advertise yourself as an oracle, no tokens needed.
-Coming soon.</description>
+      <description>Hashelot&amp;rsquo;s Delphi is a Doaas (Distributed oracle as a service) smart contract written in Solidity and currently in beta testing on the Ropsten network. Become and advertise yourself as an Oracle, no token needed.
+Each question or answer is limited to 32 characters1, every Oracle has a minimum reward that inquirers need to grant in order to ask them something.
+Delphi gets 0.1% of each reward.
+Code and deployment specs Solidity code: Hashelot Delphi (GitHub).</description>
     </item>
     
     <item>
-      <title>Hodler - You&#39;d better hold on that precious Ether</title>
-      <link>/dapps/hodler/</link>
+      <title>Delphi [Beta testing] - Oracle&#39;s page</title>
+      <link>/dapps/delphi/singleOracle/</link>
       <pubDate>Thu, 01 Oct 2020 01:02:03 +0100</pubDate>
       
-      <guid>/dapps/hodler/</guid>
-      <description>A set of tools for better holding on your precious Ether such as time locks, password safes, and trading protocols.
+      <guid>/dapps/delphi/singleOracle/</guid>
+      <description>A complete record of the Oracle&amp;rsquo;s activity.
+ function htmlEntities(str) {return String(str).replace(/&amp;/g, &#39;&amp;amp;&#39;).replace(//g, &#39;&amp;gt;&#39;).replace(/&#34;/g, &#39;&amp;quot;&#39;);}function consultOracle(_contract, _curr_account, _oracle, _answerKind, _reward, _question){consultOracle:{if (isNaN(_reward)){ console.error(&#39;To consult the Oracle, you need to input a number as a reward!&#39;);break consultOracle;}else{const amount = web3.utils.toWei(_reward); var _kind;if (_answerKind == 1 || _answerKind == 0){_kind = _answerKind;}else{console.error(&#39;The answer can only be either open (1) or closed (0)!</description>
+    </item>
+    
+    <item>
+      <title>Shelter - You&#39;d better keep that precious Ether safe</title>
+      <link>/dapps/shelter/</link>
+      <pubDate>Thu, 01 Oct 2020 01:02:03 +0100</pubDate>
+      
+      <guid>/dapps/shelter/</guid>
+      <description>A set of tools for better keeping your precious Ether safe such as time locks, password safes, and trading protocols.
 Coming a bit less soon.</description>
     </item>
     

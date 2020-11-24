@@ -24,6 +24,11 @@
 <link rel="stylesheet" type="text/css" href="../../css/icons.css" />
 
 
+    
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+
+    
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 
     
@@ -69,8 +74,8 @@
               <a href="../../dapps/delphi/" class="navbar-item">
                 Delphi
               </a>
-              <a href="../../dapps/hodler/" class="navbar-item">
-                Hodler
+              <a href="../../dapps/shelter/" class="navbar-item">
+                Shelter
               </a>
               <a href="../../dapps/chronicles/" class="navbar-item">
                 Chronicles
@@ -99,6 +104,9 @@
             <div class="navbar-dropdown">
               <a href="../../utilities/entropy/" class="navbar-item">
                 Entropy
+              </a>
+              <a href="../../utilities/BytesMath/" class="navbar-item">
+                BytesMath
               </a>
             </div>
           </div>
@@ -142,7 +150,7 @@ if (typeof web3 !== 'undefined') {
         if(curr_account != null){
           
           
-          var displayed_account = curr_account.slice(0, 6) + '...' + curr_account.slice(-5, -1);
+          var displayed_account = curr_account.slice(0, 6) + '...' + curr_account.slice(37, 42);
           document.getElementById('enableWallet').innerHTML = displayed_account;
         }else{
           
@@ -218,8 +226,8 @@ if (typeof web3 !== 'undefined') {
             <a href="../../dapps/delphi/" class="navbar-item">
               Delphi
             </a>
-            <a href="../../dapps/hodler/" class="navbar-item">
-              Hodler
+            <a href="../../dapps/shelter/" class="navbar-item">
+              Shelter
             </a>
             <a href="../../dapps/chronicles/" class="navbar-item">
               Chronicles
@@ -248,6 +256,9 @@ if (typeof web3 !== 'undefined') {
           <div class="navbar-dropdown">
             <a href="../../utilities/entropy/" class="navbar-item">
               Entropy
+            </a>
+            <a href="../../utilities/BytesMath/" class="navbar-item">
+              BytesMath
             </a>
           </div>
         </div>
@@ -291,7 +302,7 @@ if (typeof web3 !== 'undefined') {
         if(curr_account != null){
           
           
-          var displayed_account = curr_account.slice(0, 6) + '...' + curr_account.slice(-5, -1);
+          var displayed_account = curr_account.slice(0, 6) + '...' + curr_account.slice(37, 42);
           document.getElementById('enableWallet-clone').innerHTML = displayed_account;
         }else{
           
@@ -350,13 +361,12 @@ if (typeof web3 !== 'undefined') {
     </div>
 
     <div class="content">
-      <p><script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
-<script>
+      <p><script>
 function depositWage(cash, _contract, _curr_account){
 	if(isNaN(cash)){ 
 		console.error('To play Rings, you need to input a number!');
 	}else{
-		const amount = cash*10**15;
+		const amount = web3.utils.toWei(cash); 
 		console.log(_curr_account);
 		_contract.methods.depositStack().estimateGas({from: _curr_account, value:amount}).then(gasEstimate => {
 			_contract.methods.depositStack().send({from: _curr_account, value:amount, gas: gasEstimate},function(error, result){
@@ -547,9 +557,9 @@ if (typeof web3 !== 'undefined') {
 						
 						rings.methods.stackSoFar().call().then(stackSoFar => {
 							if(eval(currentStack)>0){ 
-								document.getElementById('stacked').innerHTML = '<p>The current Jackpot of Rings is <strong>'+ Math.round((eval(currentStack)/100*98)/Math.pow(10,15)+Number.EPSILON)/Math.pow(10,3) +' Ether</strong>.<br/>Total prizes collected so far in all the rounds of Rings: <strong>' + Math.round(eval(stackSoFar)/Math.pow(10,15)+Number.EPSILON)/Math.pow(10,3) + ' Ether</strong>.</p><hr/>';
+								document.getElementById('stacked').innerHTML = '<p>The current Jackpot of Rings is <strong>' + web3.utils.fromWei(currentStack) + ' Ether</strong>.<br/>Total prizes collected so far in all the rounds of Rings: <strong>' + web3.utils.fromWei(stackSoFar) + ' Ether</strong>.</p><hr/>';
 							}else{ 
-								document.getElementById('stacked').innerHTML = '<p>Total prizes collected so far in all the rounds of Rings: <strong>' + Math.round(eval(stackSoFar)/Math.pow(10,15)+Number.EPSILON)/Math.pow(10,3) + ' Ether</strong>.</p><hr/>';
+								document.getElementById('stacked').innerHTML = '<p>Total prizes collected so far in all the rounds of Rings: <strong>' + web3.utils.fromWei(stackSoFar) + ' Ether</strong>.</p><hr/>';
 							}
 						}); 
 					}); 
@@ -570,15 +580,15 @@ if (typeof web3 !== 'undefined') {
 											blockString = blocksLeft + ' blocks';
 										}
 												if(playersNum == 1){
-													document.getElementById('ElonMetaMask').innerHTML = '<p>The current round of Rings will end in ' + blockString + ' and there is currently 1 player in the game for a Jackpot of <strong>'+ Math.round((eval(currentStack)/100*98)/Math.pow(10,15)+Number.EPSILON)/Math.pow(10,3) +' Ether</strong>. To play you need ' + Math.round(eval(valueToEnter)/Math.pow(10,15)+Number.EPSILON)/Math.pow(10,3) + ' Ether (<i>plus an editable gas fee for the transaction</i>).<br/>Were you to enter the round, your chances to win would be 50&percnt;.</p><p><button class="countMeIn button cta rounded primary-btn raised">Count me in!</button></p>';
-													var dummy = eval(valueToEnter)/Math.pow(10,15);
+													document.getElementById('ElonMetaMask').innerHTML = '<p>The current round of Rings will end in ' + blockString + ' and there is currently 1 player in the game for a Jackpot of <strong>' + web3.utils.fromWei(currentStack) + ' Ether</strong>. To play you need ' + web3.utils.fromWei(valueToEnter) + ' Ether (<i>plus an editable gas fee for the transaction</i>).<br/>Were you to enter the round, your chances to win would be 50&percnt;.</p><p><button class="countMeIn button cta rounded primary-btn raised">Count me in!</button></p>';
+													var dummy = web3.utils.fromWei(valueToEnter);
 													const countMeIn = document.querySelector('.countMeIn');
 													countMeIn.addEventListener('click', () => {
 														depositWage(dummy, rings, curr_account_rings); 
 													});
 												}else{
-													document.getElementById('ElonMetaMask').innerHTML = '<p>The current round of Rings will end in ' + blockString + ' and there are currently ' + playersNum +' players in the game for a total Jackpot of <strong>'+ Math.round((eval(currentStack)/100*98)/Math.pow(10,15)+Number.EPSILON)/Math.pow(10,3) +' Ether</strong>. To play you need ' + Math.round(eval(valueToEnter)/Math.pow(10,15)+Number.EPSILON)/Math.pow(10,3) + ' Ether (<i>plus an editable gas fee for the transaction</i>).<br/>Were you to enter the round, your chances to win would be '+ Math.round((1/(eval(playersNum)+1)*Math.pow(10,6))+Number.EPSILON)/Math.pow(10,4)+'&percnt;.</p><p><button class="countMeIn button cta rounded primary-btn raised">Count me in!</button></p>';
-													var dummy = eval(valueToEnter)/Math.pow(10,15);
+													document.getElementById('ElonMetaMask').innerHTML = '<p>The current round of Rings will end in ' + blockString + ' and there are currently ' + playersNum +' players in the game for a total Jackpot of <strong>' + web3.utils.fromWei(currentStack) + ' Ether</strong>. To play you need ' + web3.utils.fromWei(valueToEnter) + ' Ether (<i>plus an editable gas fee for the transaction</i>).<br/>Were you to enter the round, your chances to win would be '+ Math.round((1/(eval(playersNum)+1)*Math.pow(10,6))+Number.EPSILON)/Math.pow(10,4)+'&percnt;.</p><p><button class="countMeIn button cta rounded primary-btn raised">Count me in!</button></p>';
+													var dummy = web3.utils.fromWei(valueToEnter);
 													const countMeIn = document.querySelector('.countMeIn');
 													countMeIn.addEventListener('click', () => {
 														depositWage(dummy, rings, curr_account_rings); 
@@ -590,11 +600,11 @@ if (typeof web3 !== 'undefined') {
 										if(playersNum > 0){ 
 											var roundInfo = '-';
 											if(playersNum == 1){
-												roundInfo = '1 player for a Jackpot of '+ Math.round((eval(currentStack)/100*98)/Math.pow(10,15)+Number.EPSILON)/Math.pow(10,3) +' Ether';
+												roundInfo = '1 player for a Jackpot of '+ web3.utils.fromWei(currentStack) + ' Ether';
 											}else{
-												roundInfo = playersNum + ' players for a Jackpot of '+ Math.round((eval(currentStack)/100*98)/Math.pow(10,15)+Number.EPSILON)/Math.pow(10,3) +' Ether';
+												roundInfo = playersNum + ' players for a Jackpot of '+ web3.utils.fromWei(currentStack) + ' Ether';
 											}
-											document.getElementById('ElonMetaMask').innerHTML = '<p>The previous round of Rings ('+ roundInfo +') still needs to be finalized with a winner.<br/>You can simply do that (<i>paying an editable gas fee for the transaction</i>) or start a new round (<i>automatically finalizing the pending one</i>) on your own terms (<i>i.e. you choose the value to enter the game for the next round</i>).</p><p><input type="number" class="input" style="width: 25%;" id="deposit" min="1" step="1" name="deposit" label="deposit"/> Finney (0.001 Ether) - <span style="font-style: italic;">PS: 1 Finney is the lowest deposit allowed</span></p><p><button class="startNewRound button cta rounded primary-btn raised">Start a new round</button></p><p>If another player starts a new round in the meantime you lollygag, you\'ll end up playing at the other player\'s terms (<i>if the other player\'s deposit is equal to or lower than yours</i>) or not playing at all (<i>if your deposit is not enough</i>).<br/>Funds that are not invested in the game will be directly returned to their owner.</p><hr/><p><button class="findTheLastWinner button signup-button rounded secondary-btn raised">Just find out who won</button></p>';
+											document.getElementById('ElonMetaMask').innerHTML = '<p>The previous round of Rings ('+ roundInfo +') still needs to be finalized with a winner.<br/>You can simply do that (<i>paying an editable gas fee for the transaction</i>) or start a new round (<i>automatically finalizing the pending one</i>) on your own terms (<i>i.e. you choose the value to enter the game for the next round</i>).</p><p><input type="number" class="input" style="width: 25%;" id="deposit" min="0.001" name="deposit" label="deposit"/> Ether.</p><p><button class="startNewRound button cta rounded primary-btn raised">Start a new round</button></p><p><span style="font-style: italic;">PS: 0.001 Ether is the lowest deposit allowed</span></p><p>If another player starts a new round in the meantime you lollygag, you\'ll end up playing at the other player\'s terms (<i>if the other player\'s deposit is equal to or lower than yours</i>) or not playing at all (<i>if your deposit is not enough</i>).<br/>Funds that are not invested in the game will be directly returned to their owner.</p><hr/><p><button class="findTheLastWinner button signup-button rounded secondary-btn raised">Just find out who won</button></p>';
 
 											const startNewRound = document.querySelector('.startNewRound');
 											const findTheLastWinner = document.querySelector('.findTheLastWinner');
@@ -606,7 +616,7 @@ if (typeof web3 !== 'undefined') {
 												winnerSelection(rings, curr_account_rings);
 											});
 										}else{ 
-											document.getElementById('ElonMetaMask').innerHTML = '<p>Start a new round of Rings on your own terms (<i>i.e. you choose the value to enter the game for the next round</i>).</p><p><input type="number" class="input" style="width: 25%;" id="deposit" min="1" step="1" name="deposit" label="deposit"/> Finney (0.001 Ether) - <span style="font-style: italic;">PS: 1 Finney is the lowest deposit allowed</span></p><p><button class="startNewRound button cta rounded primary-btn raised">Start a new round</button></p><p>If another player starts a new round in the meantime you choose how much to stack, you\'ll end up playing at the other player\'s terms (<i>if the other player\'s deposit is equal to or lower than yours</i>) or not playing at all (<i>if your deposit is not enough</i>).<br/>Funds that are not invested in the game will be directly returned to their owner.</p>';
+											document.getElementById('ElonMetaMask').innerHTML = '<p>Start a new round of Rings on your own terms (<i>i.e. you choose the value to enter the game for the next round</i>).</p><p><input type="number" class="input" style="width: 25%;" id="deposit" min="0.001" name="deposit" label="deposit"/> Ether.</p><p><button class="startNewRound button cta rounded primary-btn raised">Start a new round</button></p><p><span style="font-style: italic;">PS: 0.001 Ether is the lowest deposit allowed</span></p><p>If another player starts a new round in the meantime you choose how much to stack, you\'ll end up playing at the other player\'s terms (<i>if the other player\'s deposit is equal to or lower than yours</i>) or not playing at all (<i>if your deposit is not enough</i>).<br/>Funds that are not invested in the game will be directly returned to their owner.</p>';
 
 											const startNewRound = document.querySelector('.startNewRound');
 
@@ -691,5 +701,6 @@ if (typeof web3 !== 'undefined') {
 <script src="../../js/fresh.js"></script>
 <script src="../../js/jquery.panelslider.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
   </body>
 </html>

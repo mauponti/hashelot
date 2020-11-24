@@ -6,10 +6,19 @@
     <description>Recent content in Utilities on Hashelot - Decentralized ventures</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 12 Jun 2020 10:53:25 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 15 Oct 2020 01:02:03 +0100</lastBuildDate>
     
 	<atom:link href="/utilities/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>BytesMath - A different approach to mathematics</title>
+      <link>/utilities/BytesMath/</link>
+      <pubDate>Thu, 15 Oct 2020 01:02:03 +0100</pubDate>
+      
+      <guid>/utilities/BytesMath/</guid>
+      <description>A library for mathematical operations with numbers expressed as bytes. So far it&amp;rsquo;s mainly just an idea.</description>
+    </item>
     
     <item>
       <title>Entropy - A case for on-chain randomness</title>
@@ -17,7 +26,9 @@
       <pubDate>Fri, 12 Jun 2020 10:53:25 +0100</pubDate>
       
       <guid>/utilities/entropy/</guid>
-      <description>Entropy is an intellectual exercise, a smart contract (hashelot_entropy_v.1.0.sol) in which you will find the callable (i.e. you don&amp;rsquo;t need gas to use it) method randomics() that returns a value in $ [0,2^{256}-1] $, mimicking a random generator1.
+      <description>Entropy is an intellectual exercise, a smart contract (hashelot_entropy_v.1.0.sol) in which you will find the callable (i.e. you don&amp;rsquo;t need gas to use it) method randomics() that returns a value in
+$$ [0,2^{256}-1], $$
+mimicking a random generator1.
 Transaction hash: 0x80d370b146&amp;hellip;2f978ae329.
 The way another contract might use randomics() is then up to the developer. As an example, the following button generates and displays a value in
 $$ [0,1] $$

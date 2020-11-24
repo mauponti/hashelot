@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+
+<meta property="og:title" content="Delphi [Beta testing] - Oracle&#39;s page" />
+<meta property="og:description" content="Review what the Oracle has been up to." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/dapps/delphi/singleOracle/" />
+<meta property="article:published_time" content="2020-10-01T01:02:03+01:00" />
+<meta property="article:modified_time" content="2020-10-01T01:02:03+01:00" />
+
+
+<meta name="description" content="Hardcoded description; the author should update :)" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Hashelot - Decentralized ventures</title>
+    
+<link rel="icon" type="image/png" href="../../../images/favicon.png" />
+<link href="https://fonts.googleapis.com/css?family=Open&#43;Sans:400,600" rel="stylesheet" />
+
+<link rel="stylesheet" type="text/css" href="../../../css/style.min.bfae47b96aa2abf6eedbe138c13dbaa4e229e252b9906c24269d571907da1d1d.css" />
+<link rel="stylesheet" type="text/css" href="../../../css/icons.css" />
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+
+    
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+  </head>
+  <body>
+    
+    <div id="preloader">
+      <div id="status"></div>
+    </div>
+
+    
+
+    
+
+<nav class="navbar is-fresh is-transparent no-shadow" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../../">
+        <img src="../../../images/logos/hashelot-header.svg" alt="" width="200">
+      </a>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar-menu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+      <div id="navbar-menu" class="navbar-menu is-static">
+
+        <div class="navbar-end">
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              DApps
+            </a>
+
+            <div class="navbar-dropdown">
+              <a href="../../../dapps/delphi/" class="navbar-item">
+                Delphi
+              </a>
+              <a href="../../../dapps/shelter/" class="navbar-item">
+                Shelter
+              </a>
+              <a href="../../../dapps/chronicles/" class="navbar-item">
+                Chronicles
+              </a>
+            </div>
+          </div>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              Games
+            </a>
+
+            <div class="navbar-dropdown">
+              <a href="../../../games/rings/" class="navbar-item">
+                Rings
+              </a>
+              <a href="../../../games/dayrings/" class="navbar-item">
+                [Day] Rings
+              </a>
+            </div>
+          </div>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              Utilities
+            </a>
+
+            <div class="navbar-dropdown">
+              <a href="../../../utilities/entropy/" class="navbar-item">
+                Entropy
+              </a>
+              <a href="../../../utilities/BytesMath/" class="navbar-item">
+                BytesMath
+              </a>
+            </div>
+          </div>
+
+          <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+
+<a class="navbar-item"><span id="enableWallet" class="enableWallet button signup-button rounded secondary-btn raised"></span></a>
+
+<script>
+
+
+var metamask = 0; 
+var connectMetaMask = "Connect MetaMask";
+
+var dapper = 0; 
+var connectDapper = "Connect Dapper";
+
+
+var neoline = 0; 
+
+
+var brave = 0; 
+
+var unsupportedWallet = "Unsupported Web3 wallet"
+
+var noWeb3 = 'No Web3 wallet';
+
+
+if (typeof web3 !== 'undefined') {
+    if(web3.currentProvider.isMetaMask){
+      metamask = 1;
+    }
+    
+
+
+    if(metamask){ 
+      
+      ethereum.request({ method: 'eth_accounts' }).then(accounts => {
+        
+        var curr_account = accounts[0];
+        if(curr_account != null){
+          
+          
+          var displayed_account = curr_account.slice(0, 6) + '...' + curr_account.slice(37, 42);
+          document.getElementById('enableWallet').innerHTML = displayed_account;
+        }else{
+          
+          
+          const classMetaMask = document.getElementById('enableWallet');
+          if (classMetaMask) {
+            classMetaMask.addEventListener('click', async() => {
+              ethereum.request({ method: 'eth_requestAccounts' }).then(result => {
+                console.log(result);
+                location.reload();
+              });
+            }); 
+          } 
+
+          document.getElementById('enableWallet').innerHTML = connectMetaMask;
+
+        }
+      });
+
+
+    }else{ 
+      const classWallet = document.getElementById('enableWallet');
+      if (classWallet) {
+        classWallet.addEventListener('click', async() => {
+          window.location = 'wallets';
+        }); 
+      } 
+      document.getElementById('enableWallet').innerHTML = unsupportedWallet;
+    }
+}else{ 
+  const classWallet = document.getElementById('enableWallet');
+  if (classWallet) {
+    classWallet.addEventListener('click', async() => {
+      window.location = 'wallets';
+    }); 
+  } 
+
+  document.getElementById('enableWallet').innerHTML = noWeb3;
+}
+</script>
+
+
+        </div>
+      </div>
+  </div>
+</nav>
+
+
+
+<nav id="navbar-clone" class="navbar is-fresh is-transparent" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../../">
+        <img src="../../../images/logos/hashelot-header.svg" alt="" width="200">
+      </a>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="cloned-navbar-menu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="cloned-navbar-menu" class="navbar-menu is-fixed">
+
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            DApps
+          </a>
+
+          <div class="navbar-dropdown">
+            <a href="../../../dapps/delphi/" class="navbar-item">
+              Delphi
+            </a>
+            <a href="../../../dapps/shelter/" class="navbar-item">
+              Shelter
+            </a>
+            <a href="../../../dapps/chronicles/" class="navbar-item">
+              Chronicles
+            </a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            Games
+          </a>
+
+          <div class="navbar-dropdown">
+            <a href="../../../games/rings/" class="navbar-item">
+              Rings
+            </a>
+            <a href="../../../games/dayrings/" class="navbar-item">
+              [Day] Rings
+            </a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            Utilities
+          </a>
+
+          <div class="navbar-dropdown">
+            <a href="../../../utilities/entropy/" class="navbar-item">
+              Entropy
+            </a>
+            <a href="../../../utilities/BytesMath/" class="navbar-item">
+              BytesMath
+            </a>
+          </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+
+<a class="navbar-item"><span id="enableWallet-clone" class="enableWallet button signup-button rounded secondary-btn raised"></span></a>
+
+<script>
+
+
+var metamask = 0; 
+var connectMetaMask = "Connect MetaMask";
+
+var dapper = 0; 
+var connectDapper = "Connect Dapper";
+
+
+var neoline = 0; 
+
+
+var brave = 0; 
+
+var unsupportedWallet = "Unsupported Web3 wallet"
+
+var noWeb3 = 'No Web3 wallet';
+
+
+if (typeof web3 !== 'undefined') {
+    if(web3.currentProvider.isMetaMask){
+      metamask = 1;
+    }
+    
+
+
+    if(metamask){ 
+      
+      ethereum.request({ method: 'eth_accounts' }).then(accounts => {
+        
+        var curr_account = accounts[0];
+        if(curr_account != null){
+          
+          
+          var displayed_account = curr_account.slice(0, 6) + '...' + curr_account.slice(37, 42);
+          document.getElementById('enableWallet-clone').innerHTML = displayed_account;
+        }else{
+          
+          
+          const classMetaMask = document.getElementById('enableWallet-clone');
+          if (classMetaMask) {
+            classMetaMask.addEventListener('click', async() => {
+              ethereum.request({ method: 'eth_requestAccounts' }).then(result => {
+                console.log(result);
+                location.reload();
+              });
+            }); 
+          } 
+
+          document.getElementById('enableWallet-clone').innerHTML = connectMetaMask;
+
+        }
+      });
+
+
+    }else{ 
+      const classWallet = document.getElementById('enableWallet-clone');
+      if (classWallet) {
+        classWallet.addEventListener('click', async() => {
+          window.location = 'wallets';
+        }); 
+      } 
+      document.getElementById('enableWallet-clone').innerHTML = unsupportedWallet;
+    }
+}else{ 
+  const classWallet = document.getElementById('enableWallet-clone');
+  if (classWallet) {
+    classWallet.addEventListener('click', async() => {
+      window.location = 'wallets';
+    }); 
+  } 
+
+  document.getElementById('enableWallet-clone').innerHTML = noWeb3;
+}
+</script>
+
+
+      </div>
+    </div>
+</div>
+</nav>
+
+<section class="section is-medium">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-centered-tablet-portrait">
+        <h1 class="title section-title">Delphi [Beta testing] - Oracle&#39;s page</h1>
+        <h5 class="subtitle is-5 is-muted"></h5>
+        <div class="divider"></div>
+      </div>
+    </div>
+
+    <div class="content">
+      <p>A complete record of the Oracle&rsquo;s activity.</p>
+<hr>
+<div id="stacked"></div>
+<div id="ElonMetaMask"></div>
+
+<div id="amIAnOracle"></div>
+<script>
+
+function htmlEntities(str) {
+    return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+
+function consultOracle(_contract, _curr_account, _oracle, _answerKind, _reward, _question){
+  consultOracle:{
+  	if (isNaN(_reward)){ 
+  		console.error('To consult the Oracle, you need to input a number as a reward!');
+      break consultOracle;
+  	}else{
+  		const amount = web3.utils.toWei(_reward); 
+  		
+      var _kind;
+      if (_answerKind == 1 || _answerKind == 0){
+        _kind = _answerKind;
+        
+      }else{
+        console.error('The answer can only be either open (1) or closed (0)!');
+        break consultOracle;
+      }
+      if (_question == ''){
+        console.error('You did not enter a question.');
+        break consultOracle;
+      }
+      var _hexQuestion = web3.utils.asciiToHex(_question);
+      
+  		_contract.methods.askTheOracle(_oracle, _hexQuestion, _kind).estimateGas({from: _curr_account, value: amount}).then(gasEstimate => {
+  			_contract.methods.askTheOracle(_oracle, _hexQuestion, _kind).send({from: _curr_account, value: amount, gas: gasEstimate},function(error, result){
+  				if(!error)
+  					console.log(result);
+  				else
+  					console.error(error);
+  			}); 
+  		}); 
+  	}
+  }
+}
+
+
+function updateMinRew(_contract, _curr_account, _oracle, _minReward){
+  updateMinRew:{
+  	if (isNaN(_minReward)){ 
+  		console.error('To update the Oracle\'s minimum reward, you need to input a number!');
+      break updateMinRew;
+  	}else{
+      
+  		const amount = web3.utils.toWei(_minReward); 
+
+  		_contract.methods.updateMinimumReward(_oracle, amount).estimateGas({from: _curr_account, value: 0}).then(gasEstimate => {
+  			_contract.methods.updateMinimumReward(_oracle, amount).send({from: _curr_account, value: 0, gas: gasEstimate},function(error, result){
+  				if(!error)
+  					console.log(result);
+  				else
+  					console.error(error);
+  			}); 
+  		}); 
+  	}
+  }
+}
+
+function answerQuestion(_contract, _curr_account, _oracle, _id, _answer){
+  answerQuestion:{
+    if (_answer == ''){
+      console.error('Answer [id = ' + _id + ']: You did not enter an answer.');
+      break answerQuestion;
+    }
+    var _hexAnswer = web3.utils.asciiToHex(_answer);
+    _contract.methods.setAnswer(_oracle, _id, _hexAnswer).estimateGas({from: _curr_account, value: '0'}).then(gasEstimate => {
+      _contract.methods.setAnswer(_oracle, _id, _hexAnswer).send({from: _curr_account, value: '0', gas: gasEstimate},function(error, result){
+        if(!error)
+          console.log(result);
+        else
+          console.error(error);
+      }); 
+    }); 
+  }
+}
+
+var current_network = 3; 
+var ethScanner = "https://ropsten.etherscan.io/";
+var networkWarning = 'To access this page, set your MetaMask network on the Ropsten one.';
+var delphi_address = '0x5c288a80aec2820ce38ea3f70d71873b3f648939';
+var jsonInterface = [
+	{
+		"inputs": [
+			{
+				"internalType": "contract Oracle",
+				"name": "_oracle",
+				"type": "address"
+			},
+			{
+				"internalType": "bytes32",
+				"name": "_question",
+				"type": "bytes32"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_openNum",
+				"type": "uint256"
+			}
+		],
+		"name": "askTheOracle",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "_index",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_minimumReward",
+				"type": "uint256"
+			}
+		],
+		"name": "makeMeAnOracle",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "newOracle",
+				"type": "address"
+			}
+		],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "contract Oracle",
+				"name": "_oracle",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_index",
+				"type": "uint256"
+			},
+			{
+				"internalType": "bytes32",
+				"name": "_answer",
+				"type": "bytes32"
+			}
+		],
+		"name": "setAnswer",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "contract Oracle",
+				"name": "_oracle",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_minimumReward",
+				"type": "uint256"
+			}
+		],
+		"name": "updateMinimumReward",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "_delphi",
+		"outputs": [
+			{
+				"internalType": "address payable",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "contract Oracle",
+				"name": "_oracle",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_index",
+				"type": "uint256"
+			}
+		],
+		"name": "checkAnswerByIndex",
+		"outputs": [
+			{
+				"internalType": "bytes32",
+				"name": "",
+				"type": "bytes32"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "contract Oracle",
+				"name": "_oracle",
+				"type": "address"
+			}
+		],
+		"name": "checkOracleAddress",
+		"outputs": [
+			{
+				"internalType": "address payable",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "contract Oracle",
+				"name": "_oracle",
+				"type": "address"
+			}
+		],
+		"name": "checkOracleMinimumReward",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "contract Oracle",
+				"name": "_oracle",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_index",
+				"type": "uint256"
+			}
+		],
+		"name": "checkQuestionByIndex",
+		"outputs": [
+			{
+				"internalType": "bytes32",
+				"name": "",
+				"type": "bytes32"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "contract Oracle",
+				"name": "_oracle",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_index",
+				"type": "uint256"
+			}
+		],
+		"name": "checkRewardByIndex",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "contract Oracle",
+				"name": "_oracle",
+				"type": "address"
+			}
+		],
+		"name": "getOracleID",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "_index",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "howManyOracles",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "contract Oracle",
+				"name": "_oracle",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_index",
+				"type": "uint256"
+			}
+		],
+		"name": "isThereAnAnswerYet",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "oracles",
+		"outputs": [
+			{
+				"internalType": "contract Oracle",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "oraclesAddresses",
+		"outputs": [
+			{
+				"internalType": "address payable",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "contract Oracle",
+				"name": "_oracle",
+				"type": "address"
+			}
+		],
+		"name": "oracleStats",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "_numberQuestions",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_numberAnswers",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "showcaseAllOracles",
+		"outputs": [
+			{
+				"internalType": "bytes",
+				"name": "",
+				"type": "bytes"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "contract Oracle",
+				"name": "_oracle",
+				"type": "address"
+			}
+		],
+		"name": "thatSingleOracle",
+		"outputs": [
+			{
+				"internalType": "bytes",
+				"name": "",
+				"type": "bytes"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "contract Oracle",
+				"name": "_oracle",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_index",
+				"type": "uint256"
+			}
+		],
+		"name": "thatSingleQuestion",
+		"outputs": [
+			{
+				"internalType": "bytes",
+				"name": "",
+				"type": "bytes"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+];
+var metamaskDelphi = 0; 
+
+
+if (typeof web3 !== 'undefined') {
+	var oracle_id = htmlEntities(window.location.search);
+	if (oracle_id.slice(0, 4) == '?id=' && !isNaN(oracle_id.slice(4, oracle_id.length))){
+		oracle_id = parseInt(oracle_id.slice(4, oracle_id.length));
+		console.log(oracle_id);
+	  var delphi;
+	  var current_account;
+
+		if(web3.currentProvider.isMetaMask){
+			metamaskDelphi = 1;
+		}
+
+		if(metamaskDelphi){ 
+			
+			ethereum.request({ method: 'eth_accounts' }).then(accounts => {
+				var curr_account_delphi = accounts[0];
+				if(curr_account_delphi != null){
+					
+
+					window.web3 = new Web3(ethereum);
+					
+					delphi = new web3.eth.Contract(jsonInterface, delphi_address);
+
+					
+					if(ethereum.networkVersion == current_network){
+						document.getElementById('ElonMetaMask').innerHTML = '';
+						
+						delphi.methods.howManyOracles().call().then(_oraclesNumber => {
+							if (oracle_id >= _oraclesNumber){ 
+								
+                if (_oraclesNumber == 0){
+                  document.getElementById('amIAnOracle').innerHTML = '<p>There are no Oracles at Delphi at the moment, no need to provide an <i>id</i>.</p>';
+                }else{
+                  document.getElementById('amIAnOracle').innerHTML = '<p>There are no Oracles at Delphi with the provided <i>id</i> (' + oracle_id + '), you\'d better verify your data (choose an <i>id</id> between 0 and ' + eval(_oraclesNumber-1) + ').</p>';
+                }
+
+							}else{ 
+                var _previousID = (oracle_id-1)%_oraclesNumber;
+                var _nextID = (oracle_id+1)%_oraclesNumber;
+
+                if (_previousID < 0){
+                  _previousID = _oraclesNumber-1;
+                }
+
+								delphi.methods.showcaseAllOracles().call().then(function(_showcaseAll, _errorAll){
+
+									var substring = _showcaseAll.slice(2,_showcaseAll.length); 
+									var incipit = oracle_id*144;
+									var contract_address = "0x" + substring.slice(incipit, incipit+40);
+									var oracle_address = "0x" + substring.slice(incipit+40, incipit+80);
+                  oracle_minimumReward = web3.utils.fromWei("0x"+substring.slice(incipit+80, incipit+144));
+									
+									
+
+                  var showcase = '<div style="display: inline-block; vertical-align: top;"><a href="../../../dapps/delphi/singleOracle/?id=' + _previousID + '" >Previous Oracle</a></div><div style="display: inline-block; vertical-align: top; float:right;"><a href="../../../dapps/delphi/singleOracle/?id=' + _nextID + '">Next Oracle</a></div><hr/><div style="width: 100%; border-radius: 5px; padding: 10px; background: #F4F4F4;"><p><i>Contract</i>: <a href="' + ethScanner + 'address/' + contract_address + '" target="_blank"><strong>' + contract_address.slice(0,7) + '...' + contract_address.slice(37,42) + '</strong></a>.</p><p><i>Address</i>: <a href="' + ethScanner + 'address/' + oracle_address + '" target="_blank"><strong>' + oracle_address.slice(0,7) + '...' + oracle_address.slice(37,42) + '</strong></a>.</p><p><i>Minimum reward</i>: <strong>' + oracle_minimumReward + ' Ether</strong>.</p></div></div><div style="width: 100%; padding: 10px; border: solid 2px #F4F4F4; margin-top: 5px; margin-bottom: 20px; border-radius: 5px;"><p><span style="text-decoration: underline;">The Oracle awaits your question</span></p><p><label for="answerKind">What kind of answer are you looking for?</label><br/><select id="answerKind" name="answerKind" class="input" style="width: 150px; -webkit-appearance: menulist; vertical-align: middle;"><option value="0">Closed answer</option><option value="1">Open answer</option></select></p><p>Set a reward for the Oracle\'s question:<br/><input type="number" class="input" style="width: 50%; vertical-align: middle;" min="' + oracle_minimumReward + '" value="' + oracle_minimumReward + '" placeholder="Minimum ' + oracle_minimumReward + '" id="askReward" name="askReward" label="askReward"/> Ether.<br/>N.B.: 0.1% of the reward will go to Delphi.</p><hr/><p><input type="text" class="input" style="width: 100%;" maxlength="32" id="question" name="question" label="question" placeholder="Write your question here!"/></p><p><button class="askOracle button cta rounded primary-btn raised">Consult the Oracle [' + contract_address.slice(0,7) + '...' + contract_address.slice(37,42) + ']</button></p><p><span style="font-style: italic;">TL;DR rules: You may use up to 32 characters for your question. Keep in mind that an <span style="text-decoration: underline;">open answer</span> can be modified indefinitely many times, yet the Oracle gets rewarded only the first time, while a <span style="text-decoration: underline;">closed answer</span> will remain the same once it has been given.</span></p></div>';
+
+                  if (curr_account_delphi == oracle_address){
+                    showcase = showcase + '<div style="width: 100%; border-radius: 5px; padding: 10px; background: #F4F4F4; margin-bottom: 20px;"><span style="text-decoration: underline;">Update your minimum reward</span></p><p><input type="number" class="input" style="width: 50%; vertical-align: middle;" min="' + oracle_minimumReward + '" placeholder="The current minimum reward is ' + oracle_minimumReward + '" id="minRewUpdate" name="minRewUpdate" label="minRewUpdate" value="' + oracle_minimumReward + '"/> Ether.</p><p><button class="updateMinReward button cta rounded secondary-btn raised">Update the minimum reward</button></p></div>';
+                  }
+									delphi.methods.thatSingleOracle(contract_address).call().then(function(_showcaseSingle, _errorSingle){
+                    if (_showcaseSingle == null){
+									    showcase = showcase + '<p>The selected Oracle has no activity to show.</p>';
+                      document.getElementById('amIAnOracle').innerHTML = showcase;
+                    }else{
+                      substring = _showcaseSingle.slice(2,_showcaseSingle.length); 
+                      var lenny = substring.length;
+                      
+                      var rounds = 0;
+                      if (lenny%362 == 0) { 
+                          rounds = lenny/362;
+                      }
+
+                      var _question;
+                      var _answer;
+                      var _answer_label;
+                      var _reward;
+                      var _reward_label;
+                      var _questionTime;
+                      var _answerTime;
+                      var _inquirer;
+                      var _open;
+
+                      var counter = 1;
+
+                      var _divClass;
+                      
+                      showcase = showcase + '<p>Hide/show questions: <a href="javascript:void(0);" class="_hideUnanswered" >Unanswered</a> - <a href="javascript:void(0);" class="_hideAnswered" style="background:none; border:none; margin:0; padding:0; cursor: pointer;">Answered</a></p><hr/>';
+
+                      for (k=0; k<rounds; k++){ 
+                        incipit = k*362;
+                        _question = "0x" + substring.slice(incipit, incipit+64);
+                        _question = web3.utils.hexToAscii(_question);
+                        _answer = "0x" + substring.slice(incipit+64, incipit+128);
+                        _reward = web3.utils.fromWei("0x"+substring.slice(incipit+128, incipit+192));
+                        
+                        
+                        _questionTime = parseInt("0x"+substring.slice(incipit+192, incipit+256));
+                        _answerTime = parseInt("0x"+substring.slice(incipit+256, incipit+320));
+                        _inquirer = "0x" + substring.slice(incipit+320, incipit+360);
+                        _open = parseInt("0x"+substring.slice(incipit+360, incipit+362));
+
+                        if(_questionTime > _answerTime) {
+                          
+                          _answer = '<i>This question hasn\'t been answered yet</i>';
+                          _answer_label = '<span style="text-decoration: line-through;">Answer</span>';
+                          _reward_label = 'Reward';
+                          _divClass = "_unanswered";
+                        }else{
+                          _answer = web3.utils.hexToAscii(_answer);
+                          _answer_label = 'Answer (Block height <a href="' + ethScanner + 'block/' + _questionTime + '" target="_blank">' + _answerTime + '</a>)';
+                          _reward_label = 'Already rewarded';
+                          _divClass = "_answered";
+                        }
+
+                        if (curr_account_delphi == oracle_address){
+                          
+                          showcase = showcase + '<div class="' + _divClass + '" style="display: block;"><div style="display: inline-block; vertical-align: top;"><p><i>From</i>: <a href="' + ethScanner + 'address/' + _inquirer + '" target="_blank">' + _inquirer.slice(0,7) + '...' + _inquirer.slice(37,42) + '</a>.</p><p><i>Question (Block height <a href="' + ethScanner + 'block/' + _questionTime + '" target="_blank">' + _questionTime + '</a>)</i>: ' + _question + '?</p><p><i>' + _answer_label + '</i>: ' + _answer + '.</p><p><i>' + _reward_label + '</i>: ' + _reward + ' Ether.</p></div><div style="display: inline-block; vertical-align: top; float:right;"><p><a class="button btn-align-md accent-btn raised" href="javascript:void(0);">' + counter + '</a></p></div><div style="width: 100%; height: 10px;"></div><div style="width: 100%; border-radius: 5px; padding: 10px; background: #F4F4F4;">';
+
+                          if (_questionTime > _answerTime){ 
+                            showcase = showcase + '<p><input type="text" class="input" style="width: 100%;" maxlength="32" id="answer_' + k + '" name="answer_' + k + '" label="answer_' + k + '" placeholder="Your answer goes here!"/></p><p><button class="giveAnswer_' + k +' button btn-align-md accent-btn raised">Give an answer to Question ' + counter + '</button></p><p><span style="font-style: italic;">TL;DR rules: You may use up to 32 characters for your answer.';
+                              if (_open == 1){
+                                showcase = showcase + ' This is an <span style="text-decoration: underline;">open answer</span> and you can modify it as many times as you want (though only the first time gets rewarded).</span></p></div><div id="answered_' + k + '"></div>';
+                              }else{
+                                showcase = showcase + ' This is a <span style="text-decoration: underline;">closed answer</span> and it will not be possible to revert it once it has been registered on the blockchain.</span></p></div><div id="answered_' + k + '"></div>';
+                              }
+                          }else{ 
+                            if(_open == 1){ 
+                              showcase = showcase + '<p><input type="text" class="input" style="width: 100%;" maxlength="32" id="answer_' + k + '" name="answer_' + k + '" label="answer_' + k + '" placeholder="Write your new answer here!"/></p><p><button class="giveAnswer_' + k +' button btn-align-md accent-btn raised">Change the answer to Question ' + counter + '</button></p><p><span style="font-style: italic;">TL;DR rules: You may use up to 32 characters for your answer. This is an <span style="text-decoration: underline;">open answer</span> and you can modify it as many times as you want (though only the first time gets rewarded).</span></p></div><div id="answered_' + k + '"></div>';
+                            }else{ 
+                              showcase = showcase + '<p><span style="font-style: italic;">This is a <span style="text-decoration: underline;">closed answer</span> and it cannot be reverted since it is already been registered on the blockchain.</span></p></div>';
+                            }
+                          }
+
+                        }else{
+                          
+                          showcase = showcase + '<div class="' + _divClass + '" style="display: block;"><div style="display: inline-block; vertical-align: top;"><p><i>From</i>: <a href="' + ethScanner + 'address/' + _inquirer + '" target="_blank">' + _inquirer.slice(0,7) + '...' + _inquirer.slice(37,42) + '</a>.</p><p><i>Question (Block height <a href="' + ethScanner + 'block/' + _questionTime + '" target="_blank">' + _questionTime + '</a>)</i>: ' + _question + '?</p><p><i>' + _answer_label + '</i>: ' + _answer + '.</p><p><i>' + _reward_label + '</i>: ' + _reward + ' Ether.</p>';
+                          if (_open == 1){
+                            showcase = showcase + '<p><i>Question ' + counter + ' has an <span style="text-decoration: underline;">open answer</span></i>.</p>';
+                          }else{
+                            showcase = showcase + '<p><i>Question ' + counter + ' has a <span style="text-decoration: underline;">closed answer</span></i>.</p>';
+                          }
+                          showcase = showcase + '</div><div style="display: inline-block; vertical-align: top; float:right;"><p><a class="button btn-align-md accent-btn raised" href="javascript:void(0);">' + counter + '</a></p></div>';
+                        }
+
+                        
+                        if (k < rounds-1){
+                          showcase = showcase + '<hr/></div>';
+                        }else{
+                          showcase = showcase + '</div>';
+                        }
+                        
+                        counter++;
+                      } 
+
+                      document.getElementById('amIAnOracle').innerHTML = showcase;
+
+                      
+                      
+                      for (k=0; k<rounds; k++){
+                          if (document.querySelector('.giveAnswer_' + k) != null){
+                            const _action = document.querySelector('.giveAnswer_' + k);
+                            const _answerID = k;
+                            _action.addEventListener('click', () => {
+                              
+                              answerQuestion(delphi, curr_account_delphi, contract_address, _answerID, document.getElementById('answer_' + _answerID).value);
+        									  });
+                          }
+                      }
+
+
+                      var _button = document.querySelector('._hideUnanswered');
+                      var coll = document.getElementsByClassName("_unanswered");
+                      var i;
+                      
+                      _button.addEventListener("click", function(){
+                        for (i = 0; i < coll.length; i++) { 
+                          
+                          console.log(coll[i].style.display);
+                          if (coll[i].style.display === "block") {
+                            coll[i].style.display = "none";
+                          } else {
+                            coll[i].style.display = "block";
+                          }
+                        }
+                      }); 
+
+                      var _answrdButton = document.querySelector('._hideAnswered');
+                      var _answrdColl = document.getElementsByClassName("_answered");
+                      
+                      _answrdButton.addEventListener("click", function(){
+                        for (i = 0; i < _answrdColl.length; i++) { 
+                          
+                          console.log(_answrdColl[i].style.display);
+                          if (_answrdColl[i].style.display === "block") {
+                            _answrdColl[i].style.display = "none";
+                          } else {
+                            _answrdColl[i].style.display = "block";
+                          }
+                        }
+                      }); 
+
+                    } 
+
+                    
+                    const _askTheOracle = document.querySelector('.askOracle');
+                    _askTheOracle.addEventListener('click', () => {
+  										consultOracle(delphi, curr_account_delphi, contract_address, document.getElementById('answerKind').value, document.getElementById('askReward').value, document.getElementById('question').value);
+  									});
+
+                    
+                    if (curr_account_delphi == oracle_address){
+
+                      const _updateMinimumReward = document.querySelector('.updateMinReward');
+                      _updateMinimumReward.addEventListener('click', () => {
+                        updateMinRew(delphi, curr_account_delphi, contract_address, document.getElementById('minRewUpdate').value);
+                      }); 
+                    }
+
+									}); 
+
+								}); 
+							}
+						}); 
+					}else{
+						document.getElementById('stacked').innerHTML = '<p>' + networkWarning + '</p>';
+					}
+				}else{
+					
+          document.getElementById('ElonMetaMask').innerHTML = '<p><i>If you want to test <strong>Delphi</strong> through your web browser, you need to connect your MetaMask account.</p>';
+				}
+			});
+
+
+		}else{ 
+			document.getElementById('ElonMetaMask').innerHTML = '<p><i>If you want to test <strong>Delphi</strong> through your web browser, you need to use a <a href="https://metamask.io/download.html" target="_blank">MetaMask</a> account.</p>';
+		}
+	}else{ 
+	  document.getElementById('ElonMetaMask').innerHTML = '<p>Something\'s fishy with your url, you\'d better verify it!</p>';
+	}
+}else{ 
+  document.getElementById('ElonMetaMask').innerHTML = '<p><i>If you want to test <strong>Delphi</strong> through your web browser, you need to install <a href="https://metamask.io/download.html" target="_blank">MetaMask</a>.</p>';
+}
+</script>
+
+
+    </div>
+  </div>
+</section>
+
+
+
+    
+    
+<footer class="footer footer-dark">
+  <div class="container">
+    <div class="columns">
+      <div class="column" style="width: 100%; text-align: center;">
+        <div class="footer-column">
+          <div class="footer-header">
+            <h3>Other contact channels</h3>
+            <nav class="level is-mobile">
+              <div class="level-left" style="margin: auto;">
+                <a class="level-item" href="https://github.com/mauponti/hashelot">
+                  <span class="icon"><i class="fa fa-github"></i></span>
+                </a>
+                <a class="level-item" href="https://www.reddit.com/user/mauponti">
+                  <span class="icon"><i class="fa fa-reddit"></i></span>
+                </a>
+              </div>
+            </nav>
+            <a href="https://bulma.io" target="_blank">
+              <img src="../../../images/logos/made-with-bulma.png" alt="Made with Bulma" width="128" height="24">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    
+
+    
+    <div id="backtotop"><a href="#"></a></div>
+
+    
+
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="../../../js/fresh.js"></script>
+<script src="../../../js/jquery.panelslider.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+  </body>
+</html>

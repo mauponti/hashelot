@@ -3,6 +3,36 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/dapps/</loc>
+    <lastmod>2020-11-01T01:02:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/dapps/delphi/oraclesList/</loc>
+    <lastmod>2020-11-01T01:02:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2020-11-01T01:02:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/wallets/</loc>
+    <lastmod>2020-11-01T01:02:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/utilities/BytesMath/</loc>
+    <lastmod>2020-10-15T01:02:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/utilities/</loc>
+    <lastmod>2020-10-15T01:02:03+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/dapps/chronicles/</loc>
     <lastmod>2020-10-01T01:02:03+01:00</lastmod>
   </url>
@@ -13,12 +43,12 @@
   </url>
   
   <url>
-    <loc>/dapps/</loc>
+    <loc>/dapps/delphi/</loc>
     <lastmod>2020-10-01T01:02:03+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/dapps/delphi/</loc>
+    <loc>/dapps/delphi/singleOracle/</loc>
     <lastmod>2020-10-01T01:02:03+01:00</lastmod>
   </url>
   
@@ -28,12 +58,7 @@
   </url>
   
   <url>
-    <loc>/</loc>
-    <lastmod>2020-10-01T01:02:03+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/dapps/hodler/</loc>
+    <loc>/dapps/shelter/</loc>
     <lastmod>2020-10-01T01:02:03+01:00</lastmod>
   </url>
   
@@ -54,11 +79,6 @@
   
   <url>
     <loc>/utilities/entropy/</loc>
-    <lastmod>2020-06-12T10:53:25+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/utilities/</loc>
     <lastmod>2020-06-12T10:53:25+01:00</lastmod>
   </url>
   

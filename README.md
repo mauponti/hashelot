@@ -13,11 +13,13 @@ At first it will be an Ethereum-centric project, but from that point on it may l
 - [**[Day] Rings**](/games/ethereum/dayrings) (*deployed and verified*)
 
 ##### Apps
+- [**Delphi**](/apps/ethereum/delphi) (*Beta testing*)
+- **Shelter** (*under development*)
 - **Chronicles** (*under development*)
-- **Delphi** (*under development*)
 
 ##### Utilities
 - [**Entropy**](/utilities/ethereum/entropy) (*deployed*)
+- [**BytesMath**] (*under development*)
 
 ##### Web interface
 - [**Hashelot.com**](https://www.hashelot.com)

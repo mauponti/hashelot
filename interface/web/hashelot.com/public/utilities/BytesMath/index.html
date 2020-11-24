@@ -3,12 +3,12 @@
   <head>
     
 
-<meta property="og:title" content="Entropy - A case for on-chain randomness" />
-<meta property="og:description" content="How decentralized and fair is randomness in a blockchain setting?" />
+<meta property="og:title" content="BytesMath - A different approach to mathematics" />
+<meta property="og:description" content="A library for mathematical functions involving bytes" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/utilities/entropy/" />
-<meta property="article:published_time" content="2020-06-12T10:53:25+01:00" />
-<meta property="article:modified_time" content="2020-06-12T10:53:25+01:00" />
+<meta property="og:url" content="/utilities/BytesMath/" />
+<meta property="article:published_time" content="2020-10-15T01:02:03+01:00" />
+<meta property="article:modified_time" content="2020-10-15T01:02:03+01:00" />
 
 
 <meta name="description" content="Hardcoded description; the author should update :)" />
@@ -23,9 +23,6 @@
 <link rel="stylesheet" type="text/css" href="../../css/style.min.bfae47b96aa2abf6eedbe138c13dbaa4e229e252b9906c24269d571907da1d1d.css" />
 <link rel="stylesheet" type="text/css" href="../../css/icons.css" />
 
-
-    
-    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
 
     
 
@@ -354,82 +351,14 @@ if (typeof web3 !== 'undefined') {
   <div class="container">
     <div class="columns">
       <div class="column is-centered-tablet-portrait">
-        <h1 class="title section-title">Entropy - A case for on-chain randomness</h1>
+        <h1 class="title section-title">BytesMath - A different approach to mathematics</h1>
         <h5 class="subtitle is-5 is-muted"></h5>
         <div class="divider"></div>
       </div>
     </div>
 
     <div class="content">
-      <p><strong>Entropy</strong> is an intellectual exercise, a smart contract (<a href="https://github.com/mauponti/hashelot/tree/master/utilities/ethereum/entropy/solidity" target="">hashelot_entropy_v.1.0.sol</a>) in which you will find the callable (<em>i.e. you don&rsquo;t need gas to use it</em>) method <code>randomics()</code> that returns a value in</p>
-<p>$$ [0,2^{256}-1], $$</p>
-<p>mimicking a random generator<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
-<p>Transaction hash: <a href="https://etherscan.io/tx/0x80d370b1466d132c545ba234eef018d2ac21fbfa18bf7b2221578f2f978ae329" target="\_blank">0x80d370b146&hellip;2f978ae329</a>.</p>
-<p>The way another contract might use <code>randomics()</code> is then up to the developer. As an example, the following button generates and displays a value in</p>
-<p>$$ [0,1] $$</p>
-<p>by an off-chain evaluation of</p>
-<p>$$ \frac{ randomics().call()}{2^{256}-1}. $$</p>
-<hr>
-<div id="ElonMetaMask"></div>
-<script>
-
-var infuraWeb3 = new Web3(Web3.HttpProvider || "https://mainnet.infura.io/v3/becb60120425437f8aeeaa91305586bb");
-var entropy_address = '0xd2EBC948AE2C98c6c500C1d5B8d5783f8608A6fA';
-
-var jsonInterface = [
-	{
-		"inputs": [],
-		"name": "randomics",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	}
-];
-
-var entropy_contract = new infuraWeb3.eth.Contract(jsonInterface);
-entropy_contract.options.address = entropy_address;
-
-document.getElementById('ElonMetaMask').innerHTML = '<p><span class="input" style="width: 40%;" id="randomTarget" name="randomTarget" label="randomTarget">Expect the random value to appear here!</span></p><p><button class="enableEthereumButton  button cta rounded primary-btn raised" >Ask for entropy</button></span></p>';
-
-const ethereumButton = document.querySelector('.enableEthereumButton');
-
-ethereumButton.addEventListener('click', () => {
-  
-  entropy_contract.methods.randomics().call().then(randomValue => {
-    var _random = randomValue/(2**256-1);
-    document.getElementById('randomTarget').innerHTML = _random;
-  });
-});
-
-
-</script>
-
-<hr>
-<p>Playing around and coding with Solidity forces developers to adapt their way of thinking, especially if they come from more traditional languages.</p>
-<p>The initial hype many feel when learning for the first time about distributed ledger technologies is then usually weakened by the hard truth that blockchains are often oversold as a universal remedy to unfairness in the financial system, that is unless a maximalist stance is held despite solid criticism, and by the fact that a harder to hack structure comes with the property of having harder to implement features.</p>
-<p>The shift from centralized entities accountable to the law to decentralized designs solely run with economic incentives, in the case of a <a href="https://en.wikipedia.org/wiki/Proof_of_work">Proof of Work</a> system, or by sharing authority among specific actors, for instance in the future <a href="https://en.wikipedia.org/wiki/Proof_of_stake">Proof of Stake</a> solution, shouldn&rsquo;t be dismissed without a thorough analysis.</p>
-<p>Unfortunately, fairness is still a human quality and we&rsquo;re not quite there yet in terms of hardcoding it inside a protocol or a distributed consensus.</p>
-<p>A task as simple as defining randomness inside the Ethereum blockchain while maintaining the property of decentralization, once again shows that something that might look decentralized, and therefore intuitively more secure, needs to be handled with care.</p>
-<p>There&rsquo;s a special set of variables (<em>e.g. <code>block.timestamp</code>, <code>block.number</code>, <code>block.coinbase</code>, &hellip;</em>) from which it appears possible to draw the inspiration for randomness, at least with a hint of freshness since those variables usually change from block to block, but that inspiration comes with a price. For instance, in the game <a href="../../games/rings/">Rings</a>, the winner of a round is determined by a precise hash value, <code>blockhash</code>, but that variable is manipulable at a certain degree by a miner who might take the risk of discarding, i.e. not propagating it to the network, a mined block whose blockhash doesn&rsquo;t comply to the miner&rsquo;s interests.</p>
-<p>A miner might be encouraged in doing so if a better chance in winning the Jackpot of a round could overcome the risk of losing the reward for creating a new block, and the answer to that dilemma depends on the hash power of the miner and the value of the Jackpot, but still, in theory, the game is not completely fair.</p>
-<p>Regrettably, in the Ethereum network, the long awaited Proof of Stake implementation could even increase the advantage held by a miner in that regard.</p>
-<p>In designing a game that would rely on randomness, the miners&rsquo; motive can&rsquo;t be neglected, but for the fun of it and as long as the Jackpot doesn&rsquo;t inflate to a notable amount, a blockhash can be sufficiently fair.</p>
-<p>One possible solution for mitigating the influence by those who mine is to seed randomness in other values from the network, for instance the Ether balances of known wealthy addresses, tipically the ones that belong to exchanges which would hardly find interest in manipulating the outcome of a smart contract that easily has a fraction of their value.</p>
-<p>A bigger number of parameters or a bigger number of actors whose actions might modify the outcome would streghten a decentralized smart contract. Entropy is a friend.</p>
-<section class="footnotes" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn:1" role="doc-endnote">
-<p><em>To be taken cum grano salis</em>. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-</ol>
-</section>
+      <p>A library for mathematical operations with numbers expressed as bytes. So far it&rsquo;s mainly just an idea.</p>
 
     </div>
   </div>

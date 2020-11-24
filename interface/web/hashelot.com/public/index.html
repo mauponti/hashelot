@@ -8,7 +8,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/" />
-<meta property="og:updated_time" content="2020-10-01T01:02:03+01:00" />
+<meta property="og:updated_time" content="2020-11-01T01:02:03+01:00" />
 
 
 <meta name="description" content="Hardcoded description; the author should update :)" />
@@ -22,6 +22,7 @@
 
 <link rel="stylesheet" type="text/css" href="./css/style.min.bfae47b96aa2abf6eedbe138c13dbaa4e229e252b9906c24269d571907da1d1d.css" />
 <link rel="stylesheet" type="text/css" href="./css/icons.css" />
+
 
   </head>
   <body>
@@ -61,8 +62,8 @@
               <a href="./dapps/delphi/" class="navbar-item">
                 Delphi
               </a>
-              <a href="./dapps/hodler/" class="navbar-item">
-                Hodler
+              <a href="./dapps/shelter/" class="navbar-item">
+                Shelter
               </a>
               <a href="./dapps/chronicles/" class="navbar-item">
                 Chronicles
@@ -91,6 +92,9 @@
             <div class="navbar-dropdown">
               <a href="./utilities/entropy/" class="navbar-item">
                 Entropy
+              </a>
+              <a href="./utilities/BytesMath/" class="navbar-item">
+                BytesMath
               </a>
             </div>
           </div>
@@ -134,7 +138,7 @@ if (typeof web3 !== 'undefined') {
         if(curr_account != null){
           
           
-          var displayed_account = curr_account.slice(0, 6) + '...' + curr_account.slice(-5, -1);
+          var displayed_account = curr_account.slice(0, 6) + '...' + curr_account.slice(37, 42);
           document.getElementById('enableWallet').innerHTML = displayed_account;
         }else{
           
@@ -210,8 +214,8 @@ if (typeof web3 !== 'undefined') {
             <a href="./dapps/delphi/" class="navbar-item">
               Delphi
             </a>
-            <a href="./dapps/hodler/" class="navbar-item">
-              Hodler
+            <a href="./dapps/shelter/" class="navbar-item">
+              Shelter
             </a>
             <a href="./dapps/chronicles/" class="navbar-item">
               Chronicles
@@ -240,6 +244,9 @@ if (typeof web3 !== 'undefined') {
           <div class="navbar-dropdown">
             <a href="./utilities/entropy/" class="navbar-item">
               Entropy
+            </a>
+            <a href="./utilities/BytesMath/" class="navbar-item">
+              BytesMath
             </a>
           </div>
         </div>
@@ -283,7 +290,7 @@ if (typeof web3 !== 'undefined') {
         if(curr_account != null){
           
           
-          var displayed_account = curr_account.slice(0, 6) + '...' + curr_account.slice(-5, -1);
+          var displayed_account = curr_account.slice(0, 6) + '...' + curr_account.slice(37, 42);
           document.getElementById('enableWallet-clone').innerHTML = displayed_account;
         }else{
           
@@ -527,5 +534,6 @@ if (typeof web3 !== 'undefined') {
 <script src="./js/fresh.js"></script>
 <script src="./js/jquery.panelslider.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
   </body>
 </html>
