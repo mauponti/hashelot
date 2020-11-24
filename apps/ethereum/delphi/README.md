@@ -1,6 +1,6 @@
 #### Delphi by Hashelot
 
-**Delphi by Hashelot** is a Doaas (Distributed oracle as a service) smart contract written in Solidity and currently in beta testing on the [**Ropsten** network](https://www.hashelot.com/dapps/delphi/).
+**Delphi by Hashelot** is a DoaaS (Distributed oracle as a service) smart contract written in Solidity and currently in beta testing on the [**Ropsten** network](https://www.hashelot.com/dapps/delphi/).
 
 You can check out the code: [hashelot\_delphi\_1.0_beta.sol](solidity/hashelot_delphi_1.0_beta.sol).
 
