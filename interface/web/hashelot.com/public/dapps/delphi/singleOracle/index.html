@@ -892,6 +892,15 @@ if (typeof web3 !== 'undefined') {
                   _previousID = _oraclesNumber-1;
                 }
 
+                addEventListener('keydown', function(event) {
+
+                  if (event.key === "ArrowLeft"){
+                    window.location.href = '/dapps/delphi/singleOracle/?id=' + _previousID;
+                  }else if (event.key === "ArrowRight"){
+                    window.location.href = '/dapps/delphi/singleOracle/?id=' + _nextID;
+                  }
+                });
+
 								delphi.methods.showcaseAllOracles().call().then(function(_showcaseAll, _errorAll){
 
 									var substring = _showcaseAll.slice(2,_showcaseAll.length); 
@@ -902,15 +911,20 @@ if (typeof web3 !== 'undefined') {
 									
 									
 
-                  var showcase = '<div style="display: inline-block; vertical-align: top;"><a href="../../../dapps/delphi/singleOracle/?id=' + _previousID + '" >Previous Oracle</a></div><div style="display: inline-block; vertical-align: top; float:right;"><a href="../../../dapps/delphi/singleOracle/?id=' + _nextID + '">Next Oracle</a></div><hr/><div style="width: 100%; border-radius: 5px; padding: 10px; background: #F4F4F4;"><p><i>Contract</i>: <a href="' + ethScanner + 'address/' + contract_address + '" target="_blank"><strong>' + contract_address.slice(0,7) + '...' + contract_address.slice(37,42) + '</strong></a>.</p><p><i>Address</i>: <a href="' + ethScanner + 'address/' + oracle_address + '" target="_blank"><strong>' + oracle_address.slice(0,7) + '...' + oracle_address.slice(37,42) + '</strong></a>.</p><p><i>Minimum reward</i>: <strong>' + oracle_minimumReward + ' Ether</strong>.</p></div></div><div style="width: 100%; padding: 10px; border: solid 2px #F4F4F4; margin-top: 5px; margin-bottom: 20px; border-radius: 5px;"><p><span style="text-decoration: underline;">The Oracle awaits your question</span></p><p><label for="answerKind">What kind of answer are you looking for?</label><br/><select id="answerKind" name="answerKind" class="input" style="width: 150px; -webkit-appearance: menulist; vertical-align: middle;"><option value="0">Closed answer</option><option value="1">Open answer</option></select></p><p>Set a reward for the Oracle\'s question:<br/><input type="number" class="input" style="width: 50%; vertical-align: middle;" min="' + oracle_minimumReward + '" value="' + oracle_minimumReward + '" placeholder="Minimum ' + oracle_minimumReward + '" id="askReward" name="askReward" label="askReward"/> Ether.<br/>N.B.: 0.1% of the reward will go to Delphi.</p><hr/><p><input type="text" class="input" style="width: 100%;" maxlength="32" id="question" name="question" label="question" placeholder="Write your question here!"/></p><p><button class="askOracle button cta rounded primary-btn raised">Consult the Oracle [' + contract_address.slice(0,7) + '...' + contract_address.slice(37,42) + ']</button></p><p><span style="font-style: italic;">TL;DR rules: You may use up to 32 characters for your question. Keep in mind that an <span style="text-decoration: underline;">open answer</span> can be modified indefinitely many times, yet the Oracle gets rewarded only the first time, while a <span style="text-decoration: underline;">closed answer</span> will remain the same once it has been given.</span></p></div>';
+                  var showcase = '<div style="display: inline-block; vertical-align: top;"><a href="../../../dapps/delphi/singleOracle/?id=' + _previousID + '" >Previous Oracle</a></div><div style="display: inline-block; vertical-align: top; float:right;"><a href="../../../dapps/delphi/singleOracle/?id=' + _nextID + '">Next Oracle</a></div><hr/><div style="width: 100%; border-radius: 5px; padding: 10px; background: #F4F4F4;"><p><i>Contract</i>: <a href="' + ethScanner + 'address/' + contract_address + '" target="_blank"><strong>' + contract_address.slice(0,7) + '...' + contract_address.slice(37,42) + '</strong></a>.</p><p><i>Address</i>: <a href="' + ethScanner + 'address/' + oracle_address + '" target="_blank"><strong>' + oracle_address.slice(0,7) + '...' + oracle_address.slice(37,42) + '</strong></a>.</p><p><i>Minimum reward</i>: <strong>' + oracle_minimumReward + ' Ether</strong>.</p>';
+
+                  var showcaseTwo = '<div style="width: 100%; padding: 10px; border: solid 2px #F4F4F4; margin-top: 5px; margin-bottom: 20px; border-radius: 5px;"><p><span style="text-decoration: underline;">The Oracle awaits your question</span></p><p><label for="answerKind">What kind of answer are you looking for?</label><br/><select id="answerKind" name="answerKind" class="input" style="width: 150px; -webkit-appearance: menulist; vertical-align: middle;"><option value="0">Closed answer</option><option value="1">Open answer</option></select></p><p>Set a reward for the Oracle\'s question:<br/><input type="number" class="input" style="width: 50%; vertical-align: middle;" min="' + oracle_minimumReward + '" value="' + oracle_minimumReward + '" placeholder="Minimum ' + oracle_minimumReward + '" id="askReward" name="askReward" label="askReward"/> Ether.<br/>N.B.: 0.1% of the reward will go to Delphi.</p><hr/><p><input type="text" class="input" style="width: 100%;" maxlength="32" id="question" name="question" label="question" placeholder="Write your question here!"/></p><p><button class="askOracle button cta rounded primary-btn raised">Consult the Oracle [' + contract_address.slice(0,7) + '...' + contract_address.slice(37,42) + ']</button></p><p><span style="font-style: italic;">TL;DR rules: You may use up to 32 characters for your question. Keep in mind that an <span style="text-decoration: underline;">open answer</span> can be modified indefinitely many times, yet the Oracle gets rewarded only the first time, while a <span style="text-decoration: underline;">closed answer</span> will remain the same once it has been given.</span></p></div>';
 
                   if (curr_account_delphi == oracle_address){
-                    showcase = showcase + '<div style="width: 100%; border-radius: 5px; padding: 10px; background: #F4F4F4; margin-bottom: 20px;"><span style="text-decoration: underline;">Update your minimum reward</span></p><p><input type="number" class="input" style="width: 50%; vertical-align: middle;" min="' + oracle_minimumReward + '" placeholder="The current minimum reward is ' + oracle_minimumReward + '" id="minRewUpdate" name="minRewUpdate" label="minRewUpdate" value="' + oracle_minimumReward + '"/> Ether.</p><p><button class="updateMinReward button cta rounded secondary-btn raised">Update the minimum reward</button></p></div>';
+                    showcaseTwo = showcaseTwo + '<div style="width: 100%; border-radius: 5px; padding: 10px; background: #F4F4F4; margin-bottom: 20px;"><span style="text-decoration: underline;">Update your minimum reward</span></p><p><input type="number" class="input" style="width: 50%; vertical-align: middle;" min="' + oracle_minimumReward + '" placeholder="The current minimum reward is ' + oracle_minimumReward + '" id="minRewUpdate" name="minRewUpdate" label="minRewUpdate" value="' + oracle_minimumReward + '"/> Ether.</p><p><button class="updateMinReward button cta rounded secondary-btn raised">Update the minimum reward</button></p></div>';
                   }
+
+                  showcaseTwo = showcaseTwo + '<p>Hide/show questions: <a href="javascript:void(0);" class="_hideUnanswered" >Unanswered</a> - <a href="javascript:void(0);" class="_hideAnswered" style="background:none; border:none; margin:0; padding:0; cursor: pointer;">Answered</a></p><hr/>';
+
 									delphi.methods.thatSingleOracle(contract_address).call().then(function(_showcaseSingle, _errorSingle){
                     if (_showcaseSingle == null){
-									    showcase = showcase + '<p>The selected Oracle has no activity to show.</p>';
-                      document.getElementById('amIAnOracle').innerHTML = showcase;
+									    showcaseTwo = showcaseTwo + '<p>The selected Oracle has no activity to show.</p>';
+                      document.getElementById('amIAnOracle').innerHTML = showcase + '<p><i>Oracle stats</i>: 0 questions - 0 answers.</p></div></div>' + showcaseTwo;
                     }else{
                       substring = _showcaseSingle.slice(2,_showcaseSingle.length); 
                       var lenny = substring.length;
@@ -921,7 +935,9 @@ if (typeof web3 !== 'undefined') {
                       }
 
                       var _question;
+                      var _howManyQuestions = 0;
                       var _answer;
+                      var _howManyAnswers = 0;
                       var _answer_label;
                       var _reward;
                       var _reward_label;
@@ -934,10 +950,10 @@ if (typeof web3 !== 'undefined') {
 
                       var _divClass;
                       
-                      showcase = showcase + '<p>Hide/show questions: <a href="javascript:void(0);" class="_hideUnanswered" >Unanswered</a> - <a href="javascript:void(0);" class="_hideAnswered" style="background:none; border:none; margin:0; padding:0; cursor: pointer;">Answered</a></p><hr/>';
 
                       for (k=0; k<rounds; k++){ 
                         incipit = k*362;
+                        _howManyQuestions++;
                         _question = "0x" + substring.slice(incipit, incipit+64);
                         _question = web3.utils.hexToAscii(_question);
                         _answer = "0x" + substring.slice(incipit+64, incipit+128);
@@ -956,6 +972,7 @@ if (typeof web3 !== 'undefined') {
                           _reward_label = 'Reward';
                           _divClass = "_unanswered";
                         }else{
+                          _howManyAnswers++;
                           _answer = web3.utils.hexToAscii(_answer);
                           _answer_label = 'Answer (Block height <a href="' + ethScanner + 'block/' + _questionTime + '" target="_blank">' + _answerTime + '</a>)';
                           _reward_label = 'Already rewarded';
@@ -964,45 +981,63 @@ if (typeof web3 !== 'undefined') {
 
                         if (curr_account_delphi == oracle_address){
                           
-                          showcase = showcase + '<div class="' + _divClass + '" style="display: block;"><div style="display: inline-block; vertical-align: top;"><p><i>From</i>: <a href="' + ethScanner + 'address/' + _inquirer + '" target="_blank">' + _inquirer.slice(0,7) + '...' + _inquirer.slice(37,42) + '</a>.</p><p><i>Question (Block height <a href="' + ethScanner + 'block/' + _questionTime + '" target="_blank">' + _questionTime + '</a>)</i>: ' + _question + '?</p><p><i>' + _answer_label + '</i>: ' + _answer + '.</p><p><i>' + _reward_label + '</i>: ' + _reward + ' Ether.</p></div><div style="display: inline-block; vertical-align: top; float:right;"><p><a class="button btn-align-md accent-btn raised" href="javascript:void(0);">' + counter + '</a></p></div><div style="width: 100%; height: 10px;"></div><div style="width: 100%; border-radius: 5px; padding: 10px; background: #F4F4F4;">';
+                          showcaseTwo = showcaseTwo + '<div class="' + _divClass + '" style="display: block;"><div style="display: inline-block; vertical-align: top;"><p><i>From</i>: <a href="' + ethScanner + 'address/' + _inquirer + '" target="_blank">' + _inquirer.slice(0,7) + '...' + _inquirer.slice(37,42) + '</a>.</p><p><i>Question (Block height <a href="' + ethScanner + 'block/' + _questionTime + '" target="_blank">' + _questionTime + '</a>)</i>: ' + _question + '?</p><p><i>' + _answer_label + '</i>: ' + _answer + '.</p><p><i>' + _reward_label + '</i>: ' + _reward + ' Ether.</p></div><div style="display: inline-block; vertical-align: top; float:right;"><p><a class="button btn-align-md accent-btn raised" href="javascript:void(0);">' + counter + '</a></p></div><div style="width: 100%; height: 10px;"></div><div style="width: 100%; border-radius: 5px; padding: 10px; background: #F4F4F4;">';
 
                           if (_questionTime > _answerTime){ 
-                            showcase = showcase + '<p><input type="text" class="input" style="width: 100%;" maxlength="32" id="answer_' + k + '" name="answer_' + k + '" label="answer_' + k + '" placeholder="Your answer goes here!"/></p><p><button class="giveAnswer_' + k +' button btn-align-md accent-btn raised">Give an answer to Question ' + counter + '</button></p><p><span style="font-style: italic;">TL;DR rules: You may use up to 32 characters for your answer.';
+                            showcaseTwo = showcaseTwo + '<p><input type="text" class="input" style="width: 100%;" maxlength="32" id="answer_' + k + '" name="answer_' + k + '" label="answer_' + k + '" placeholder="Your answer goes here!"/></p><p><button class="giveAnswer_' + k +' button btn-align-md accent-btn raised">Give an answer to Question ' + counter + '</button></p><p><span style="font-style: italic;">TL;DR rules: You may use up to 32 characters for your answer.';
                               if (_open == 1){
-                                showcase = showcase + ' This is an <span style="text-decoration: underline;">open answer</span> and you can modify it as many times as you want (though only the first time gets rewarded).</span></p></div><div id="answered_' + k + '"></div>';
+                                showcaseTwo = showcaseTwo + ' This is an <span style="text-decoration: underline;">open answer</span> and you can modify it as many times as you want (though only the first time gets rewarded).</span></p></div><div id="answered_' + k + '"></div>';
                               }else{
-                                showcase = showcase + ' This is a <span style="text-decoration: underline;">closed answer</span> and it will not be possible to revert it once it has been registered on the blockchain.</span></p></div><div id="answered_' + k + '"></div>';
+                                showcaseTwo = showcaseTwo + ' This is a <span style="text-decoration: underline;">closed answer</span> and it will not be possible to revert it once it has been registered on the blockchain.</span></p></div><div id="answered_' + k + '"></div>';
                               }
                           }else{ 
                             if(_open == 1){ 
-                              showcase = showcase + '<p><input type="text" class="input" style="width: 100%;" maxlength="32" id="answer_' + k + '" name="answer_' + k + '" label="answer_' + k + '" placeholder="Write your new answer here!"/></p><p><button class="giveAnswer_' + k +' button btn-align-md accent-btn raised">Change the answer to Question ' + counter + '</button></p><p><span style="font-style: italic;">TL;DR rules: You may use up to 32 characters for your answer. This is an <span style="text-decoration: underline;">open answer</span> and you can modify it as many times as you want (though only the first time gets rewarded).</span></p></div><div id="answered_' + k + '"></div>';
+                              showcaseTwo = showcaseTwo + '<p><input type="text" class="input" style="width: 100%;" maxlength="32" id="answer_' + k + '" name="answer_' + k + '" label="answer_' + k + '" placeholder="Write your new answer here!"/></p><p><button class="giveAnswer_' + k +' button btn-align-md accent-btn raised">Change the answer to Question ' + counter + '</button></p><p><span style="font-style: italic;">TL;DR rules: You may use up to 32 characters for your answer. This is an <span style="text-decoration: underline;">open answer</span> and you can modify it as many times as you want (though only the first time gets rewarded).</span></p></div><div id="answered_' + k + '"></div>';
                             }else{ 
-                              showcase = showcase + '<p><span style="font-style: italic;">This is a <span style="text-decoration: underline;">closed answer</span> and it cannot be reverted since it is already been registered on the blockchain.</span></p></div>';
+                              showcaseTwo = showcaseTwo + '<p><span style="font-style: italic;">This is a <span style="text-decoration: underline;">closed answer</span> and it cannot be reverted since it is already been registered on the blockchain.</span></p></div>';
                             }
                           }
 
                         }else{
                           
-                          showcase = showcase + '<div class="' + _divClass + '" style="display: block;"><div style="display: inline-block; vertical-align: top;"><p><i>From</i>: <a href="' + ethScanner + 'address/' + _inquirer + '" target="_blank">' + _inquirer.slice(0,7) + '...' + _inquirer.slice(37,42) + '</a>.</p><p><i>Question (Block height <a href="' + ethScanner + 'block/' + _questionTime + '" target="_blank">' + _questionTime + '</a>)</i>: ' + _question + '?</p><p><i>' + _answer_label + '</i>: ' + _answer + '.</p><p><i>' + _reward_label + '</i>: ' + _reward + ' Ether.</p>';
+                          showcaseTwo = showcaseTwo + '<div class="' + _divClass + '" style="display: block;"><div style="display: inline-block; vertical-align: top;"><p><i>From</i>: <a href="' + ethScanner + 'address/' + _inquirer + '" target="_blank">' + _inquirer.slice(0,7) + '...' + _inquirer.slice(37,42) + '</a>.</p><p><i>Question (Block height <a href="' + ethScanner + 'block/' + _questionTime + '" target="_blank">' + _questionTime + '</a>)</i>: ' + _question + '?</p><p><i>' + _answer_label + '</i>: ' + _answer + '.</p><p><i>' + _reward_label + '</i>: ' + _reward + ' Ether.</p>';
                           if (_open == 1){
-                            showcase = showcase + '<p><i>Question ' + counter + ' has an <span style="text-decoration: underline;">open answer</span></i>.</p>';
+                            showcaseTwo = showcaseTwo + '<p><i>Question ' + counter + ' has an <span style="text-decoration: underline;">open answer</span></i>.</p>';
                           }else{
-                            showcase = showcase + '<p><i>Question ' + counter + ' has a <span style="text-decoration: underline;">closed answer</span></i>.</p>';
+                            showcaseTwo = showcaseTwo + '<p><i>Question ' + counter + ' has a <span style="text-decoration: underline;">closed answer</span></i>.</p>';
                           }
-                          showcase = showcase + '</div><div style="display: inline-block; vertical-align: top; float:right;"><p><a class="button btn-align-md accent-btn raised" href="javascript:void(0);">' + counter + '</a></p></div>';
+                          showcaseTwo = showcaseTwo + '</div><div style="display: inline-block; vertical-align: top; float:right;"><p><a class="button btn-align-md accent-btn raised" href="javascript:void(0);">' + counter + '</a></p></div>';
                         }
 
                         
                         if (k < rounds-1){
-                          showcase = showcase + '<hr/></div>';
+                          showcaseTwo = showcaseTwo + '<hr/></div>';
                         }else{
-                          showcase = showcase + '</div>';
+                          showcaseTwo = showcaseTwo + '</div>';
                         }
                         
                         counter++;
                       } 
 
-                      document.getElementById('amIAnOracle').innerHTML = showcase;
+                      var oracleStatsQuestions;
+
+                      if (_howManyQuestions == 1){
+                        oracleStatsQuestions = '1 question - ';
+                      }else{
+                        oracleStatsQuestions = _howManyQuestions + ' questions - ';
+                      }
+
+                      var oracleStatsAnswers;
+
+                      if (_howManyAnswers == 1){
+                        oracleStatsAnswers = '1 answer.';
+                      }else{
+                        oracleStatsAnswers = _howManyAnswers + ' answers.';
+                      }
+
+                      var showcaseMiddle = '<p><i>Oracle stats</i>: ' + oracleStatsQuestions + oracleStatsAnswers + '</p></div></div>';
+
+                      document.getElementById('amIAnOracle').innerHTML = showcase + showcaseMiddle + showcaseTwo;
 
                       
                       
