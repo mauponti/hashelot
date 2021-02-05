@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>Trading assets in the lifespan of a single block (and hopefully profiting from it)</title>
+      <link>/notes/flashloan_arbitrage/</link>
+      <pubDate>Mon, 01 Feb 2021 01:02:03 +0100</pubDate>
+      
+      <guid>/notes/flashloan_arbitrage/</guid>
+      <description>Flashloans are zero-risk instruments in the universe of Decentralized Finance (DeFi). Their purpose is not much different from the one held by more traditional loans: borrowing money to invest it in ventures or personal projects and lending it in order to gain a profit.
+As the name itself suggests though, the novelty of the decentralized version lies in its instantaneous lifespan, a quality that on one hand enormously limits what a borrower can do with the received money, but that on the other hand manages to cancel credit risk, the possibility of a loss resulting from a borrower&amp;rsquo;s failure to repay a loan, making theoretically possible to lend any amount of money (Ether or tokens) to anyone without any risk.</description>
+    </item>
+    
+    <item>
       <title>Delphi [Beta testing] - A comprehensive list of Delphi&#39;s Oracles</title>
       <link>/dapps/delphi/oraclesList/</link>
       <pubDate>Sun, 01 Nov 2020 01:02:03 +0100</pubDate>
@@ -55,7 +65,8 @@ So far, just an idea.</description>
       <pubDate>Thu, 01 Oct 2020 01:02:03 +0100</pubDate>
       
       <guid>/notes/</guid>
-      <description>Not ready yet.</description>
+      <description>A comprehensive list of notes written by and talks held by Hashelot (which is just one person at the moment, but nevertheless):
+ Trading assets in the lifespan of a single block (and hopefully profiting from it).  </description>
     </item>
     
     <item>
@@ -99,12 +110,13 @@ Coming a bit less soon.</description>
     </item>
     
     <item>
-      <title>What we have done so far</title>
+      <title>The work, so far</title>
       <link>/showcase/</link>
       <pubDate>Thu, 01 Oct 2020 01:02:03 +0100</pubDate>
       
       <guid>/showcase/</guid>
-      <description>Not ready yet.</description>
+      <description>Hashelot is an Ethereum-centric project (at least for the moment), but from that point on it may leap to other crypto ecosystems depending on the initial outcome or the appeal those crypto-systems play.
+Apps  Delphi (Beta testing) Shelter (under development) Chronicles (under development)  Games  Rings (deployed and verified), there&amp;rsquo;s also a test version on Ropsten [Day] Rings (deployed and verified)  Utilities  Entropy (deployed) BytesMath (under development)  Notes  Trading assets in the lifespan of a single block (and hopefully profiting from it)  </description>
     </item>
     
     <item>

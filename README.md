@@ -8,24 +8,21 @@ At first it will be an Ethereum-centric project, but from that point on it may l
 
 ![I think I might have sharded!](/images/hashelot_ethereum_wbg.png)
 
-##### Games
-- [**Rings**](/games/ethereum/rings) (*deployed and verified*)
-- [**[Day] Rings**](/games/ethereum/dayrings) (*deployed and verified*)
-
 ##### Apps
 - [**Delphi**](/apps/ethereum/delphi) (*Beta testing*)
 - **Shelter** (*under development*)
 - **Chronicles** (*under development*)
 
+##### Games
+- [**Rings**](/games/ethereum/rings) (*deployed and verified*)
+- [**[Day] Rings**](/games/ethereum/dayrings) (*deployed and verified*)
+
 ##### Utilities
 - [**Entropy**](/utilities/ethereum/entropy) (*deployed*)
-- [**BytesMath**] (*under development*)
+- **BytesMath** (*under development*)
 
 ##### Web interface
 - [**Hashelot.com**](https://www.hashelot.com)
 
 ##### Mobile interface
 (*still needs time to be developed*)
-
----
-*On the other hand Hashelot might just be a fun quarantine idea and nothing more*.
