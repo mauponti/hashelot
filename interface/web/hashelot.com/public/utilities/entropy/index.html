@@ -462,7 +462,7 @@ var jsonInterface = [
 var entropy_contract = new infuraWeb3.eth.Contract(jsonInterface);
 entropy_contract.options.address = entropy_address;
 
-document.getElementById('ElonMetaMask').innerHTML = '<p><span class="input" style="width: 50%; overflow: hidden; white-space:nowrap; text-overflow:ellipsis;" id="randomTarget;" name="randomTarget" label="randomTarget">Here comes the randomness!</span></p><p><button class="enableEthereumButton  button cta rounded primary-btn raised" >Ask for entropy</button></span></p>';
+document.getElementById('ElonMetaMask').innerHTML = '<p><span class="input" style="width: 50%; overflow: hidden; white-space:nowrap; text-overflow:ellipsis;" id="randomTarget" name="randomTarget" label="randomTarget">Here comes the randomness!</span></p><p><button class="enableEthereumButton  button cta rounded primary-btn raised" >Ask for entropy</button></span></p>';
 
 const ethereumButton = document.querySelector('.enableEthereumButton');
 
