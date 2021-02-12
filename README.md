@@ -21,6 +21,9 @@ At first it will be an Ethereum-centric project, but from that point on it may l
 - [**Entropy**](/utilities/ethereum/entropy) (*deployed*)
 - **BytesMath** (*under development*)
 
+##### Research
+- - [A Privacy-Preserving Protocol for Local Storage of Pseudonymous Contact Tracing Data and Asynchronous Verification Against Centralized Alerts](/research/Tzero) (2020-04-30)
+
 ##### Web interface
 - [**Hashelot.com**](https://www.hashelot.com)
 

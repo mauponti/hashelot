@@ -12,6 +12,17 @@
     
     
     <item>
+      <title>How to protect privacy while fighting a pandemic</title>
+      <link>/notes/howtoprotectprivacy/</link>
+      <pubDate>Mon, 01 Feb 2021 01:02:03 +0100</pubDate>
+      
+      <guid>/notes/howtoprotectprivacy/</guid>
+      <description>Imagine you are a superhero who is fighting against an invisible crime organization that operates all across the world.
+As all superheroes do, you need to hide your identity, but the good news is you&amp;rsquo;re not alone in this fight. You can count on a league of superhero friends to detect and control new crimes.
+Each one of you has a secret identity. Even better, your secret identities can change every 10 minutes.</description>
+    </item>
+    
+    <item>
       <title>Trading assets in the lifespan of a single block (and hopefully profiting from it)</title>
       <link>/notes/flashloan_arbitrage/</link>
       <pubDate>Mon, 01 Feb 2021 01:02:03 +0100</pubDate>
@@ -66,7 +77,9 @@ So far, just an idea.</description>
       
       <guid>/notes/</guid>
       <description>A comprehensive list of notes written by and talks held by Hashelot (which is just one person at the moment, but nevertheless):
- Trading assets in the lifespan of a single block (and hopefully profiting from it).  </description>
+  How to protect privacy while fighting a pandemic
+  Trading assets in the lifespan of a single block (and hopefully profiting from it)
+  </description>
     </item>
     
     <item>
@@ -96,7 +109,8 @@ Delphi gets 0.1% of each reward.</description>
       <pubDate>Thu, 01 Oct 2020 01:02:03 +0100</pubDate>
       
       <guid>/research/</guid>
-      <description>Not ready yet.</description>
+      <description>Articles published so far:
+ A Privacy-Preserving Protocol for Local Storage of Pseudonymous Contact Tracing Data and Asynchronous Verification Against Centralized Alerts (2020-04-30)  </description>
     </item>
     
     <item>
@@ -116,7 +130,7 @@ Coming a bit less soon.</description>
       
       <guid>/showcase/</guid>
       <description>Hashelot is an Ethereum-centric project (at least for the moment), but from that point on it may leap to other crypto ecosystems depending on the initial outcome or the appeal those crypto-systems play.
-Apps  Delphi (Beta testing) Shelter (under development) Chronicles (under development)  Games  Rings (deployed and verified), there&amp;rsquo;s also a test version on Ropsten [Day] Rings (deployed and verified)  Utilities  Entropy (deployed) BytesMath (under development)  Notes  Trading assets in the lifespan of a single block (and hopefully profiting from it)  </description>
+Apps  Delphi (Beta testing) Shelter (under development) Chronicles (under development)  Games  Rings (deployed and verified), there&amp;rsquo;s also a test version on Ropsten [Day] Rings (deployed and verified)  Utilities  Entropy (deployed) BytesMath (under development)  Notes  How to protect privacy while fighting a pandemic Trading assets in the lifespan of a single block (and hopefully profiting from it)  </description>
     </item>
     
     <item>
