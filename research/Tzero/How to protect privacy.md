@@ -6,7 +6,7 @@ As all superheroes do, **you need to hide your identity**, but the good news is 
 
 Each one of you has a secret identity. Even better, your secret identities can change every 10 minutes.
 
-![With great pseudonyms comes great privacy!](/images/superheroes.png)
+![With great pseudonyms comes great privacy!](images/superheroes.png)
 
 During one guard duty of yours, you realize that you might need to send each other a message and you wonder: is there a way to do it without the risk of revealing your secret identities, let alone your real ones?
 
